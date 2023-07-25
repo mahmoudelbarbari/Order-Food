@@ -1,7 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:order/features/cart/presentation/cubit/cart_cubit.dart';
 import 'package:order/features/restaurant/data/model/restaurant_model.dart';
 
 class CartWidget extends StatefulWidget {
@@ -192,7 +190,7 @@ class _CartWidgetState extends State<CartWidget> {
         Column(
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.fromLTRB(17, 0, 10, 10),
+              padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 20),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     minimumSize: const Size(327, 56),

@@ -38,10 +38,10 @@ class NavigationDrawerr extends StatelessWidget {
             bottom: 24,
             right: 80,
             left: 10),
-        child: const Align(
+        child: Align(
           alignment: Alignment.centerLeft,
           child: Column(
-            children: [
+            children: const [
               Padding(
                 padding: EdgeInsets.fromLTRB(6, 10, 100, 15),
                 child: CircleAvatar(
