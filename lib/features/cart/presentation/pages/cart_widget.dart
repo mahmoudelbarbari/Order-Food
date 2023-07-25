@@ -190,7 +190,7 @@ class _CartWidgetState extends State<CartWidget> {
         Column(
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 42, vertical: 20),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     minimumSize: const Size(327, 56),
