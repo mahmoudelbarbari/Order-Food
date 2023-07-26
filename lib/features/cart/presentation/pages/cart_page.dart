@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:order/core/drawer_menu.dart';
 import 'package:order/features/cart/presentation/cubit/cart_cubit.dart';
 import 'package:order/features/cart/presentation/cubit/cart_state.dart';
-import 'package:order/features/cart/presentation/pages/cart_widget.dart';
+import 'package:order/features/cart/presentation/pages/widgets/cart_widget.dart';
 
 class CartPage extends StatefulWidget {
   const CartPage({super.key});

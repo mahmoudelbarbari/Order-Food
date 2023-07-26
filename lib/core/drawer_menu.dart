@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:order/features/event/presentation/cubit/ticket_cubit.dart';
 import 'package:order/features/event/presentation/pages/ticket_page.dart';
-import 'package:order/features/login/presentation/cubit/login_cubit.dart';
 import 'package:order/features/login/presentation/pages/login_page.dart';
 import 'package:order/features/restaurant/presentation/cubit/restaurant_cubit.dart';
 import 'package:order/features/restaurant/presentation/pages/add_restaurant_page.dart';
 import 'package:order/features/restaurant/presentation/pages/get_all_restaurants_page/all_restaurants_page.dart';
+
+import '../features/login/presentation/cubit/login_cubit.dart';
 
 class NavigationDrawerr extends StatelessWidget {
   const NavigationDrawerr({super.key});
@@ -22,7 +23,6 @@ class NavigationDrawerr extends StatelessWidget {
             SingleChildScrollView(
                 child: Column(
               children: <Widget>[
-                //buildHeader(context),
                 buildMenuItems(context),
               ],
             )),
@@ -31,42 +31,6 @@ class NavigationDrawerr extends StatelessWidget {
       ),
     );
   }
-
-  Widget buildHeader(BuildContext context) => Container(
-        padding: EdgeInsets.only(
-            top: 24 + MediaQuery.of(context).padding.top,
-            bottom: 24,
-            right: 80,
-            left: 10),
-        child: Align(
-          alignment: Alignment.centerLeft,
-          child: Column(
-            children: const [
-              Padding(
-                padding: EdgeInsets.fromLTRB(6, 10, 100, 15),
-                child: CircleAvatar(
-                  radius: 40,
-                ),
-              ),
-              Text(
-                'Mohamed Mamdouh \n',
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Text(
-                'M.Kamel123@gmail.com',
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                  fontSize: 14,
-                ),
-              )
-            ],
-          ),
-        ),
-      );
 
   Widget buildMenuItems(BuildContext context) => Wrap(
         //runSpacing: 5,
@@ -112,10 +76,33 @@ class NavigationDrawerr extends StatelessWidget {
               ),
             ),
             onTap: () {
-              context.read<LoginCubit>().logOut();
-              Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => const LoginPage(),
-              ));
+              // context.read<LoginCubit>().logOut();
+              // Navigator.of(context).push(MaterialPageRoute(
+              //   builder: (context) => const LoginPage(),
+              // ));
+              showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return AlertDialog(
+                      title: const Text("Logout"),
+                      content: const Text("Are you sure you want to logout?"),
+                      actions: [
+                        TextButton(
+                          child: const Text("Confirm"),
+                          onPressed: () async {
+                            context.read<LoginCubit>().logOut();
+                            Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                    builder: (context) => const LoginPage()));
+                          },
+                        ),
+                        TextButton(
+                          onPressed: () => Navigator.pop(context, 'Cancel'),
+                          child: const Text('Cancel'),
+                        ),
+                      ],
+                    );
+                  });
             },
           ),
         ],

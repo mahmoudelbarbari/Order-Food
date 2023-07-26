@@ -3,7 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:order/features/event/presentation/pages/ticket_page.dart';
 import 'package:order/features/login/presentation/cubit/login_cubit.dart';
 import 'package:order/features/login/presentation/cubit/login_state.dart';
-import 'login_widget.dart';
+
+import 'widgtes/login_widget.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
