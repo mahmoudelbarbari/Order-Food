@@ -2,3 +2,4 @@ node_modules/*
 dart_tool/*
 gradle/*
 idea/*
+node_modules

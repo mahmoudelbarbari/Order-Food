@@ -7,8 +7,9 @@ import 'package:order/core/error/widgets/loading_widget.dart';
 import 'package:order/features/cart/presentation/pages/cart_page.dart';
 import 'package:order/features/event/presentation/cubit/ticket_cubit.dart';
 import 'package:order/features/event/presentation/cubit/ticket_state.dart';
-import 'package:order/features/event/presentation/pages/ticket_widget.dart';
 import 'package:order/features/event/presentation/pages/widgets/event_add_update_pages/event_add_update_page.dart';
+
+import '../pages/widgets/ticket_widget.dart';
 
 class TicketPage extends StatefulWidget {
   const TicketPage({super.key});
