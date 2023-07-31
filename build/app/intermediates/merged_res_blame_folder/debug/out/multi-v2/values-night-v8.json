@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "F:\\Food\\Order\\order\\Flutter-app\\Order-Food\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "F:\\Order-Food\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "F:\\Food\\Order\\order\\Flutter-app\\Order-Food\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "F:\\Order-Food\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

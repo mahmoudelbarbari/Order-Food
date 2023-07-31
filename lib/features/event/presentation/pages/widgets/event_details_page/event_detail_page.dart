@@ -22,7 +22,6 @@ class EventDetailsPage extends StatefulWidget {
 class _EventDetailsPageState extends State<EventDetailsPage> {
   @override
   Widget build(BuildContext context) {
-    int count = 1;
     return Scaffold(
         drawer: const NavigationDrawerr(),
         appBar: AppBar(

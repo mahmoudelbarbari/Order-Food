@@ -3,7 +3,6 @@ import 'package:order/core/database/firebase_db.dart';
 import 'package:order/features/cart/data/datasource/cart_datasource.dart';
 import 'package:order/features/cart/data/reporisatory_imlp/cart_reporisatory_impl.dart';
 import 'package:order/features/cart/domain/reporisatory/cart_reporisatory.dart';
-import 'package:order/features/cart/domain/usecase/add_cart_data_usecase.dart';
 import 'package:order/features/cart/domain/usecase/add_items_to_cart_usecase.dart';
 import 'package:order/features/cart/domain/usecase/get_all_cart_items_usecase.dart';
 import 'package:order/features/cart/presentation/cubit/cart_cubit.dart';
@@ -26,6 +25,7 @@ import 'package:order/features/login/presentation/cubit/login_cubit.dart';
 import 'package:order/features/register/data/datasource/remote_register_user_datasource.dart';
 import 'package:order/features/register/data/reporisatory/register_reporisatory_impl.dart';
 import 'package:order/features/register/domain/reposisatory/register_reprisatory.dart';
+import 'package:order/features/register/domain/usecase/get_user_info_usecase.dart';
 import 'package:order/features/register/domain/usecase/register_usecase.dart';
 import 'package:order/features/register/domain/usecase/remote_register_usecase.dart';
 import 'package:order/features/register/presentation/cubit/register_cubit.dart';
@@ -39,6 +39,7 @@ import 'package:order/features/restaurant/domain/usecase/get_all_restaurant_usec
 import 'package:order/features/restaurant/domain/usecase/upload_image_usecase.dart';
 import 'package:order/features/restaurant/presentation/cubit/menu_cubit.dart';
 import 'package:order/features/restaurant/presentation/cubit/restaurant_cubit.dart';
+
 import 'features/login/data/datasources/local_login_user.dart';
 import 'features/login/data/reporisatory/account_reporisatory_impl.dart';
 import 'features/login/domain/repositories/account_repository.dart';
@@ -92,8 +93,12 @@ void init() {
   sl.registerLazySingleton<RemoteRegisterUsecase>(
       () => RemoteRegisterUsecase(sl<RegisterAccountRepository>()));
 
+  sl.registerLazySingleton<GetUserInfoUsecase>(
+      () => GetUserInfoUsecase(sl<RegisterAccountRepository>()));
+
   //register bloc cubit
   // sl.registerLazySingleton(() => RegisterCubit());
+
   sl.registerFactory<RegisterCubit>(() => RegisterCubit());
 
   //-----------------------------------------------------------------------------------------
@@ -186,8 +191,6 @@ void init() {
   sl.registerLazySingleton<GetAllCartItemsUsecase>(
       () => GetAllCartItemsUsecase(sl<CartReporisatoryInterface>()));
 
-  sl.registerLazySingleton<AddCartData>(
-      () => AddCartData(sl<CartReporisatoryInterface>()));
 //AddCartData
   //Cart Cubit
   sl.registerFactory(() => CartCubit());

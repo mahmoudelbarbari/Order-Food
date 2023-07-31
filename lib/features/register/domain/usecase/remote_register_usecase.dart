@@ -6,7 +6,9 @@ class RemoteRegisterUsecase {
 
   RemoteRegisterUsecase(this._registerAccountRepository);
 
-  Future<RegisterAccountEntity> call(String email, String password,RegisterAccountEntity registerAccountEntity) async {
-    return await _registerAccountRepository.remoteRegisterUser(email, password,registerAccountEntity);
+  Future<RegisterAccountEntity> call(String email, String password,
+      RegisterAccountEntity registerAccountEntity) async {
+    return await _registerAccountRepository.remoteRegisterUser(
+        email, password, registerAccountEntity);
   }
 }

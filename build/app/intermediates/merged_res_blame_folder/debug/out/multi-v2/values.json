@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "F:\\Food\\Order\\order\\Flutter-app\\Order-Food\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "F:\\Order-Food\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\mawad\\.gradle\\caches\\transforms-3\\d5a8f692488500b5dcc859a2fc2151f1\\transformed\\jetified-firebase-messaging-23.2.0\\res\\values\\values.xml",
@@ -108,23 +108,6 @@
                     }
                 },
                 {
-                    "source": "F:\\Food\\Order\\order\\Flutter-app\\Order-Food\\build\\app\\generated\\res\\google-services\\debug\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "55,198,279,383,491,611,705",
-                        "endColumns": "142,80,103,107,119,93,70",
-                        "endOffsets": "193,274,378,486,606,700,771"
-                    },
-                    "to": {
-                        "startLines": "149,154,155,156,157,158,159",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "10452,10892,10973,11077,11185,11305,11399",
-                        "endColumns": "142,80,103,107,119,93,70",
-                        "endOffsets": "10590,10968,11072,11180,11300,11394,11465"
-                    }
-                },
-                {
                     "source": "C:\\Users\\mawad\\.gradle\\caches\\transforms-3\\baa0cae05e9ae84e9686ffd981614515\\transformed\\jetified-savedstate-1.2.1\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -178,6 +161,23 @@
                     }
                 },
                 {
+                    "source": "F:\\Order-Food\\build\\app\\generated\\res\\google-services\\debug\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,198,279,383,491,611,705",
+                        "endColumns": "142,80,103,107,119,93,70",
+                        "endOffsets": "193,274,378,486,606,700,771"
+                    },
+                    "to": {
+                        "startLines": "149,154,155,156,157,158,159",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "10452,10892,10973,11077,11185,11305,11399",
+                        "endColumns": "142,80,103,107,119,93,70",
+                        "endOffsets": "10590,10968,11072,11180,11300,11394,11465"
+                    }
+                },
+                {
                     "source": "C:\\Users\\mawad\\.gradle\\caches\\transforms-3\\81c4b255e6e7701a52bf58831817d911\\transformed\\jetified-window-1.0.0-beta04\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,7,8,9,10,11,19,23,34,51",
@@ -194,6 +194,25 @@
                         "endLines": "7,8,9,10,95,194,198,350,367,375",
                         "endColumns": "11,59,51,44,59,24,24,24,24,24",
                         "endOffsets": "339,399,451,496,6076,13710,13907,19128,20242,20635"
+                    }
+                },
+                {
+                    "source": "F:\\Order-Food\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "3,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "176,832",
+                        "endLines": "7,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "483,998"
+                    },
+                    "to": {
+                        "startLines": "161,166",
+                        "startColumns": "4,4",
+                        "startOffsets": "11541,11849",
+                        "endLines": "165,168",
+                        "endColumns": "12,12",
+                        "endOffsets": "11844,12013"
                     }
                 },
                 {
@@ -228,25 +247,6 @@
                         "startOffsets": "1844,1933,2004,3686,3739,3792,3845,7259,12336,12512,12634,12896,13091",
                         "endColumns": "88,70,72,52,52,52,52,59,65,121,60,65,66",
                         "endOffsets": "1928,1999,2072,3734,3787,3840,3893,7314,12397,12629,12690,12957,13153"
-                    }
-                },
-                {
-                    "source": "F:\\Food\\Order\\order\\Flutter-app\\Order-Food\\android\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "3,14",
-                        "startColumns": "4,4",
-                        "startOffsets": "176,832",
-                        "endLines": "7,16",
-                        "endColumns": "12,12",
-                        "endOffsets": "483,998"
-                    },
-                    "to": {
-                        "startLines": "161,166",
-                        "startColumns": "4,4",
-                        "startOffsets": "11541,11849",
-                        "endLines": "165,168",
-                        "endColumns": "12,12",
-                        "endOffsets": "11844,12013"
                     }
                 }
             ]

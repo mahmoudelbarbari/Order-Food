@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "F:\\Food\\Order\\order\\Flutter-app\\Order-Food\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mk\\values-mk.xml",
+            "outputFile": "F:\\Order-Food\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mk\\values-mk.xml",
             "map": [
                 {
                     "source": "C:\\Users\\mawad\\.gradle\\caches\\transforms-3\\bfac82c78bae35df194079ad0338966b\\transformed\\jetified-play-services-base-18.1.0\\res\\values-mk\\values.xml",

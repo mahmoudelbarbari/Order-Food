@@ -13,29 +13,29 @@
 13         to allow setting breakpoints, to provide hot reload, etc.
 14    -->
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->F:\Food\Order\order\Flutter-app\Order-Food\android\app\src\debug\AndroidManifest.xml:7:5-66
-15-->F:\Food\Order\order\Flutter-app\Order-Food\android\app\src\debug\AndroidManifest.xml:7:22-64
+15-->F:\Order-Food\android\app\src\debug\AndroidManifest.xml:7:5-66
+15-->F:\Order-Food\android\app\src\debug\AndroidManifest.xml:7:22-64
 16    <uses-permission android:name="android.permission.WAKE_LOCK" />
-16-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-68
-16-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-65
+16-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-68
+16-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-65
 17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Permissions options for the `notification` group -->
-17-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-79
-17-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-76
+17-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-79
+17-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-76
 18    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-18-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-77
-18-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:13:22-74
+18-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-77
+18-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:13:22-74
 19    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-19-->[:flutter_local_notifications] F:\Food\Order\order\Flutter-app\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-81
-19-->[:flutter_local_notifications] F:\Food\Order\order\Flutter-app\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-78
+19-->[:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-81
+19-->[:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-78
 20    <uses-permission android:name="android.permission.VIBRATE" />
-20-->[:flutter_local_notifications] F:\Food\Order\order\Flutter-app\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-66
-20-->[:flutter_local_notifications] F:\Food\Order\order\Flutter-app\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-63
+20-->[:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-66
+20-->[:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-63
 21    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
-21-->[:flutter_local_notifications] F:\Food\Order\order\Flutter-app\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-81
-21-->[:flutter_local_notifications] F:\Food\Order\order\Flutter-app\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-78
+21-->[:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-81
+21-->[:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-78
 22    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" /> <!-- Required by older versions of Google Play services to create IID tokens -->
-22-->[:flutter_local_notifications] F:\Food\Order\order\Flutter-app\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-79
-22-->[:flutter_local_notifications] F:\Food\Order\order\Flutter-app\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:12:22-76
+22-->[:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-79
+22-->[:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:12:22-76
 23    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 23-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\mawad\.gradle\caches\transforms-3\1c71bdaede5fb70624c81058b12292f8\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:26:5-82
 23-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\mawad\.gradle\caches\transforms-3\1c71bdaede5fb70624c81058b12292f8\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:26:22-79
@@ -106,49 +106,49 @@
 76            android:value="2" />
 77
 78        <service
-78-->[:firebase_auth] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+78-->[:firebase_auth] F:\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
 79            android:name="com.google.firebase.components.ComponentDiscoveryService"
-79-->[:firebase_auth] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:18-89
+79-->[:firebase_auth] F:\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:18-89
 80            android:directBootAware="true"
 80-->[com.google.firebase:firebase-common:20.3.3] C:\Users\mawad\.gradle\caches\transforms-3\a7414f859da620dd63f4e151444b9ea4\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:34:13-43
 81            android:exported="false" >
 81-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\mawad\.gradle\caches\transforms-3\a5ed2787244d1d029684e4412f2ec19e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:68:13-37
 82            <meta-data
-82-->[:firebase_auth] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+82-->[:firebase_auth] F:\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
 83                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
-83-->[:firebase_auth] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
+83-->[:firebase_auth] F:\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
 84                android:value="com.google.firebase.components.ComponentRegistrar" />
-84-->[:firebase_auth] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+84-->[:firebase_auth] F:\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 85            <meta-data
-85-->[:firebase_database] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+85-->[:firebase_database] F:\Order-Food\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
 86                android:name="com.google.firebase.components:io.flutter.plugins.firebase.database.FlutterFirebaseAppRegistrar"
-86-->[:firebase_database] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-127
+86-->[:firebase_database] F:\Order-Food\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-127
 87                android:value="com.google.firebase.components.ComponentRegistrar" />
-87-->[:firebase_database] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+87-->[:firebase_database] F:\Order-Food\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 88            <meta-data
-88-->[:firebase_storage] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+88-->[:firebase_storage] F:\Order-Food\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
 89                android:name="com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar"
-89-->[:firebase_storage] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-126
+89-->[:firebase_storage] F:\Order-Food\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-126
 90                android:value="com.google.firebase.components.ComponentRegistrar" />
-90-->[:firebase_storage] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+90-->[:firebase_storage] F:\Order-Food\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 91            <meta-data
-91-->[:cloud_firestore] F:\Food\Order\order\Flutter-app\Order-Food\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+91-->[:cloud_firestore] F:\Order-Food\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
 92                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
-92-->[:cloud_firestore] F:\Food\Order\order\Flutter-app\Order-Food\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-134
+92-->[:cloud_firestore] F:\Order-Food\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-134
 93                android:value="com.google.firebase.components.ComponentRegistrar" />
-93-->[:cloud_firestore] F:\Food\Order\order\Flutter-app\Order-Food\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+93-->[:cloud_firestore] F:\Order-Food\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 94            <meta-data
-94-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:38:13-40:85
+94-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:38:13-40:85
 95                android:name="com.google.firebase.components:io.flutter.plugins.firebase.messaging.FlutterFirebaseAppRegistrar"
-95-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:39:17-128
+95-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:39:17-128
 96                android:value="com.google.firebase.components.ComponentRegistrar" />
-96-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:40:17-82
+96-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:40:17-82
 97            <meta-data
-97-->[:firebase_core] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+97-->[:firebase_core] F:\Order-Food\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
 98                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
-98-->[:firebase_core] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
+98-->[:firebase_core] F:\Order-Food\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
 99                android:value="com.google.firebase.components.ComponentRegistrar" />
-99-->[:firebase_core] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+99-->[:firebase_core] F:\Order-Food\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 100            <meta-data
 100-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\mawad\.gradle\caches\transforms-3\a5ed2787244d1d029684e4412f2ec19e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:69:13-71:85
 101                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
@@ -205,103 +205,103 @@
 126-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\mawad\.gradle\caches\transforms-3\171656154b44d66cc87c9b1e591bbc1d\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:29:17-82
 127        </service>
 128        <service
-128-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-19:72
+128-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-19:72
 129            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService"
-129-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-107
+129-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-107
 130            android:exported="false"
-130-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-37
+130-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-37
 131            android:permission="android.permission.BIND_JOB_SERVICE" />
-131-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-69
+131-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-69
 132        <service
-132-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:20:9-26:19
+132-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:20:9-26:19
 133            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService"
-133-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-97
+133-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-97
 134            android:exported="false" >
-134-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-37
+134-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-37
 135            <intent-filter>
-135-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-25:29
+135-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-25:29
 136                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-136-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:24:17-78
-136-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:24:25-75
+136-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:24:17-78
+136-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:24:25-75
 137            </intent-filter>
 138        </service>
 139
 140        <receiver
-140-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:28:9-35:20
+140-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:28:9-35:20
 141            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver"
-141-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:29:13-98
+141-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:29:13-98
 142            android:exported="true"
-142-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:30:13-36
+142-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:30:13-36
 143            android:permission="com.google.android.c2dm.permission.SEND" >
-143-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:31:13-73
+143-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:31:13-73
 144            <intent-filter>
-144-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:32:13-34:29
+144-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:32:13-34:29
 145                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-145-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:33:17-81
-145-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:33:25-78
+145-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:33:17-81
+145-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:33:25-78
 146            </intent-filter>
 147        </receiver>
 148
 149        <provider
-149-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:43:9-47:38
+149-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:43:9-47:38
 150            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider"
-150-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:44:13-102
+150-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:44:13-102
 151            android:authorities="com.example.order.flutterfirebasemessaginginitprovider"
-151-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:45:13-88
+151-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:45:13-88
 152            android:exported="false"
-152-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:46:13-37
+152-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:46:13-37
 153            android:initOrder="99" />
-153-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:47:13-35
+153-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:47:13-35
 154        <provider
-154-->[:image_picker_android] F:\Food\Order\order\Flutter-app\Order-Food\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
+154-->[:image_picker_android] F:\Order-Food\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
 155            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-155-->[:image_picker_android] F:\Food\Order\order\Flutter-app\Order-Food\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-82
+155-->[:image_picker_android] F:\Order-Food\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-82
 156            android:authorities="com.example.order.flutter.image_provider"
-156-->[:image_picker_android] F:\Food\Order\order\Flutter-app\Order-Food\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-74
+156-->[:image_picker_android] F:\Order-Food\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-74
 157            android:exported="false"
-157-->[:image_picker_android] F:\Food\Order\order\Flutter-app\Order-Food\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
+157-->[:image_picker_android] F:\Order-Food\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
 158            android:grantUriPermissions="true" >
-158-->[:image_picker_android] F:\Food\Order\order\Flutter-app\Order-Food\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
+158-->[:image_picker_android] F:\Order-Food\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
 159            <meta-data
-159-->[:image_picker_android] F:\Food\Order\order\Flutter-app\Order-Food\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:75
+159-->[:image_picker_android] F:\Order-Food\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:75
 160                android:name="android.support.FILE_PROVIDER_PATHS"
-160-->[:image_picker_android] F:\Food\Order\order\Flutter-app\Order-Food\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
+160-->[:image_picker_android] F:\Order-Food\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
 161                android:resource="@xml/flutter_image_picker_file_paths" />
-161-->[:image_picker_android] F:\Food\Order\order\Flutter-app\Order-Food\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-72
+161-->[:image_picker_android] F:\Order-Food\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-72
 162        </provider>
 163
 164        <receiver
-164-->[:flutter_local_notifications] F:\Food\Order\order\Flutter-app\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-18:40
+164-->[:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-18:40
 165            android:name="com.dexterous.flutterlocalnotifications.ActionBroadcastReceiver"
-165-->[:flutter_local_notifications] F:\Food\Order\order\Flutter-app\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-91
+165-->[:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-91
 166            android:exported="false" />
-166-->[:flutter_local_notifications] F:\Food\Order\order\Flutter-app\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-37
+166-->[:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-37
 167        <receiver
-167-->[:flutter_local_notifications] F:\Food\Order\order\Flutter-app\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:19:9-21:40
+167-->[:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:19:9-21:40
 168            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver"
-168-->[:flutter_local_notifications] F:\Food\Order\order\Flutter-app\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-97
+168-->[:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-97
 169            android:exported="false" />
-169-->[:flutter_local_notifications] F:\Food\Order\order\Flutter-app\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-37
+169-->[:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-37
 170        <receiver
-170-->[:flutter_local_notifications] F:\Food\Order\order\Flutter-app\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:22:9-31:20
+170-->[:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:22:9-31:20
 171            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver"
-171-->[:flutter_local_notifications] F:\Food\Order\order\Flutter-app\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-101
+171-->[:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-101
 172            android:exported="false" >
-172-->[:flutter_local_notifications] F:\Food\Order\order\Flutter-app\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-37
+172-->[:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-37
 173            <intent-filter>
-173-->[:flutter_local_notifications] F:\Food\Order\order\Flutter-app\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:25:13-30:29
+173-->[:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:25:13-30:29
 174                <action android:name="android.intent.action.BOOT_COMPLETED" />
-174-->[:flutter_local_notifications] F:\Food\Order\order\Flutter-app\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:26:17-79
-174-->[:flutter_local_notifications] F:\Food\Order\order\Flutter-app\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:26:25-76
+174-->[:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:26:17-79
+174-->[:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:26:25-76
 175                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
-175-->[:flutter_local_notifications] F:\Food\Order\order\Flutter-app\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:27:17-84
-175-->[:flutter_local_notifications] F:\Food\Order\order\Flutter-app\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:27:25-81
+175-->[:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:27:17-84
+175-->[:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:27:25-81
 176                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
-176-->[:flutter_local_notifications] F:\Food\Order\order\Flutter-app\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:28:17-82
-176-->[:flutter_local_notifications] F:\Food\Order\order\Flutter-app\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:28:25-79
+176-->[:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:28:17-82
+176-->[:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:28:25-79
 177                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
-177-->[:flutter_local_notifications] F:\Food\Order\order\Flutter-app\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:29:17-82
-177-->[:flutter_local_notifications] F:\Food\Order\order\Flutter-app\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:29:25-79
+177-->[:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:29:17-82
+177-->[:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:29:25-79
 178            </intent-filter>
 179        </receiver>
 180
@@ -385,10 +385,10 @@
 221            android:permission="com.google.android.c2dm.permission.SEND" >
 221-->[com.google.firebase:firebase-messaging:23.2.0] C:\Users\mawad\.gradle\caches\transforms-3\d5a8f692488500b5dcc859a2fc2151f1\transformed\jetified-firebase-messaging-23.2.0\AndroidManifest.xml:34:13-73
 222            <intent-filter>
-222-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:32:13-34:29
+222-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:32:13-34:29
 223                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-223-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:33:17-81
-223-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:33:25-78
+223-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:33:17-81
+223-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:33:25-78
 224            </intent-filter>
 225        </receiver>
 226        <!--
@@ -404,10 +404,10 @@
 233            android:exported="false" >
 233-->[com.google.firebase:firebase-messaging:23.2.0] C:\Users\mawad\.gradle\caches\transforms-3\d5a8f692488500b5dcc859a2fc2151f1\transformed\jetified-firebase-messaging-23.2.0\AndroidManifest.xml:47:13-37
 234            <intent-filter android:priority="-500" >
-234-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-25:29
+234-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-25:29
 235                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-235-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:24:17-78
-235-->[:firebase_messaging] F:\Food\Order\order\Flutter-app\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:24:25-75
+235-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:24:17-78
+235-->[:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:24:25-75
 236            </intent-filter>
 237        </service>
 238

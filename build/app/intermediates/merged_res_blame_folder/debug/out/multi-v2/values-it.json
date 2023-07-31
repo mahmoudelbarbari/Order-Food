@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "F:\\Food\\Order\\order\\Flutter-app\\Order-Food\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-it\\values-it.xml",
+            "outputFile": "F:\\Order-Food\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-it\\values-it.xml",
             "map": [
                 {
                     "source": "C:\\Users\\mawad\\.gradle\\caches\\transforms-3\\e6c5931a131f9074365fa6b30384fdd0\\transformed\\browser-1.4.0\\res\\values-it\\values-it.xml",

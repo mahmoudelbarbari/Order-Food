@@ -13,21 +13,21 @@ class LoginWidget extends StatefulWidget {
 }
 
 class _LoginWidgetState extends State<LoginWidget> {
-  late TextEditingController _controller_email;
-  late TextEditingController _controller_password;
+  late TextEditingController controllerEmail;
+  late TextEditingController controllerPassword;
   final GlobalKey<FormState> _keyform = GlobalKey<FormState>();
 
   @override
   void initState() {
     super.initState();
-    _controller_email = TextEditingController();
-    _controller_password = TextEditingController();
+    controllerEmail = TextEditingController();
+    controllerPassword = TextEditingController();
   }
 
   @override
   void dispose() {
-    _controller_email.dispose();
-    _controller_password.dispose();
+    controllerEmail.dispose();
+    controllerPassword.dispose();
     super.dispose();
   }
 
@@ -62,7 +62,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                   return 'please fill the form';
                 }
               },
-              controller: _controller_email,
+              controller: controllerEmail,
             ),
           ),
           const SizedBox(height: 12),
@@ -70,7 +70,7 @@ class _LoginWidgetState extends State<LoginWidget> {
             obscureText: true,
             enableSuggestions: false,
             autocorrect: false,
-            controller: _controller_password,
+            controller: controllerPassword,
             style: const TextStyle(fontSize: 20),
             decoration: const InputDecoration(
               border: OutlineInputBorder(),
@@ -90,8 +90,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                 setState(() {
                   if (_keyform.currentState!.validate()) {
                     context.read<LoginCubit>().remoteLogin(
-                        _controller_email.text.trim(),
-                        _controller_password.text);
+                        controllerEmail.text.trim(), controllerPassword.text);
                   } else {
                     return;
                   }
