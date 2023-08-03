@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:order/core/error/widgets/loading_widget.dart';
+import 'package:order/core/widgets/loading_widget.dart';
 import 'package:order/features/event/data/models/titcket_model.dart';
 import 'package:order/features/event/domain/entities/event_entities.dart';
 import 'package:order/features/event/presentation/cubit/cubit_message/chat_cubit.dart';

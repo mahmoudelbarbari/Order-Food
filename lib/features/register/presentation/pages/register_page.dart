@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:order/core/widgets/app_bar_widget.dart';
 import 'package:order/features/login/presentation/pages/login_page.dart';
 import 'package:order/features/register/domain/entities/register_entities.dart';
 import 'package:order/features/register/presentation/cubit/register_cubit.dart';
@@ -19,8 +20,8 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Register Page"),
+      appBar: const AppBarWidget(
+        pageName: 'Register Page',
       ),
       body: _buildBody(),
     );

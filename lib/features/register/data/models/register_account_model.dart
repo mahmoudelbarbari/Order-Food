@@ -28,7 +28,7 @@ class RegisterAccountModel extends RegisterAccountEntity {
     };
   }
 
-  factory RegisterAccountModel.fromMap(Map<String, dynamic> map) {
+  factory RegisterAccountModel.fromMap(map) {
     return RegisterAccountModel(
       idUser: map['id'],
       username: map['username'],

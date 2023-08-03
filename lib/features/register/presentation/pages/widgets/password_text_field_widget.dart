@@ -16,7 +16,8 @@ class PasswordTextFieldWidget extends StatelessWidget {
       controller: controllerPassword,
       style: const TextStyle(fontSize: 20),
       decoration: const InputDecoration(
-        border: OutlineInputBorder(),
+        border: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(12))),
         labelText: 'Password',
         prefixIcon: Icon(Icons.lock),
       ),

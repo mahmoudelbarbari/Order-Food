@@ -2,6 +2,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:order/core/drawer_menu.dart';
+import 'package:order/core/widgets/app_bar_widget.dart';
+import 'package:order/core/widgets/loading_widget.dart';
 import 'package:order/features/cart/presentation/cubit/cart_cubit.dart';
 import 'package:order/features/cart/presentation/cubit/cart_state.dart';
 import 'package:order/features/cart/presentation/pages/widgets/cart_widget.dart';
@@ -18,43 +20,31 @@ class _CartPageState extends State<CartPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       endDrawer: const NavigationDrawerr(),
-      appBar: AppBar(
+      appBar: const AppBarWidget(
+        pageName: "Cart",
         centerTitle: false,
-        title: const Text(
-          'Cart',
-          style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
       ),
-      body: BlocProvider<CartCubit>(
-        create: (context) => CartCubit()..getAllCartItems(),
-        child: BlocConsumer<CartCubit, CartState>(
-          listener: (context, state) {
-            if (state is CartError) {
-              if (kDebugMode) {
-                print(state.errorMessage);
-              }
+      body: BlocConsumer<CartCubit, CartState>(
+        listener: (context, state) {
+          if (state is CartError) {
+            if (kDebugMode) {
+              print(state.errorMessage);
             }
-          },
-          builder: (context, state) {
-            if (state is CartItemsLoadded) {
-              return CartWidget(menuModel: state.menuModel);
-            }
-            if (state is CartError) {
-              if (kDebugMode) {
-                print(state.errorMessage);
-              }
-            }
-            return const Center(
-              child: Text(
-                'Your cart is empty..!',
-                style: TextStyle(fontSize: 15),
-              ),
-            );
-          },
-        ),
+          }
+        },
+        builder: (context, state) {
+          if (state is CartLoading) {
+            return const LoadingWidget();
+          } else if (state is CartItemsLoadded) {
+            return CartWidget(menuModel: state.menuModel);
+          }
+          return const Center(
+            child: Text(
+              'Your cart is empty..!',
+              style: TextStyle(fontSize: 15),
+            ),
+          );
+        },
       ),
     );
   }

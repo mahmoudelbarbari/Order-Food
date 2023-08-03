@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:order/features/event/presentation/cubit/ticket_cubit.dart';
 import 'package:order/features/event/presentation/pages/ticket_page.dart';
 import 'package:order/features/login/presentation/pages/login_page.dart';
+import 'package:order/features/register/presentation/pages/profile_page.dart';
 import 'package:order/features/restaurant/presentation/cubit/restaurant_cubit.dart';
 import 'package:order/features/restaurant/presentation/pages/add_restaurant_page.dart';
 import 'package:order/features/restaurant/presentation/pages/get_all_restaurants_page/all_restaurants_page.dart';
@@ -66,6 +67,19 @@ class NavigationDrawerr extends StatelessWidget {
                   builder: (context) => const RestaurantPage()));
             },
           ),
+          ListTile(
+            leading: const Icon(Icons.add_box_rounded),
+            title: const Text(
+              'Profile',
+              style: TextStyle(
+                fontSize: 14,
+              ),
+            ),
+            onTap: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const ProfilePage()));
+            },
+          ),
           const Divider(color: Color.fromRGBO(255, 255, 255, 0.08)),
           ListTile(
             leading: const Icon(Icons.logout_outlined),
@@ -88,6 +102,13 @@ class NavigationDrawerr extends StatelessWidget {
                       content: const Text("Are you sure you want to logout?"),
                       actions: [
                         TextButton(
+                          onPressed: () => Navigator.pop(context, 'Cancel'),
+                          child: const Text(
+                            'Cancel',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        TextButton(
                           child: const Text("Confirm"),
                           onPressed: () async {
                             context.read<LoginCubit>().logOut();
@@ -95,10 +116,6 @@ class NavigationDrawerr extends StatelessWidget {
                                 MaterialPageRoute(
                                     builder: (context) => const LoginPage()));
                           },
-                        ),
-                        TextButton(
-                          onPressed: () => Navigator.pop(context, 'Cancel'),
-                          child: const Text('Cancel'),
                         ),
                       ],
                     );

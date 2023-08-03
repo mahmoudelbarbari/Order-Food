@@ -15,7 +15,8 @@ class RegisterTextFieldWidget extends StatelessWidget {
     return TextFormField(
       style: const TextStyle(fontSize: 20),
       decoration: InputDecoration(
-        border: const OutlineInputBorder(),
+        border: const OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(12))),
         labelText: labelText,
         prefixIcon: const Icon(Icons.person),
       ),

@@ -20,42 +20,55 @@ class _TicketWidgetState extends State<TicketWidget> {
     setState(() {
       context.read<TicketCubit>().getAllTickets();
     });
-    return Future.delayed(
+    return await Future.delayed(
       const Duration(seconds: 0),
     );
   }
 
   @override
   Widget build(BuildContext context) {
+    const divider = Divider(
+      thickness: 1,
+      height: 3,
+    );
     return RefreshIndicator(
       onRefresh: _refresh,
-      child: ListView.separated(
-        itemCount: widget.eventEntity.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            trailing: const Icon(Icons.arrow_circle_right),
-            title: Text(
-              widget.eventEntity[index].title!,
-              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
-            subtitle: Text(
-              widget.eventEntity[index].description!,
-              style: const TextStyle(fontSize: 16),
-            ),
-            contentPadding: const EdgeInsets.symmetric(horizontal: 10),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (_) => EventDetailsPage(
-                    eventEntity: widget.eventEntity[index],
-                  ),
-                ),
-              );
-            },
-          );
-        },
-        separatorBuilder: (context, index) => const Divider(thickness: 1),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          divider,
+          Expanded(
+            child: ListView.separated(
+                itemCount: widget.eventEntity.length,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    trailing: const Icon(Icons.arrow_circle_right),
+                    title: Text(
+                      widget.eventEntity[index].title!,
+                      style: const TextStyle(
+                          fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                    subtitle: Text(
+                      widget.eventEntity[index].description!,
+                      style: const TextStyle(fontSize: 16),
+                    ),
+                    contentPadding: const EdgeInsets.symmetric(horizontal: 10),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => EventDetailsPage(
+                            eventEntity: widget.eventEntity[index],
+                          ),
+                        ),
+                      );
+                    },
+                  );
+                },
+                separatorBuilder: (context, index) => divider),
+          ),
+        ],
       ),
     );
   }

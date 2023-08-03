@@ -1,14 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:order/core/database/firebase_db.dart';
-import 'package:order/features/login/domain/entities/account_entites.dart';
 import 'package:order/features/register/data/models/register_account_model.dart';
 import 'package:order/features/register/domain/entities/register_entities.dart';
 
 abstract class RemoteRegisterDatasource {
   Future<RegisterAccountEntity> remoteRegisterUser(String email,
       String password, RegisterAccountEntity registerAccountEntity);
-  Future<LoginBaseResponse> getUserInfo(
-      RegisterAccountModel registerAccountModel);
+  Future<RegisterAccountEntity> getUserInfo();
 }
 
 class RemoteRegisterDatasourceImlp implements RemoteRegisterDatasource {
@@ -55,22 +53,19 @@ class RemoteRegisterDatasourceImlp implements RemoteRegisterDatasource {
   }
 
   @override
-  Future<LoginBaseResponse> getUserInfo(
-      RegisterAccountModel registerAccountModel) async {
+  Future<RegisterAccountEntity> getUserInfo() async {
+    User? user = firebaseDB.auth.currentUser;
     try {
-      final user = firebaseDB.auth.currentUser;
       await firebaseDB.firebaseFirestore
           .collection("Users")
           .doc(user!.uid)
           .get()
           .then((value) {
-        RegisterAccountModel.fromMap(value.data()!);
+        RegisterAccountModel.fromMap(value.data());
       });
-      LoginBaseResponse(
-          status: true, message: "Fetching the user info is Done!");
     } catch (e) {
-      LoginBaseResponse(status: false, message: e.toString());
+      return RegisterAccountEntity(message: e.toString());
     }
-    return LoginBaseResponse(status: false, message: "Server Error");
+    return RegisterAccountEntity(message: "server error", replyCode: 500);
   }
 }

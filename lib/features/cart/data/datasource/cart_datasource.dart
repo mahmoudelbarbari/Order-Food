@@ -65,13 +65,22 @@ class CartDatasourceImpl extends CartDatasourceInterface {
 
   @override
   Future<List<MenuModel>> getAllCartItems() async {
+    // final retrive = firebaseFirestore.collection('Cart');
+    // List<MenuModel> cartItems = [];
+    // retrive.get().then((querySnapshot) {
+    //   for (var doc in querySnapshot.docs) {
+    //     cartItems.add(MenuModel.fromSnapShot(doc));
+    //   }
+    // });
+    // return cartItems;
     final retrive = firebaseFirestore.collection('Cart');
+    final querySnapshot = await retrive.get();
+    querySnapshot.docs.map((e) => e.data()).toList();
     List<MenuModel> cartItems = [];
-    retrive.get().then((querySnapshot) {
-      for (var doc in querySnapshot.docs) {
-        cartItems.add(MenuModel.fromSnapShot(doc));
-      }
-    });
+    for (QueryDocumentSnapshot<Map<String, dynamic>> doc
+        in querySnapshot.docs) {
+      cartItems.add(MenuModel.fromSnapShot(doc));
+    }
     return cartItems;
   }
 }

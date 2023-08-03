@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:order/features/login/presentation/cubit/login_cubit.dart';
 import 'package:order/features/register/presentation/pages/register_page.dart';
 
-import '../../../../../core/util/botton_auth_row_widget.dart';
+import '../../../../../core/widgets/botton_auth_row_widget.dart';
+import '../../../../../core/widgets/common_elevated_button_widget.dart';
+import '../../cubit/login_cubit.dart';
+import 'login_header_widget.dart';
+import 'login_textfield_widget.dart';
 
 class LoginWidget extends StatefulWidget {
   const LoginWidget({super.key});
@@ -33,80 +36,48 @@ class _LoginWidgetState extends State<LoginWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: ListView(
-        children: [
-          const Padding(
-            padding: EdgeInsets.fromLTRB(10, 50, 10, 60),
-            child: Text(
-              'Welcome back',
-              style: TextStyle(fontSize: 30, color: Colors.red),
-              textAlign: TextAlign.center,
+    return Form(
+      key: _keyform,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+        child: ListView(
+          children: [
+            const SizedBox(height: 100),
+            const LoginHeaderWidget(),
+            const SizedBox(height: 15),
+            LoginTextFieldWidget(
+                labelText: "Email",
+                obscureText: false,
+                prefixIcon: const Icon(Icons.person),
+                controllerEmail: controllerEmail),
+            const SizedBox(height: 12),
+            LoginTextFieldWidget(
+              obscureText: true,
+              controllerEmail: controllerPassword,
+              labelText: "Password",
+              prefixIcon: const Icon(Icons.lock),
             ),
-          ),
-          Form(
-            key: _keyform,
-            child: TextFormField(
-              keyboardType: TextInputType.emailAddress,
-              style: const TextStyle(fontSize: 20),
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Email',
-                prefixIcon: Icon(Icons.person),
-              ),
-              validator: (value) {
-                if (value!.isNotEmpty) {
-                  return null;
-                } else {
-                  return 'please fill the form';
-                }
-              },
-              controller: controllerEmail,
-            ),
-          ),
-          const SizedBox(height: 12),
-          TextFormField(
-            obscureText: true,
-            enableSuggestions: false,
-            autocorrect: false,
-            controller: controllerPassword,
-            style: const TextStyle(fontSize: 20),
-            decoration: const InputDecoration(
-              border: OutlineInputBorder(),
-              labelText: 'Password',
-              prefixIcon: Icon(Icons.lock),
-            ),
-          ),
-          const SizedBox(height: 12),
-          Container(
-            padding: const EdgeInsets.all(10.0),
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  minimumSize: const Size(327, 56),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15))),
-              onPressed: () {
+            const SizedBox(height: 12),
+            CommonElevatedButton(
+              text: "Log in",
+              onTap: () {
                 setState(() {
                   if (_keyform.currentState!.validate()) {
                     context.read<LoginCubit>().remoteLogin(
                         controllerEmail.text.trim(), controllerPassword.text);
-                  } else {
-                    return;
                   }
                 });
               },
-              child: const Text('Log in'),
             ),
-          ),
-          BottomAuthRowWidget(
-            text: "Don't have an account",
-            value: "Register Now",
-            onTap: () => Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => const RegisterPage(),
-            )),
-          ),
-        ],
+            BottomAuthRowWidget(
+              text: "Don't have an account",
+              value: "Register Now",
+              onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => const RegisterPage(),
+              )),
+            ),
+          ],
+        ),
       ),
     );
   }

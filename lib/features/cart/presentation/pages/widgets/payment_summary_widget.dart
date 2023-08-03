@@ -12,18 +12,21 @@ class PaymentSummaryWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: <Widget>[
-        Text(
-          startName,
-          style: const TextStyle(fontSize: 10, color: Colors.black54),
-        ),
-        Text(
-          endName,
-          style: const TextStyle(fontSize: 15),
-        ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Text(
+            startName,
+            style: const TextStyle(fontSize: 15, color: Colors.black54),
+          ),
+          Text(
+            endName,
+            style: const TextStyle(fontSize: 15),
+          ),
+        ],
+      ),
     );
   }
 }

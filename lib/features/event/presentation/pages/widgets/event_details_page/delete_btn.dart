@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:order/core/error/widgets/loading_widget.dart';
+import 'package:order/core/widgets/loading_widget.dart';
 import 'package:order/features/event/presentation/cubit/ticket_cubit.dart';
 import 'package:order/features/event/presentation/cubit/ticket_state.dart';
 import 'package:order/features/event/presentation/pages/event_page.dart';

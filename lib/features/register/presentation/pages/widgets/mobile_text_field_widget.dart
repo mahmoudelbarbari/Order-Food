@@ -15,7 +15,8 @@ class MobileTextFieldWidget extends StatelessWidget {
       keyboardType: TextInputType.number,
       style: const TextStyle(fontSize: 20),
       decoration: const InputDecoration(
-        border: OutlineInputBorder(),
+        border: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(12))),
         labelText: 'Phone Number',
         prefixIcon: Icon(Icons.smartphone_sharp),
       ),

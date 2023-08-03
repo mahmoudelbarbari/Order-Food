@@ -9,7 +9,7 @@ class CartCubit extends Cubit<CartState> {
   late AddProductToCartUsecase addProductToCartUsecase;
   late GetAllCartItemsUsecase getAllCartItemsUsecase;
 
-  CartCubit() : super(CartStateInt());
+  CartCubit() : super(CartLoading());
 
   Future<void> addProductToCart(MenuModel menuModel) async {
     try {

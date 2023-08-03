@@ -3,11 +3,11 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:order/core/drawer_menu.dart';
-import 'package:order/core/error/widgets/loading_widget.dart';
+import 'package:order/core/widgets/loading_widget.dart';
 import 'package:order/features/cart/presentation/pages/cart_page.dart';
 import 'package:order/features/event/presentation/cubit/ticket_cubit.dart';
 import 'package:order/features/event/presentation/cubit/ticket_state.dart';
-import 'package:order/features/event/presentation/pages/widgets/event_add_update_pages/event_add_update_page.dart';
+import 'package:order/features/event/presentation/pages/widgets/floating_button_home_widget.dart';
 
 import '../pages/widgets/ticket_widget.dart';
 
@@ -18,7 +18,7 @@ class TicketPage extends StatefulWidget {
   State<TicketPage> createState() => _TicketPageState();
 }
 
-String greetings() {
+String _greetings() {
   final hour = TimeOfDay.now().hour;
 
   if (hour <= 12) {
@@ -34,6 +34,8 @@ class _TicketPageState extends State<TicketPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
         actions: [
           Badge(
             child: IconButton(
@@ -46,15 +48,13 @@ class _TicketPageState extends State<TicketPage> {
           ),
         ],
         title: Text(
-          'Welcome, ${greetings()}',
-          style: const TextStyle(
-            fontSize: 18,
-          ),
+          'Welcome, ${_greetings()}',
+          style: const TextStyle(fontSize: 18, color: Colors.black),
         ),
       ),
       drawer: const NavigationDrawerr(),
       body: _buildBody(),
-      floatingActionButton: _buildFloatingBtn(context),
+      floatingActionButton: const FloatingButtonHomeWidget(),
     );
   }
 
@@ -81,23 +81,6 @@ class _TicketPageState extends State<TicketPage> {
           }
           return const LoadingWidget();
         },
-      ),
-    );
-  }
-
-  Widget _buildFloatingBtn(BuildContext context) {
-    return FloatingActionButton(
-      onPressed: () {
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (_) => const EventAddUpdatePage(
-                      isUpdateEvent: false,
-                    )));
-      },
-      child: const Icon(
-        Icons.border_color_rounded,
-        color: Colors.white,
       ),
     );
   }

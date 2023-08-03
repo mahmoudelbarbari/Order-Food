@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:order/features/login/presentation/pages/login_page.dart';
 import 'package:order/features/register/domain/entities/register_entities.dart';
-import 'package:order/features/register/presentation/cubit/register_cubit.dart';
 
-import '../../../../../core/util/botton_auth_row_widget.dart';
+import '../../../../../core/widgets/botton_auth_row_widget.dart';
+import '../../../../../core/widgets/common_elevated_button_widget.dart';
+import '../../cubit/register_cubit.dart';
 import 'email_text_field_widget.dart';
 import 'mobile_text_field_widget.dart';
 import 'password_text_field_widget.dart';
@@ -19,17 +20,16 @@ class RegisterWidget extends StatefulWidget {
 }
 
 class _RegisterWidgetState extends State<RegisterWidget> {
-  late TextEditingController controllerUsername;
-  late TextEditingController controllerPassword;
-  late TextEditingController controllerName;
-  late TextEditingController controllerEmail;
-  late TextEditingController controllerGender;
-  late TextEditingController controllerPhone;
-  late GlobalKey<FormState> _keyform;
+  late final TextEditingController controllerUsername;
+  late final TextEditingController controllerPassword;
+  late final TextEditingController controllerName;
+  late final TextEditingController controllerEmail;
+  late final TextEditingController controllerGender;
+  late final TextEditingController controllerPhone;
+  late final GlobalKey<FormState> _keyform;
 
   @override
   void initState() {
-    super.initState();
     controllerUsername = TextEditingController();
     controllerPassword = TextEditingController();
     controllerName = TextEditingController();
@@ -37,6 +37,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
     controllerGender = TextEditingController();
     controllerPhone = TextEditingController();
     _keyform = GlobalKey<FormState>();
+    super.initState();
   }
 
   @override
@@ -58,87 +59,86 @@ class _RegisterWidgetState extends State<RegisterWidget> {
 
   @override
   Widget build(BuildContext context) {
+    const sizedBox = SizedBox(height: 12);
     return Form(
       key: _keyform,
-      child: ListView(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                RegisterTextFieldWidget(
-                    controller: controllerUsername, labelText: 'Username'),
-                const SizedBox(height: 12),
-                RegisterTextFieldWidget(
-                    controller: controllerName, labelText: 'Name'),
-                const SizedBox(height: 12),
-                EmailTextFieldWidget(controllerEmail: controllerEmail),
-                const SizedBox(height: 12),
-                PasswordTextFieldWidget(controllerPassword: controllerPassword),
-                const SizedBox(height: 12),
-                DropdownButtonFormField<String?>(
-                  hint: const Text(
-                    'Gender',
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  decoration: const InputDecoration(
-                    prefixIcon: Icon(Icons.person),
-                    border: OutlineInputBorder(),
-                  ),
-                  value: selectedValue,
-                  icon: const Icon(Icons.keyboard_arrow_down),
-                  items: items.map((String item) {
-                    return DropdownMenuItem(
-                      value: item,
-                      child: Text(
-                        item,
-                        style: const TextStyle(fontSize: 16),
-                      ),
-                    );
-                  }).toList(),
-                  onChanged: (value) {
-                    setState(() {
-                      controllerGender.text = value!;
-                    });
-                  },
+      child: ListView(children: [
+        Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              RegisterTextFieldWidget(
+                  controller: controllerUsername, labelText: 'Username'),
+              sizedBox,
+              RegisterTextFieldWidget(
+                  controller: controllerName, labelText: 'Name'),
+              sizedBox,
+              EmailTextFieldWidget(controllerEmail: controllerEmail),
+              sizedBox,
+              PasswordTextFieldWidget(controllerPassword: controllerPassword),
+              sizedBox,
+              DropdownButtonFormField<String?>(
+                borderRadius: BorderRadius.circular(12),
+                hint: const Text(
+                  'Gender',
+                  style: TextStyle(fontSize: 20),
                 ),
-                const SizedBox(height: 12),
-                MobileTextFieldWidget(controllerPhone: controllerPhone),
-                const SizedBox(height: 12),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      minimumSize: const Size(327, 56),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15))),
-                  onPressed: () {
-                    setState(() {
-                      if (_keyform.currentState!.validate()) {
-                        context.read<RegisterCubit>().registerAccountFromRemote(
-                            registerAccountEntity: RegisterAccountEntity(
-                              gender: controllerGender.text.trim(),
-                              name: controllerName.text,
-                              phoneNumber: controllerPhone.text,
-                              username: controllerUsername.text,
-                            ),
-                            email: controllerEmail.text.trim(),
-                            password: controllerPassword.text);
-                      }
-                    });
-                  },
-                  child: const Text('Sign up'),
+                decoration: const InputDecoration(
+                  prefixIcon: Icon(Icons.person),
+                  border: OutlineInputBorder(
+                      gapPadding: 12,
+                      borderRadius: BorderRadius.all(Radius.circular(12))),
                 ),
-                BottomAuthRowWidget(
-                    text: "Already have an account? ",
-                    value: "Login Now",
-                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => const LoginPage(),
-                        ))),
-              ],
-            ),
+                value: selectedValue,
+                icon: const Icon(Icons.keyboard_arrow_down),
+                items: items.map((String item) {
+                  return DropdownMenuItem(
+                    value: item,
+                    child: Text(
+                      item,
+                      style: const TextStyle(fontSize: 16),
+                    ),
+                  );
+                }).toList(),
+                onChanged: (value) {
+                  setState(() {
+                    controllerGender.text = value!;
+                  });
+                },
+              ),
+              sizedBox,
+              MobileTextFieldWidget(controllerPhone: controllerPhone),
+              sizedBox,
+              CommonElevatedButton(
+                text: "Sign up",
+                onTap: () {
+                  setState(() {
+                    if (_keyform.currentState!.validate()) {
+                      context.read<RegisterCubit>().registerAccountFromRemote(
+                          registerAccountEntity: RegisterAccountEntity(
+                            gender: controllerGender.text.trim(),
+                            name: controllerName.text,
+                            phoneNumber: controllerPhone.text,
+                            username: controllerUsername.text,
+                          ),
+                          email: controllerEmail.text.trim(),
+                          password: controllerPassword.text);
+                    }
+                  });
+                },
+              ),
+              BottomAuthRowWidget(
+                text: "Already have an account? ",
+                value: "Login Now",
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const LoginPage(),
+                )),
+              ),
+            ],
           ),
-        ],
-      ),
+        ),
+      ]),
     );
   }
 }

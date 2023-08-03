@@ -24,7 +24,7 @@ class TicketReporisatoryImlp implements TicketReporisatory {
 
   @override
   Future<List<EventEntity>> remoteGetAllTickets() async {
-    return remoteTicketDatasource.remoteGetAllTickets();
+    return await remoteTicketDatasource.remoteGetAllTickets();
   }
 
   @override
