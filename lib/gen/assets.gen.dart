@@ -9,8 +9,23 @@
 
 import 'package:flutter/widgets.dart';
 
+class $AssetsImagesGen {
+  const $AssetsImagesGen();
+
+  /// File path: assets/images/empty_list.svg
+  String get emptyList => 'assets/images/empty_list.svg';
+
+  /// File path: assets/images/profile.svg
+  String get profile => 'assets/images/profile.svg';
+
+  /// List of all assets
+  List<String> get values => [emptyList, profile];
+}
+
 class Assets {
   Assets._();
+
+  static const $AssetsImagesGen images = $AssetsImagesGen();
 }
 
 class AssetGenImage {

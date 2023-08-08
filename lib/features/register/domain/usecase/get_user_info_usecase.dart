@@ -5,7 +5,7 @@ class GetUserInfoUsecase {
   final RegisterAccountRepository _registerAccountRepository;
   GetUserInfoUsecase(this._registerAccountRepository);
 
-  Future<RegisterAccountEntity> call() async {
+  Future<List<RegisterAccountEntity>> call() async {
     return await _registerAccountRepository.getUserInfo();
   }
 }

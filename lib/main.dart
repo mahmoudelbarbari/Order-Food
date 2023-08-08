@@ -23,7 +23,6 @@ import 'package:order/features/restaurant/presentation/pages/menu_page/menu_page
 import 'core/services/push_notification_service.dart';
 import 'features/event/presentation/cubit/ticket_cubit.dart';
 import 'features/login/presentation/pages/login_page.dart';
-import 'features/register/presentation/cubit/profile_cubit.dart';
 import 'firebase_options.dart';
 import 'injection_container.dart'
     as di; // di shortcut for Dependency injection.
@@ -64,7 +63,6 @@ class MyApp extends StatelessWidget {
           BlocProvider(create: (_) => di.sl<MenuCubit>()..getAllMenu()),
           BlocProvider(create: (_) => di.sl<CartCubit>()..getAllCartItems()),
           BlocProvider(create: (_) => di.sl<ChatCubit>()..getChatData()),
-          BlocProvider(create: (_) => di.sl<ProfileCubit>()..getUserInfo()),
         ],
         child: MaterialApp(
           title: 'Food App',

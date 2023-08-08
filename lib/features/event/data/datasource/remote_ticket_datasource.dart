@@ -50,10 +50,38 @@ class RemoteTicketDatasource extends TicketDatasourceInterface {
   @override
   Future<BaseResponse> remoteDeleteTicket() async {
     try {
-      await firebaseFirestore.doc("Ticket").delete();
-      return BaseResponse(status: true, message: "Ticket Added Successfully");
+      firebaseFirestore.collection('Ticket').get().then((snapshot) {
+        for (DocumentSnapshot ds in snapshot.docs) {
+          ds.reference.delete();
+        }
+      });
+      // DocumentReference docRef = firebaseFirestore.collection("Ticket").doc();
+      // docRef.get().then((DocumentSnapshot documentSnapshot) {
+      //   firebaseFirestore.runTransaction((Transaction myTransaction) async {
+      //     myTransaction.delete(documentSnapshot.reference);
+      //   });
+      // });
+
+      // await firebaseFirestore
+      //     .collection('Ticket')
+      //     .snapshots()
+      //     .forEach((querySnapshot) {
+      //   for (QueryDocumentSnapshot docSnapshot in querySnapshot.docs) {
+      //     docSnapshot.id;
+
+      //     print("id of document========${docSnapshot.id}");
+      //     var ids = docSnapshot.id;
+      //     //deleting the doc with id
+
+      //     firebaseFirestore.collection("Ticket").doc(ids).update({
+      //       'title': FieldValue.delete(),
+      //       'description': FieldValue.delete()
+      //     });
+      //   }
+      // });
+      return BaseResponse(status: true, message: "Ticket Deleted Successfully");
     } catch (e) {
-      return BaseResponse(status: false, message: "Something went wrong");
+      return BaseResponse(status: false, message: e.toString());
     }
   }
 

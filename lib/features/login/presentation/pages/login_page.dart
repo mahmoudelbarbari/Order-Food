@@ -21,8 +21,8 @@ class _LoginPageState extends State<LoginPage> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Column(
-          children: const [
+        title: const Column(
+          children: [
             SizedBox(height: 20),
             Text(
               'Food',

@@ -50,7 +50,9 @@ class _FormWidgetState extends State<FormWidget> {
                   controller: descriptionController),
               FormSubmitBtn(
                   isUpdateEvent: widget.isUpdateEvent,
-                  onPressed: validateFormThenUpdateOrAddPost),
+                  onPressed: () {
+                    validateFormThenUpdateOrAddPost();
+                  }),
             ]),
       ]),
     );
@@ -60,10 +62,6 @@ class _FormWidgetState extends State<FormWidget> {
     final isValid = _formKey.currentState!.validate();
 
     if (isValid) {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (_) => const TicketPage()),
-      );
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
           backgroundColor: Colors.green,
           content: Text("You created an ticket successfully")));
@@ -72,7 +70,11 @@ class _FormWidgetState extends State<FormWidget> {
         title: titleController.text,
         description: descriptionController.text,
       );
-
+      BlocProvider.of<TicketCubit>(context).getAllTickets();
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (_) => const TicketPage()),
+      );
       if (widget.isUpdateEvent) {
         BlocProvider.of<TicketCubit>(context).updateTicket(eventEntity);
       } else {

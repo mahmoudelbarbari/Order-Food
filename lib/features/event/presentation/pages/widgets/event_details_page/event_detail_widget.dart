@@ -10,6 +10,9 @@ import 'package:order/features/event/presentation/cubit/cubit_message/chat_state
 import 'package:order/features/event/presentation/cubit/ticket_cubit.dart';
 import 'package:order/features/login/domain/entities/account_entites.dart';
 
+import '../../../../../../core/widgets/common_alert_dialog_widget.dart';
+import '../../ticket_page.dart';
+
 class EventDetailWidget extends StatefulWidget {
   final EventEntity eventEntity;
   final List<ChattModel> chatModel;
@@ -24,13 +27,25 @@ class EventDetailWidget extends StatefulWidget {
 }
 
 class _EventDetailWidgetState extends State<EventDetailWidget> {
-  TextEditingController addCommentcontroller = TextEditingController();
+  late final TextEditingController addCommentcontroller;
   Account account = Account();
 
   Future<void> refresh() async {
     setState(() {
       context.read<ChatCubit>().getChatData();
     });
+  }
+
+  @override
+  void initState() {
+    addCommentcontroller = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    addCommentcontroller.dispose();
+    super.dispose();
   }
 
   @override
@@ -111,19 +126,45 @@ class _EventDetailWidgetState extends State<EventDetailWidget> {
         create: (_) => TicketCubit(),
         child: Column(
           children: <Widget>[
-            ListTile(
-              title: Text(
-                widget.eventEntity.title!,
-                style: const TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 14),
+                  child: Text(
+                    widget.eventEntity.title ?? '',
+                    style: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
-              ),
-              subtitle: Text(
-                widget.eventEntity.description!,
-                style: const TextStyle(
-                  fontSize: 16,
-                ),
+                OutlinedButton(
+                  onPressed: () async {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialogHandlerWidget(
+                          text: "Are you sure ?",
+                          onTap: () {
+                            BlocProvider.of<TicketCubit>(context)
+                                .deleteTicket();
+                            context.read<TicketCubit>().getAllTickets();
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => const TicketPage()));
+                          },
+                        );
+                      },
+                    );
+                  },
+                  child: const Text("Close the ticket"),
+                )
+              ],
+            ),
+            Text(
+              widget.eventEntity.description ?? '',
+              style: const TextStyle(
+                fontSize: 16,
               ),
             ),
             const Divider(
@@ -156,6 +197,7 @@ class _EventDetailWidgetState extends State<EventDetailWidget> {
               auth.currentUser!.email;
               BlocProvider.of<TicketCubit>(context)
                   .remoteAddMessage(uID, addCommentcontroller.text, account);
+              context.read<ChatCubit>().getChatData();
             },
           ),
         ),

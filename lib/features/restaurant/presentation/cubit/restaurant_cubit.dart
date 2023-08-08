@@ -3,6 +3,7 @@ import 'package:order/features/restaurant/data/model/restaurant_model.dart';
 import 'package:order/features/restaurant/domain/usecase/add_menu_items_usecase.dart';
 import 'package:order/features/restaurant/domain/usecase/add_restaurant_usecase.dart';
 import 'package:order/features/restaurant/domain/usecase/get_all_restaurant_usecase.dart';
+import 'package:order/features/restaurant/domain/usecase/get_uploaded_iamge_usecase.dart';
 import 'package:order/features/restaurant/domain/usecase/upload_image_usecase.dart';
 import 'package:order/features/restaurant/presentation/cubit/restaurant_state.dart';
 import 'package:order/injection_container.dart';
@@ -12,6 +13,7 @@ class RestaurantCubit extends Cubit<RestaurantState> {
   late UploadImageUsecase uploadImageUsecase;
   late AddMenuItemsUsecase addMenuItemsUsecase;
   late GetAllRestaurantUsecase getAllRestaurantUsecase;
+  late GetUploadedImageUsecase getUploadedImageUsecase;
 
   RestaurantCubit() : super(RestaurantStateInt());
 
@@ -31,16 +33,12 @@ class RestaurantCubit extends Cubit<RestaurantState> {
   }
 
   Future<void> uploadImage() async {
-    try {
-      uploadImageUsecase = sl();
-      final imageAdded = await uploadImageUsecase.call();
-      if (imageAdded.status) {
-        emit(ImageSuccessState(imageAdded));
-      } else {
-        emit(RestaurantError(errorMessage: imageAdded.message));
-      }
-    } catch (e) {
-      emit(RestaurantError(errorMessage: e.toString()));
+    uploadImageUsecase = sl();
+    final imageAdded = await uploadImageUsecase.call();
+    if (imageAdded.status) {
+      emit(ImageSuccessState(imageAdded));
+    } else {
+      emit(RestaurantError(errorMessage: imageAdded.message));
     }
   }
 
@@ -64,6 +62,17 @@ class RestaurantCubit extends Cubit<RestaurantState> {
       getAllRestaurantUsecase = sl();
       final allRestaurants = await getAllRestaurantUsecase.call();
       emit(RestaurantLoadedState(restaurantModel: allRestaurants));
+    } catch (e) {
+      emit(RestaurantError(errorMessage: e.toString()));
+    }
+  }
+
+  Future<void> getUploadedImage() async {
+    try {
+      emit(RestaurantLoading());
+      getUploadedImageUsecase = sl();
+      await getUploadedImageUsecase.call();
+      emit(ImageLoadedState());
     } catch (e) {
       emit(RestaurantError(errorMessage: e.toString()));
     }

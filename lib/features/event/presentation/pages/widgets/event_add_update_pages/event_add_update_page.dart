@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:order/core/drawer_menu.dart';
+import 'package:order/core/widgets/app_bar_widget.dart';
 import 'package:order/core/widgets/loading_widget.dart';
 import 'package:order/core/widgets/snackbar_message.dart';
 import 'package:order/features/event/domain/entities/event_entities.dart';
@@ -19,14 +19,11 @@ class EventAddUpdatePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: _buildAppBar(),
-      drawer: const NavigationDrawerr(),
+      appBar: AppBarWidget(
+          pageName: isUpdateEvent ? "Add Event" : "Edit Event",
+          centerTitle: false),
       body: _buildBody(),
     );
-  }
-
-  AppBar _buildAppBar() {
-    return AppBar(title: Text(isUpdateEvent ? "Add Event" : "Edit Event"));
   }
 
   Widget _buildBody() {

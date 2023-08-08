@@ -77,3 +77,28 @@ class MenuModel {
     );
   }
 }
+
+class ImageURLModel {
+  String imageURL;
+
+  ImageURLModel({required this.imageURL});
+
+  factory ImageURLModel.fromSnapShot(
+      QueryDocumentSnapshot<Map<String, dynamic>> queryDocumentSnapshot) {
+    return ImageURLModel(
+      imageURL: queryDocumentSnapshot.data()['imageURL'] ?? '',
+    );
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'imageURL': imageURL,
+    };
+  }
+
+  factory ImageURLModel.fromMap(DocumentSnapshot<Object?> map) {
+    return ImageURLModel(
+      imageURL: map['imageURL'],
+    );
+  }
+}

@@ -8,6 +8,10 @@ class TicketSuccessState extends TicketState {
   TicketSuccessState(ticketAdded);
 }
 
+class TicketDeletedSuccessState extends TicketState {
+  TicketDeletedSuccessState(ticketDeleted);
+}
+
 class MessageAddDeleteUpdateEventState extends TicketState {
   final String message;
 

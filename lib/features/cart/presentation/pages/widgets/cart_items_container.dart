@@ -36,9 +36,15 @@ class _CartItemsContainerState extends State<CartItemsContainer> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              CartTitleCardWidget(title: "EGP: ${widget.subTitle * count}"),
+              CartTitleCardWidget(
+                title: "EGP: ${widget.subTitle * count}",
+                textStyle: const TextStyle(
+                  color: Colors.blue,
+                  fontSize: 13,
+                ),
+              ),
               CounterButton(
-                  buttonColor: appTheme.errorColor,
+                  buttonColor: appTheme.colorScheme.error,
                   count: count,
                   onChange: (value) {
                     setState(() {

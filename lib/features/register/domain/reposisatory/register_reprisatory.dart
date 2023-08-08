@@ -4,5 +4,5 @@ abstract class RegisterAccountRepository {
   Future<RegisterAccountEntity> remoteRegisterUser(String email,
       String password, RegisterAccountEntity registerAccountEntity);
 
-  Future<RegisterAccountEntity> getUserInfo();
+  Future<List<RegisterAccountEntity>> getUserInfo();
 }

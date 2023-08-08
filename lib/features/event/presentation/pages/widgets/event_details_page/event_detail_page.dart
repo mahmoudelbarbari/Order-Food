@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:order/core/drawer_menu.dart';
+import 'package:order/core/widgets/app_bar_widget.dart';
 import 'package:order/core/widgets/loading_widget.dart';
 import 'package:order/features/event/domain/entities/event_entities.dart';
 import 'package:order/features/event/presentation/cubit/cubit_message/chat_cubit.dart';
@@ -23,9 +23,9 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: const NavigationDrawerr(),
-        appBar: AppBar(
-          title: const Text('Event Details'),
+        appBar: AppBarWidget(
+          pageName: widget.eventEntity.title ?? '',
+          centerTitle: false,
         ),
         body: BlocBuilder<ChatCubit, ChatState>(
           builder: (context, state) {

@@ -1,9 +1,10 @@
 import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:order/features/event/domain/entities/event_entities.dart';
-import 'package:order/features/restaurant/data/model/restaurant_model.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:order/features/event/domain/entities/event_entities.dart';
+import 'package:order/features/restaurant/data/model/restaurant_model.dart';
 
 class FirebaseDatasourceProvider {
   static final _firebaseDatasourceProvider =
@@ -26,6 +27,7 @@ abstract class RestaurantDatasourceInterface
 
   Future<BaseResponse> addRestaurant(RestaurantModel restaurantModel);
   Future<BaseResponse> uploadImage();
+  Future<BaseResponse> getUploadedImage();
   Future<BaseResponse> addMenuItems(MenuModel menuModel);
   Future<List<RestaurantModel>> getAllRestaurant();
   Future<List<MenuModel>> getAllMenu();
@@ -37,7 +39,7 @@ class RestaurantDatasourceImpl extends RestaurantDatasourceInterface {
   @override
   Future<BaseResponse> addRestaurant(RestaurantModel restaurantModel) async {
     try {
-      await firebaseFirestore.collection('Restaurants').doc('Restaurant').set({
+      await firebaseFirestore.collection('Restaurants').doc().set({
         "restaurantName": restaurantModel.restaurantName,
         "restaurantDescription": restaurantModel.restaurantDescription,
         "restaurantHotline": restaurantModel.hotlineNum,
@@ -58,35 +60,25 @@ class RestaurantDatasourceImpl extends RestaurantDatasourceInterface {
 
       //Upload to Firebase
       var snapshot =
-          await firebaseStorage.ref().child('images/imageName').putFile(file);
+          await firebaseStorage.ref().child('images/$file').putFile(file);
 
       await snapshot.ref.getDownloadURL();
+
+      return BaseResponse(status: true, message: "Image added successfuly");
     } catch (e) {
-      return BaseResponse(status: false, message: e.toString());
+      return BaseResponse(
+          status: false, message: "You must choose an image..!");
     }
-    return BaseResponse(
-        status: false,
-        message: 'Permission not granted. Try Again with permission access');
   }
 
   @override
   Future<BaseResponse> addMenuItems(MenuModel menuModel) async {
     try {
-      // await firebaseFirestore.collection("Menus").doc('Restaurant').update({
-      //   "Menu": FieldValue.arrayUnion([menuModel.toMap()])
-      // });
       await firebaseFirestore.collection('Menus').doc().set({
         "name": menuModel.name,
         "description": menuModel.description,
         "price": menuModel.price,
       });
-      // CollectionReference collectionRef =
-      //     firebaseFirestore.collection('Restaurants');
-      // DocumentReference documentRef = collectionRef.doc('Restaurant');
-      // CollectionReference subcollectionRef = documentRef.collection('Menus');
-      // subcollectionRef.add({
-      //   'Menu': FieldValue.arrayUnion([menuModel.toMap()])
-      // });
 
       return BaseResponse(status: true, message: "Successfully added");
     } catch (e) {
@@ -118,5 +110,20 @@ class RestaurantDatasourceImpl extends RestaurantDatasourceInterface {
       menus.add(MenuModel.fromSnapShot(doc));
     }
     return menus;
+  }
+
+  @override
+  Future<BaseResponse> getUploadedImage() async {
+    try {
+      XFile? pickedImage;
+      var file = File(pickedImage!.path);
+      var snapshot =
+          await firebaseStorage.ref().child('images/$file').putFile(file);
+      await snapshot.ref.getDownloadURL();
+
+      return BaseResponse(status: true, message: "Image retrive successfully");
+    } catch (e) {
+      return BaseResponse(status: false, message: e.toString());
+    }
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppBarWidget extends PreferredSize {
+  final String pageName;
   final bool hideBackButton;
   final bool centerTitle;
   const AppBarWidget({
@@ -11,7 +12,7 @@ class AppBarWidget extends PreferredSize {
     this.hideBackButton = true,
     this.centerTitle = true,
   });
-  final String pageName;
+
   @override
   Widget build(BuildContext context) {
     return AppBar(

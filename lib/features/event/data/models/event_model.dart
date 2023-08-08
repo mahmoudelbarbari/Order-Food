@@ -78,12 +78,12 @@ class EventModel extends EventEntity {
     );
   }
 
-  factory EventModel.fromSnapShot2(
-      DocumentSnapshot<Map<String, dynamic>> documentSnapshot) {
-    return EventModel(
-      comment: documentSnapshot.data()!['comment'],
-    );
-  }
+  // factory EventModel.fromSnapShot2(
+  //     DocumentSnapshot<Map<String, dynamic>> documentSnapshot) {
+  //   return EventModel(
+  //     comment: documentSnapshot.data()!['comment'],
+  //   );
+  // }
 
   factory EventModel.fromEntity(EventEntity eventEntity) => EventModel(
         id: eventEntity.id,

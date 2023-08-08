@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:order/features/event/presentation/pages/ticket_page.dart';
 import 'package:order/features/restaurant/data/model/restaurant_model.dart';
 import 'package:order/features/restaurant/presentation/cubit/restaurant_cubit.dart';
 
@@ -84,26 +85,74 @@ class _MenuWidgetState extends State<MenuWidget> {
                   controller: controllerItemPrice,
                 ),
               ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(327, 56),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15))),
-                child: const Text('Add Item'),
-                onPressed: () {
-                  setState(() {
-                    if (formKey.currentState!.validate()) {
-                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                          backgroundColor: Colors.green,
-                          content: Text("Item added successfully")));
-                      context.read<RestaurantCubit>().addMenuItems(MenuModel(
-                            name: controllerMenuname.text,
-                            description: controllerMenuDescription.text,
-                            price: int.parse(controllerItemPrice.text),
-                          ));
-                    }
-                  });
-                },
+              const Divider(
+                thickness: 1,
+                indent: 20,
+                color: Colors.black,
+              ),
+              const Text(
+                '- If you finished adding menu items, \n you can leave this page by click in Home button.',
+                style: TextStyle(color: Color.fromARGB(255, 21, 8, 201)),
+              ),
+              const SizedBox(height: 12),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: SizedBox(
+                        height: 40,
+                        width: 120,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              minimumSize: const Size(327, 56),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15))),
+                          child: const Text('Add Item'),
+                          onPressed: () {
+                            setState(() {
+                              if (formKey.currentState!.validate()) {
+                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                                    backgroundColor: Colors.green,
+                                    content: Text(
+                                        "Item ${controllerMenuname.text} added successfully ")));
+                                context
+                                    .read<RestaurantCubit>()
+                                    .addMenuItems(MenuModel(
+                                      name: controllerMenuname.text,
+                                      description:
+                                          controllerMenuDescription.text,
+                                      price:
+                                          int.parse(controllerItemPrice.text),
+                                    ));
+                              }
+                            });
+                          },
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: SizedBox(
+                        height: 40,
+                        width: 120,
+                        child: OutlinedButton(
+                          onPressed: () =>
+                              Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => const TicketPage(),
+                          )),
+                          style: OutlinedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10)),
+                              side: const BorderSide(
+                                  color: Color.fromARGB(255, 207, 78, 27))),
+                          child: const Text("Home"),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),

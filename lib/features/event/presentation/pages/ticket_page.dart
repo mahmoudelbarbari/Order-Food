@@ -1,4 +1,3 @@
-import 'package:badges/badges.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -7,7 +6,9 @@ import 'package:order/core/widgets/loading_widget.dart';
 import 'package:order/features/cart/presentation/pages/cart_page.dart';
 import 'package:order/features/event/presentation/cubit/ticket_cubit.dart';
 import 'package:order/features/event/presentation/cubit/ticket_state.dart';
+import 'package:order/features/event/presentation/pages/widgets/empty_list_widget.dart';
 import 'package:order/features/event/presentation/pages/widgets/floating_button_home_widget.dart';
+import 'package:order/features/event/presentation/pages/widgets/ticket_page_app_bar_title_widget.dart';
 
 import '../pages/widgets/ticket_widget.dart';
 
@@ -18,24 +19,13 @@ class TicketPage extends StatefulWidget {
   State<TicketPage> createState() => _TicketPageState();
 }
 
-String _greetings() {
-  final hour = TimeOfDay.now().hour;
-
-  if (hour <= 12) {
-    return 'Good Morning';
-  } else if (hour <= 17) {
-    return 'Good Afternoon';
-  }
-  return 'Good Evening';
-}
-
 class _TicketPageState extends State<TicketPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        elevation: 0.0,
+        elevation: 0,
         actions: [
           Badge(
             child: IconButton(
@@ -47,10 +37,7 @@ class _TicketPageState extends State<TicketPage> {
             ),
           ),
         ],
-        title: Text(
-          'Welcome, ${_greetings()}',
-          style: const TextStyle(fontSize: 18, color: Colors.black),
-        ),
+        title: const TicketPageAppBarTitleWidget(),
       ),
       drawer: const NavigationDrawerr(),
       body: _buildBody(),
@@ -71,14 +58,19 @@ class _TicketPageState extends State<TicketPage> {
         },
         builder: (context, state) {
           if (state is TicketLoadedState) {
-            return TicketWidget(
-              eventEntity: state.eventEntity,
-            );
+            if (state.eventEntity.isEmpty) {
+              return const TicketEmptyListWidget();
+            } else {
+              return TicketWidget(
+                eventEntity: state.eventEntity,
+              );
+            }
           } else if (state is TicketErrorState) {
             if (kDebugMode) {
               print(state.errorMessage);
             }
           }
+
           return const LoadingWidget();
         },
       ),

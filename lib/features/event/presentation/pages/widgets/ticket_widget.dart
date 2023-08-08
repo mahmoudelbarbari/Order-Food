@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:order/features/event/domain/entities/event_entities.dart';
 import 'package:order/features/event/presentation/cubit/ticket_cubit.dart';
-import 'package:order/features/event/presentation/pages/widgets/event_details_page/event_detail_page.dart';
+import 'package:order/features/event/presentation/pages/widgets/tickets_list_title_widget.dart';
 
 class TicketWidget extends StatefulWidget {
   final List<EventEntity> eventEntity;
@@ -42,28 +42,10 @@ class _TicketWidgetState extends State<TicketWidget> {
             child: ListView.separated(
                 itemCount: widget.eventEntity.length,
                 itemBuilder: (context, index) {
-                  return ListTile(
-                    trailing: const Icon(Icons.arrow_circle_right),
-                    title: Text(
-                      widget.eventEntity[index].title!,
-                      style: const TextStyle(
-                          fontSize: 18, fontWeight: FontWeight.bold),
-                    ),
-                    subtitle: Text(
-                      widget.eventEntity[index].description!,
-                      style: const TextStyle(fontSize: 16),
-                    ),
-                    contentPadding: const EdgeInsets.symmetric(horizontal: 10),
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (_) => EventDetailsPage(
-                            eventEntity: widget.eventEntity[index],
-                          ),
-                        ),
-                      );
-                    },
+                  return TicketsListTitleWidget(
+                    title: widget.eventEntity[index].title ?? '',
+                    subTitle: widget.eventEntity[index].description ?? '',
+                    eventEntity: widget.eventEntity[index],
                   );
                 },
                 separatorBuilder: (context, index) => divider),

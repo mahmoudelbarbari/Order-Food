@@ -1,6 +1,6 @@
+import 'package:order/features/event/domain/entities/event_entities.dart';
 import 'package:order/features/restaurant/data/datasource/restaurant_datasource.dart';
 import 'package:order/features/restaurant/data/model/restaurant_model.dart';
-import 'package:order/features/event/domain/entities/event_entities.dart';
 import 'package:order/features/restaurant/domain/reporisatory/restaurant_reporisatory.dart';
 
 class RestaurantReporisatoryImpl implements RestaurantReporisatory {
@@ -30,5 +30,10 @@ class RestaurantReporisatoryImpl implements RestaurantReporisatory {
   @override
   Future<List<MenuModel>> getAllMenu() async {
     return await restaurantDatasourceInterface.getAllMenu();
+  }
+
+  @override
+  Future<BaseResponse> getUploadedImage() async {
+    return await restaurantDatasourceInterface.getUploadedImage();
   }
 }

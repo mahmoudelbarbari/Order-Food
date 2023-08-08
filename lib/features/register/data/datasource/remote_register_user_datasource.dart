@@ -6,7 +6,7 @@ import 'package:order/features/register/domain/entities/register_entities.dart';
 abstract class RemoteRegisterDatasource {
   Future<RegisterAccountEntity> remoteRegisterUser(String email,
       String password, RegisterAccountEntity registerAccountEntity);
-  Future<RegisterAccountEntity> getUserInfo();
+  Future<List<RegisterAccountEntity>> getUserInfo();
 }
 
 class RemoteRegisterDatasourceImlp implements RemoteRegisterDatasource {
@@ -53,19 +53,16 @@ class RemoteRegisterDatasourceImlp implements RemoteRegisterDatasource {
   }
 
   @override
-  Future<RegisterAccountEntity> getUserInfo() async {
+  Future<List<RegisterAccountEntity>> getUserInfo() async {
     User? user = firebaseDB.auth.currentUser;
-    try {
-      await firebaseDB.firebaseFirestore
-          .collection("Users")
-          .doc(user!.uid)
-          .get()
-          .then((value) {
-        RegisterAccountModel.fromMap(value.data());
-      });
-    } catch (e) {
-      return RegisterAccountEntity(message: e.toString());
-    }
-    return RegisterAccountEntity(message: "server error", replyCode: 500);
+    List<RegisterAccountModel> loggedUser = [];
+    await firebaseDB.firebaseFirestore
+        .collection("Users")
+        .doc(user!.uid)
+        .get()
+        .then((value) {
+      loggedUser.add(RegisterAccountModel.fromMap(value.data()));
+    });
+    return loggedUser;
   }
 }

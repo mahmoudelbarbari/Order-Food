@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:order/core/drawer_menu.dart';
+import 'package:order/core/widgets/app_bar_widget.dart';
+import 'package:order/core/widgets/snackbar_message.dart';
 import 'package:order/features/register/domain/entities/register_entities.dart';
 import 'package:order/features/restaurant/presentation/cubit/restaurant_cubit.dart';
 import 'package:order/features/restaurant/presentation/cubit/restaurant_state.dart';
@@ -19,21 +20,23 @@ class _RestaurantPageState extends State<RestaurantPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Add Restaurant'),
+      appBar: const AppBarWidget(
+        pageName: "Add restaurants",
+        centerTitle: false,
       ),
-      drawer: const NavigationDrawerr(),
       body: BlocProvider<RestaurantCubit>(
         create: (context) => RestaurantCubit(),
         child: BlocConsumer<RestaurantCubit, RestaurantState>(
           listener: (context, state) {
             if (state is CreateRestaurantSuccessfully) {
+              SnackBarMessage().showSuccessSnackBar(
+                  message: "Restaurant added seccessfuly :)", context: context);
               registerAccountEntity = state.registerAccountEntity;
             }
 
             if (state is RestaurantError) {
-              ScaffoldMessenger.of(context)
-                  .showSnackBar(SnackBar(content: Text(state.errorMessage)));
+              SnackBarMessage().showErrorSnackBar(
+                  message: "You must choose an image..!", context: context);
             }
           },
           builder: (context, state) {

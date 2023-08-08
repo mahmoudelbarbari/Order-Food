@@ -29,7 +29,7 @@ class _AllMenuWidgetState extends State<AllMenuWidget> {
   Widget build(BuildContext context) {
     return RefreshIndicator(
       onRefresh: _refresh,
-      child: ListView.builder(
+      child: ListView.separated(
         itemCount: widget.menuModel.length,
         itemBuilder: (_, index) {
           return ListTile(
@@ -37,15 +37,21 @@ class _AllMenuWidgetState extends State<AllMenuWidget> {
             title: Text(widget.menuModel[index].name),
             subtitle: Text(widget.menuModel[index].price.toString()),
             onTap: () {
-              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                   backgroundColor: Colors.green,
-                  content: Text("Added to your cart")));
+                  content: Text(
+                      "${widget.menuModel[index].name} Added to your cart")));
               context
                   .read<CartCubit>()
                   .addProductToCart(widget.menuModel[index]);
             },
           );
         },
+        separatorBuilder: (context, index) => const Divider(
+          thickness: 1,
+          indent: 20,
+          endIndent: 20,
+        ),
       ),
     );
   }

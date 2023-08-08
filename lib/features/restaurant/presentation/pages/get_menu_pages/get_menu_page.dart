@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:order/core/drawer_menu.dart';
+import 'package:order/core/widgets/app_bar_widget.dart';
 import 'package:order/core/widgets/loading_widget.dart';
 import 'package:order/features/restaurant/presentation/cubit/menu_cubit.dart';
 import 'package:order/features/restaurant/presentation/cubit/menu_state.dart';
@@ -22,10 +22,10 @@ class _AllMenuPageState extends State<AllMenuPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Menu Restaurant'),
+      appBar: const AppBarWidget(
+        pageName: "Menu",
+        centerTitle: false,
       ),
-      drawer: const NavigationDrawerr(),
       body: Padding(
         padding: const EdgeInsets.all(10),
         child: BlocConsumer<MenuCubit, MenuState>(

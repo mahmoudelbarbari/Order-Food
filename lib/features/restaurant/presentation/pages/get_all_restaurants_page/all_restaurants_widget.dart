@@ -4,6 +4,8 @@ import 'package:order/features/restaurant/data/model/restaurant_model.dart';
 import 'package:order/features/restaurant/presentation/cubit/restaurant_cubit.dart';
 import 'package:order/features/restaurant/presentation/pages/get_menu_pages/get_menu_page.dart';
 
+import 'common_container_restaurant_widget.dart';
+
 class AllRestaurantWidget extends StatefulWidget {
   final List<RestaurantModel> restaurantModel;
   const AllRestaurantWidget({
@@ -30,74 +32,52 @@ class _AllRestaurantWidgetState extends State<AllRestaurantWidget> {
     return RefreshIndicator(
       onRefresh: _refresh,
       child: ListView.separated(
-        itemCount: widget.restaurantModel.length,
-        itemBuilder: (context, index) {
-          return Container(
-            padding: const EdgeInsets.all(7),
-            child: GestureDetector(
-              onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const AllMenuPage()));
-              },
-              child: Card(
-                elevation: 3,
-                clipBehavior: Clip.antiAlias,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: <Widget>[
-                    Container(
-                      padding: const EdgeInsets.all(8),
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        widget.restaurantModel[index].restaurantName,
-                        textAlign: TextAlign.left,
-                        style: const TextStyle(
-                          color: Colors.blue,
-                          fontSize: 20,
+          itemCount: widget.restaurantModel.length,
+          itemBuilder: (context, index) {
+            return Container(
+              padding: const EdgeInsets.all(7),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const AllMenuPage()));
+                },
+                child: Card(
+                  elevation: 3,
+                  clipBehavior: Clip.antiAlias,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: <Widget>[
+                      const SizedBox(height: 12),
+                      CommonContainerRestaurantWidget(
+                        text: widget.restaurantModel[index].restaurantName,
+                        iconData: Icons.restaurant_menu,
+                        isShowEndicon: true,
+                      ),
+                      CommonContainerRestaurantWidget(
+                        text:
+                            widget.restaurantModel[index].restaurantDescription,
+                        iconData: Icons.restaurant_menu,
+                        isShowEndicon: false,
+                        textStyle: const TextStyle(
+                          color: Colors.grey,
+                          fontSize: 18,
                         ),
                       ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(8),
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        widget.restaurantModel[index].restaurantDescription,
-                        textAlign: TextAlign.left,
-                        style: const TextStyle(
-                          fontSize: 12,
-                          color: Colors.blue,
-                        ),
+                      CommonContainerRestaurantWidget(
+                        text: widget.restaurantModel[index].hotlineNum,
+                        iconData: Icons.phone,
+                        isShowEndicon: true,
+                        textStyle: const TextStyle(fontSize: 15),
                       ),
-                    ),
-                    Container(
-                        padding: const EdgeInsets.all(8),
-                        alignment: Alignment.centerLeft,
-                        child: RichText(
-                          text: TextSpan(
-                            children: [
-                              const WidgetSpan(
-                                child: Icon(Icons.call, size: 14),
-                              ),
-                              TextSpan(
-                                text: widget.restaurantModel[index].hotlineNum,
-                                style: const TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.blue,
-                                ),
-                              ),
-                            ],
-                          ),
-                        )),
-                  ],
+                    ],
+                  ),
                 ),
               ),
-            ),
-          );
-        },
-        separatorBuilder: (BuildContext context, int index) {
-          return const Divider(thickness: 1);
-        },
-      ),
+            );
+          },
+          separatorBuilder: (BuildContext context, int index) {
+            return const Divider(thickness: 1);
+          }),
     );
   }
 }

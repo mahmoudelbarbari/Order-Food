@@ -36,6 +36,7 @@ import 'package:order/features/restaurant/domain/usecase/add_menu_items_usecase.
 import 'package:order/features/restaurant/domain/usecase/add_restaurant_usecase.dart';
 import 'package:order/features/restaurant/domain/usecase/get_all_menu.dart';
 import 'package:order/features/restaurant/domain/usecase/get_all_restaurant_usecase.dart';
+import 'package:order/features/restaurant/domain/usecase/get_uploaded_iamge_usecase.dart';
 import 'package:order/features/restaurant/domain/usecase/upload_image_usecase.dart';
 import 'package:order/features/restaurant/presentation/cubit/menu_cubit.dart';
 import 'package:order/features/restaurant/presentation/cubit/restaurant_cubit.dart';
@@ -160,6 +161,9 @@ void init() {
 
   sl.registerLazySingleton<UploadImageUsecase>(
       () => UploadImageUsecase(sl<RestaurantReporisatory>()));
+
+  sl.registerLazySingleton<GetUploadedImageUsecase>(
+      () => GetUploadedImageUsecase(sl<RestaurantReporisatory>()));
 
   sl.registerLazySingleton<AddMenuItemsUsecase>(
       () => AddMenuItemsUsecase(sl<RestaurantReporisatory>()));

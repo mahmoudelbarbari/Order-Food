@@ -23,7 +23,7 @@ class RegisterReporisatoryImpl implements RegisterAccountRepository {
   }
 
   @override
-  Future<RegisterAccountEntity> getUserInfo() async {
+  Future<List<RegisterAccountEntity>> getUserInfo() async {
     return await remoteRegisterDatasourceImlp.getUserInfo();
   }
 }

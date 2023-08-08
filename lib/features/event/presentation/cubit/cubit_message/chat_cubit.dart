@@ -9,7 +9,6 @@ class ChatCubit extends Cubit<ChatState> {
 
   Future<void> getChatData() async {
     try {
-      emit(ChatLoadingState());
       getMessagesUsecase = sl();
       final allMessages = await getMessagesUsecase.call();
       emit(ChatLoadedState(messages: allMessages));

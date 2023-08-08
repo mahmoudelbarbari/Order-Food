@@ -18,6 +18,8 @@ class RestaurantLoadedState extends RestaurantState {
   });
 }
 
+class ImageLoadedState extends RestaurantState {}
+
 class RestaurantError extends RestaurantState {
   String errorMessage;
   RestaurantError({required this.errorMessage});

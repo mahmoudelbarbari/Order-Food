@@ -65,7 +65,7 @@ class TicketCubit extends Cubit<TicketState> {
       deleteTicketUsecase = sl();
       final deletedTicket = await deleteTicketUsecase.call();
       if (deletedTicket.status) {
-        emit(TicketSuccessState(deletedTicket));
+        emit(TicketDeletedSuccessState(deletedTicket));
       } else {
         emit(TicketErrorState(errorMessage: deletedTicket.message));
       }

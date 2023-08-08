@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:order/features/event/presentation/cubit/ticket_cubit.dart';
 import 'package:order/features/event/presentation/pages/ticket_page.dart';
 import 'package:order/features/login/presentation/pages/login_page.dart';
-import 'package:order/features/register/presentation/pages/profile_page.dart';
 import 'package:order/features/restaurant/presentation/cubit/restaurant_cubit.dart';
 import 'package:order/features/restaurant/presentation/pages/add_restaurant_page.dart';
 import 'package:order/features/restaurant/presentation/pages/get_all_restaurants_page/all_restaurants_page.dart';
@@ -34,7 +33,6 @@ class NavigationDrawerr extends StatelessWidget {
   }
 
   Widget buildMenuItems(BuildContext context) => Wrap(
-        //runSpacing: 5,
         children: <Widget>[
           ListTile(
             title: const Text('Home'),
@@ -67,20 +65,10 @@ class NavigationDrawerr extends StatelessWidget {
                   builder: (context) => const RestaurantPage()));
             },
           ),
-          ListTile(
-            leading: const Icon(Icons.add_box_rounded),
-            title: const Text(
-              'Profile',
-              style: TextStyle(
-                fontSize: 14,
-              ),
-            ),
-            onTap: () {
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const ProfilePage()));
-            },
+          const Divider(
+            thickness: 1,
+            indent: 30,
           ),
-          const Divider(color: Color.fromRGBO(255, 255, 255, 0.08)),
           ListTile(
             leading: const Icon(Icons.logout_outlined),
             title: const Text(
@@ -90,10 +78,6 @@ class NavigationDrawerr extends StatelessWidget {
               ),
             ),
             onTap: () {
-              // context.read<LoginCubit>().logOut();
-              // Navigator.of(context).push(MaterialPageRoute(
-              //   builder: (context) => const LoginPage(),
-              // ));
               showDialog(
                   context: context,
                   builder: (BuildContext context) {
