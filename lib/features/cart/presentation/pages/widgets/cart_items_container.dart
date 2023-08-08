@@ -49,6 +49,9 @@ class _CartItemsContainerState extends State<CartItemsContainer> {
                   onChange: (value) {
                     setState(() {
                       count = value;
+                      if (count < 1) {
+                        count++;
+                      }
                     });
                   },
                   loading: false),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:order/core/widgets/app_bar_widget.dart';
+import 'package:order/core/widgets/snackbar_message.dart';
 import 'package:order/features/login/presentation/pages/login_page.dart';
 import 'package:order/features/register/domain/entities/register_entities.dart';
 import 'package:order/features/register/presentation/cubit/register_cubit.dart';
@@ -41,17 +42,20 @@ class _RegisterPageState extends State<RegisterPage> {
                     builder: (context) => const LoginPage(),
                   ));
               registerAccountEntity = state.registerAccountEntity;
-              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  backgroundColor: Colors.green,
-                  content: Text(state.registerAccountEntity.message ??
-                      "You created an account successfully")));
-            }
-            if (state is RegisterErrorState) {
-              ScaffoldMessenger.of(context)
-                  .showSnackBar(SnackBar(content: Text(state.errorMessage)));
+              SnackBarMessage().showSuccessSnackBar(
+                  message: state.registerAccountEntity.message ??
+                      "You created an account successfully",
+                  context: context);
+            } else if (state is RegisterErrorState) {
+              SnackBarMessage().showErrorSnackBar(
+                  message: state.errorMessage, context: context);
             }
           },
           builder: (context, state) {
+            if (state is RegisterErrorState) {
+              SnackBarMessage().showErrorSnackBar(
+                  message: state.errorMessage, context: context);
+            }
             return RegisterWidget(registerAccountEntity: registerAccountEntity);
           },
         ),

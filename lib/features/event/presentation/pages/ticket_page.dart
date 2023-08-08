@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:order/core/drawer_menu.dart';
 import 'package:order/core/widgets/loading_widget.dart';
+import 'package:order/features/cart/presentation/cubit/cart_cubit.dart';
 import 'package:order/features/cart/presentation/pages/cart_page.dart';
 import 'package:order/features/event/presentation/cubit/ticket_cubit.dart';
 import 'package:order/features/event/presentation/cubit/ticket_state.dart';
@@ -30,6 +31,7 @@ class _TicketPageState extends State<TicketPage> {
           Badge(
             child: IconButton(
               onPressed: () {
+                context.read<CartCubit>().getAllCartItems();
                 Navigator.of(context).push(
                     MaterialPageRoute(builder: (context) => const CartPage()));
               },

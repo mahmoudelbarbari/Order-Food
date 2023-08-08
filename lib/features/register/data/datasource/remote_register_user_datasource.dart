@@ -41,10 +41,26 @@ class RemoteRegisterDatasourceImlp implements RemoteRegisterDatasource {
           username: registerAccountEntity.username,
           message: registerAccountEntity.message);
     } on FirebaseAuthException catch (e) {
-      if (e.code == 'weak-password') {
-        return RegisterAccountEntity(message: e.message);
-      } else if (e.code == 'email-already-in-use') {
-        return RegisterAccountEntity(message: e.message);
+      switch (e.code) {
+        case "invalid-email":
+          RegisterAccountEntity(
+              message: "Your email address appears to be malformed.");
+          break;
+        case "wrong-password":
+          RegisterAccountEntity(message: "Your password is wrong.");
+          break;
+        case "user-not-found":
+          RegisterAccountEntity(message: "User with this email doesn't exist.");
+          break;
+        case "too-many-requests":
+          RegisterAccountEntity(message: "Too many requests");
+          break;
+        case "operation-not-allowed":
+          RegisterAccountEntity(
+              message: "Signing in with Email and Password is not enabled.");
+          break;
+        default:
+          RegisterAccountEntity(message: "An undefined Error happened.");
       }
     } catch (e) {
       return RegisterAccountEntity(message: e.toString());

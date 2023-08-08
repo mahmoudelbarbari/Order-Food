@@ -1,3 +1,4 @@
+import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 
 class EmailTextFieldWidget extends StatelessWidget {
@@ -17,7 +18,12 @@ class EmailTextFieldWidget extends StatelessWidget {
         if (value == null) {
           return 'Please enter your mail address.';
         }
-        if (!RegExp(r'^[a-zA-Z0-9]+@[a-zA-Z0-9.]+').hasMatch(value)) {
+        // if (!RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]").hasMatch(value)) {
+        //   return "Please enter a valid email address";
+        // }
+        // const String email = 'fredrik.eilertsen@gail.com';
+        final bool isValid = EmailValidator.validate(value);
+        if (!isValid) {
           return "Please enter a valid email address";
         }
         return null;
