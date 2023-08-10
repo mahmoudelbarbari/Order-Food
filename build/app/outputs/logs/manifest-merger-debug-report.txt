@@ -1,22 +1,26 @@
 -- Merging decision tree log ---
 application
 INJECTED from F:\Order-Food\android\app\src\main\AndroidManifest.xml:3:4-38:19
-MERGED from [:firebase_auth] F:\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_auth] F:\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
 MERGED from [:firebase_database] F:\Order-Food\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
 MERGED from [:firebase_database] F:\Order-Food\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_storage] F:\Order-Food\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_storage] F:\Order-Food\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
 MERGED from [:cloud_firestore] F:\Order-Food\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
 MERGED from [:cloud_firestore] F:\Order-Food\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_auth] F:\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_auth] F:\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_storage] F:\Order-Food\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_storage] F:\Order-Food\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
 MERGED from [:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:15:5-48:19
 MERGED from [:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:15:5-48:19
 MERGED from [:firebase_core] F:\Order-Food\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
 MERGED from [:firebase_core] F:\Order-Food\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
 MERGED from [:image_picker_android] F:\Order-Food\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-19:19
 MERGED from [:image_picker_android] F:\Order-Food\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-19:19
+MERGED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:14:5-50:19
+MERGED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:14:5-50:19
 MERGED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:15:5-32:19
 MERGED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:15:5-32:19
+MERGED from [me.carda:androidcore:0.7.7] C:\Users\mawad\.gradle\caches\transforms-3\ae3e77dc7b5d2eeeb40af8bc6ec93977\transformed\jetified-androidcore-0.7.7\AndroidManifest.xml:9:5-16:19
+MERGED from [me.carda:androidcore:0.7.7] C:\Users\mawad\.gradle\caches\transforms-3\ae3e77dc7b5d2eeeb40af8bc6ec93977\transformed\jetified-androidcore-0.7.7\AndroidManifest.xml:9:5-16:19
 MERGED from [com.google.firebase:firebase-auth:22.1.0] C:\Users\mawad\.gradle\caches\transforms-3\a5ed2787244d1d029684e4412f2ec19e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:28:5-73:19
 MERGED from [com.google.firebase:firebase-auth:22.1.0] C:\Users\mawad\.gradle\caches\transforms-3\a5ed2787244d1d029684e4412f2ec19e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:28:5-73:19
 MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\mawad\.gradle\caches\transforms-3\1c71bdaede5fb70624c81058b12292f8\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:28:5-36:19
@@ -71,8 +75,12 @@ MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\mawa
 MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\mawad\.gradle\caches\transforms-3\749f96c73042a51597d251b9bd84d73c\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:20:5-24:19
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\mawad\.gradle\caches\transforms-3\81c4b255e6e7701a52bf58831817d911\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\mawad\.gradle\caches\transforms-3\81c4b255e6e7701a52bf58831817d911\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\mawad\.gradle\caches\transforms-3\a58120dcf597ad916797f12694d48e35\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\mawad\.gradle\caches\transforms-3\a58120dcf597ad916797f12694d48e35\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.core:core:1.10.1] C:\Users\mawad\.gradle\caches\transforms-3\c082f5d7d44fbd751e596b1d8dfe178c\transformed\core-1.10.1\AndroidManifest.xml:28:5-89
 MERGED from [androidx.core:core:1.10.1] C:\Users\mawad\.gradle\caches\transforms-3\c082f5d7d44fbd751e596b1d8dfe178c\transformed\core-1.10.1\AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\05595c3dac6d4a79d6bce46c51913008\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\05595c3dac6d4a79d6bce46c51913008\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mawad\.gradle\caches\transforms-3\473a5660f2386016976c48eef1ae485b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:23:5-53:19
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mawad\.gradle\caches\transforms-3\473a5660f2386016976c48eef1ae485b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:23:5-53:19
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\mawad\.gradle\caches\transforms-3\e00611b8cd97177a3a152c43f77407d0\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
@@ -93,17 +101,21 @@ INJECTED from F:\Order-Food\android\app\src\main\AndroidManifest.xml:1:1-39:12
 INJECTED from F:\Order-Food\android\app\src\main\AndroidManifest.xml:1:1-39:12
 INJECTED from F:\Order-Food\android\app\src\main\AndroidManifest.xml:1:1-39:12
 MERGED from F:\Order-Food\android\app\src\main\AndroidManifest.xml:1:1-39:12
-MERGED from [:firebase_auth] F:\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
 MERGED from [:firebase_database] F:\Order-Food\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
-MERGED from [:firebase_storage] F:\Order-Food\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
 MERGED from [:cloud_firestore] F:\Order-Food\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:firebase_auth] F:\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:firebase_storage] F:\Order-Food\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
 MERGED from [:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-50:12
 MERGED from [:firebase_core] F:\Order-Food\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
-MERGED from [:permission_handler_android] F:\Order-Food\build\permission_handler_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:image_picker_android] F:\Order-Food\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-21:12
 MERGED from [:flutter_plugin_android_lifecycle] F:\Order-Food\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-52:12
 MERGED from [:sqflite] F:\Order-Food\build\sqflite\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-34:12
+MERGED from [:permission_handler_android] F:\Order-Food\build\permission_handler_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [me.carda:androidcore:0.7.7] C:\Users\mawad\.gradle\caches\transforms-3\ae3e77dc7b5d2eeeb40af8bc6ec93977\transformed\jetified-androidcore-0.7.7\AndroidManifest.xml:2:1-18:12
+MERGED from [androidx.appcompat:appcompat-resources:1.5.1] C:\Users\mawad\.gradle\caches\transforms-3\d76f8d74ff9e7543ffea68972a4f06a5\transformed\jetified-appcompat-resources-1.5.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.5.1] C:\Users\mawad\.gradle\caches\transforms-3\716b38e02fddbe74bf594d481de4380c\transformed\appcompat-1.5.1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-auth:22.1.0] C:\Users\mawad\.gradle\caches\transforms-3\a5ed2787244d1d029684e4412f2ec19e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:17:1-75:12
 MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\mawad\.gradle\caches\transforms-3\1c71bdaede5fb70624c81058b12292f8\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:17:1-38:12
 MERGED from [com.google.firebase:firebase-firestore:24.7.0] C:\Users\mawad\.gradle\caches\transforms-3\447976460723f3a64dfa4ecbcccb2af9\transformed\jetified-firebase-firestore-24.7.0\AndroidManifest.xml:2:1-25:12
@@ -137,20 +149,28 @@ MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] C:\User
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.3.0] C:\Users\mawad\.gradle\caches\transforms-3\9daf397ebfeaed9b890adcc3d88b4732\transformed\jetified-play-services-measurement-sdk-api-21.3.0\AndroidManifest.xml:17:1-28:12
 MERGED from [com.google.android.gms:play-services-measurement-base:21.3.0] C:\Users\mawad\.gradle\caches\transforms-3\96a800bc0ae27853396ea6df1b9361e8\transformed\jetified-play-services-measurement-base-21.3.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\mawad\.gradle\caches\transforms-3\749f96c73042a51597d251b9bd84d73c\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:16:1-26:12
-MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\mawad\.gradle\caches\transforms-3\b26b03b9623bc406b551a97da7111763\transformed\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\mawad\.gradle\caches\transforms-3\45d18b261c483451a1947b6daaacb1e5\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.7.2] C:\Users\mawad\.gradle\caches\transforms-3\4acdb0f06bc4cd2cc4fbcd8316d5971f\transformed\jetified-activity-1.7.2\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.media:media:1.1.0] C:\Users\mawad\.gradle\caches\transforms-3\8d1ac97ad6eeaa211feafd53d34d991e\transformed\media-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.6.0] C:\Users\mawad\.gradle\caches\transforms-3\a7e3011e9a04ac740edbfc213f47c25f\transformed\media-1.6.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\mawad\.gradle\caches\transforms-3\1dbc3576b806896e2c9c0e6b3771f4fd\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.browser:browser:1.4.0] C:\Users\mawad\.gradle\caches\transforms-3\e6c5931a131f9074365fa6b30384fdd0\transformed\browser-1.4.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\mawad\.gradle\caches\transforms-3\8477a2108c3535fe41d3abf1edf1d40d\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\mawad\.gradle\caches\transforms-3\8c56985abe4d66d3aaea3b073c5419b5\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\mawad\.gradle\caches\transforms-3\81c4b255e6e7701a52bf58831817d911\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\mawad\.gradle\caches\transforms-3\e5afbd639434ac2f523cedf5395f25d5\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\mawad\.gradle\caches\transforms-3\352700d06157c873f8996cb72dbca503\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\mawad\.gradle\caches\transforms-3\a58120dcf597ad916797f12694d48e35\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:17:1-35:12
 MERGED from [androidx.core:core-ktx:1.10.1] C:\Users\mawad\.gradle\caches\transforms-3\e1797f9eb9258395f6bb50aba9856ae7\transformed\jetified-core-ktx-1.10.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\mawad\.gradle\caches\transforms-3\8477a2108c3535fe41d3abf1edf1d40d\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\mawad\.gradle\caches\transforms-3\8563f770f9e911df150dea0007b340f4\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\mawad\.gradle\caches\transforms-3\79b23288b601c5e916de5dc30fe3922b\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\mawad\.gradle\caches\transforms-3\e11432afc863418aa09f52e896d840d7\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.10.1] C:\Users\mawad\.gradle\caches\transforms-3\c082f5d7d44fbd751e596b1d8dfe178c\transformed\core-1.10.1\AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\mawad\.gradle\caches\transforms-3\baa0cae05e9ae84e9686ffd981614515\transformed\jetified-savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\131ac871e54845a3940f8cc8d928228d\transformed\lifecycle-livedata-2.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\eee2bb99eb62ffb54c019a4541e0c5d7\transformed\lifecycle-livedata-core-2.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\2571da7e10380d04f7024861368b0dd6\transformed\jetified-lifecycle-service-2.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-reactivestreams:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\5a4f7fa0ac44231ebf4bbd45ae4bb231\transformed\lifecycle-reactivestreams-2.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\05595c3dac6d4a79d6bce46c51913008\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\131ac871e54845a3940f8cc8d928228d\transformed\lifecycle-livedata-2.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\4d01f31bae63ab8696dfeba15c982a74\transformed\lifecycle-viewmodel-2.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\5e7d6ec4f4974b79c19e4c32f17fff32\transformed\lifecycle-runtime-2.6.1\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\89ee532bd4d48a8907fc84cacf3d9d0f\transformed\jetified-lifecycle-viewmodel-savedstate-2.6.1\AndroidManifest.xml:17:1-22:12
@@ -166,11 +186,13 @@ MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Us
 MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\mawad\.gradle\caches\transforms-3\a31d93df4a999dbb94e7d646d3eed65c\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:15:1-41:12
 MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\mawad\.gradle\caches\transforms-3\eaeceeb421be684f6c21d29376ba0a46\transformed\jetified-transport-api-3.0.0\AndroidManifest.xml:15:1-22:12
 MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\mawad\.gradle\caches\transforms-3\d6151f61f9e0f7087252d17120f61133\transformed\jetified-firebase-encoders-json-18.0.0\AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\mawad\.gradle\caches\transforms-3\f32fb81aa6dca15bcc28aa05b6d47f6d\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\mawad\.gradle\caches\transforms-3\f81841bb2d1af5f1467ca679d766605b\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\mawad\.gradle\caches\transforms-3\9397610aa89e3112e65e2a65c939279f\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\mawad\.gradle\caches\transforms-3\7e643dbd2b39b848df3a2870f1e77d69\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [io.grpc:grpc-android:1.52.1] C:\Users\mawad\.gradle\caches\transforms-3\a6f18d556e9416c267f4f8d50aafdc61\transformed\jetified-grpc-android-1.52.1\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\mawad\.gradle\caches\transforms-3\49af39915099eec44ec1265e5c05b231\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:2:1-52:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\mawad\.gradle\caches\transforms-3\0bdcc59367316b7f73353b2f9a835c5e\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
 INJECTED from F:\Order-Food\android\app\src\debug\AndroidManifest.xml:1:1-8:12
 INJECTED from F:\Order-Food\android\app\src\debug\AndroidManifest.xml:1:1-8:12
@@ -193,28 +215,36 @@ uses-sdk
 INJECTED from F:\Order-Food\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from F:\Order-Food\android\app\src\main\AndroidManifest.xml
 INJECTED from F:\Order-Food\android\app\src\main\AndroidManifest.xml
-MERGED from [:firebase_auth] F:\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_auth] F:\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:firebase_database] F:\Order-Food\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:firebase_database] F:\Order-Food\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_storage] F:\Order-Food\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_storage] F:\Order-Food\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:cloud_firestore] F:\Order-Food\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:cloud_firestore] F:\Order-Food\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_auth] F:\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_auth] F:\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_storage] F:\Order-Food\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_storage] F:\Order-Food\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:firebase_core] F:\Order-Food\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:firebase_core] F:\Order-Food\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:permission_handler_android] F:\Order-Food\build\permission_handler_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:permission_handler_android] F:\Order-Food\build\permission_handler_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:image_picker_android] F:\Order-Food\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:image_picker_android] F:\Order-Food\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:flutter_plugin_android_lifecycle] F:\Order-Food\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:flutter_plugin_android_lifecycle] F:\Order-Food\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:sqflite] F:\Order-Food\build\sqflite\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:sqflite] F:\Order-Food\build\sqflite\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:permission_handler_android] F:\Order-Food\build\permission_handler_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:permission_handler_android] F:\Order-Food\build\permission_handler_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [me.carda:androidcore:0.7.7] C:\Users\mawad\.gradle\caches\transforms-3\ae3e77dc7b5d2eeeb40af8bc6ec93977\transformed\jetified-androidcore-0.7.7\AndroidManifest.xml:5:5-7:41
+MERGED from [me.carda:androidcore:0.7.7] C:\Users\mawad\.gradle\caches\transforms-3\ae3e77dc7b5d2eeeb40af8bc6ec93977\transformed\jetified-androidcore-0.7.7\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat-resources:1.5.1] C:\Users\mawad\.gradle\caches\transforms-3\d76f8d74ff9e7543ffea68972a4f06a5\transformed\jetified-appcompat-resources-1.5.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.5.1] C:\Users\mawad\.gradle\caches\transforms-3\d76f8d74ff9e7543ffea68972a4f06a5\transformed\jetified-appcompat-resources-1.5.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.5.1] C:\Users\mawad\.gradle\caches\transforms-3\716b38e02fddbe74bf594d481de4380c\transformed\appcompat-1.5.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.5.1] C:\Users\mawad\.gradle\caches\transforms-3\716b38e02fddbe74bf594d481de4380c\transformed\appcompat-1.5.1\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-auth:22.1.0] C:\Users\mawad\.gradle\caches\transforms-3\a5ed2787244d1d029684e4412f2ec19e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:21:5-23:64
 MERGED from [com.google.firebase:firebase-auth:22.1.0] C:\Users\mawad\.gradle\caches\transforms-3\a5ed2787244d1d029684e4412f2ec19e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:21:5-23:64
 MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\mawad\.gradle\caches\transforms-3\1c71bdaede5fb70624c81058b12292f8\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:20:5-44
@@ -281,34 +311,50 @@ MERGED from [com.google.android.gms:play-services-measurement-base:21.3.0] C:\Us
 MERGED from [com.google.android.gms:play-services-measurement-base:21.3.0] C:\Users\mawad\.gradle\caches\transforms-3\96a800bc0ae27853396ea6df1b9361e8\transformed\jetified-play-services-measurement-base-21.3.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\mawad\.gradle\caches\transforms-3\749f96c73042a51597d251b9bd84d73c\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:18:5-43
 MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\mawad\.gradle\caches\transforms-3\749f96c73042a51597d251b9bd84d73c\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:18:5-43
-MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\mawad\.gradle\caches\transforms-3\b26b03b9623bc406b551a97da7111763\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\mawad\.gradle\caches\transforms-3\b26b03b9623bc406b551a97da7111763\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\mawad\.gradle\caches\transforms-3\45d18b261c483451a1947b6daaacb1e5\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\mawad\.gradle\caches\transforms-3\45d18b261c483451a1947b6daaacb1e5\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.7.2] C:\Users\mawad\.gradle\caches\transforms-3\4acdb0f06bc4cd2cc4fbcd8316d5971f\transformed\jetified-activity-1.7.2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.activity:activity:1.7.2] C:\Users\mawad\.gradle\caches\transforms-3\4acdb0f06bc4cd2cc4fbcd8316d5971f\transformed\jetified-activity-1.7.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.media:media:1.1.0] C:\Users\mawad\.gradle\caches\transforms-3\8d1ac97ad6eeaa211feafd53d34d991e\transformed\media-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.media:media:1.1.0] C:\Users\mawad\.gradle\caches\transforms-3\8d1ac97ad6eeaa211feafd53d34d991e\transformed\media-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.6.0] C:\Users\mawad\.gradle\caches\transforms-3\a7e3011e9a04ac740edbfc213f47c25f\transformed\media-1.6.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.6.0] C:\Users\mawad\.gradle\caches\transforms-3\a7e3011e9a04ac740edbfc213f47c25f\transformed\media-1.6.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\mawad\.gradle\caches\transforms-3\1dbc3576b806896e2c9c0e6b3771f4fd\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\mawad\.gradle\caches\transforms-3\1dbc3576b806896e2c9c0e6b3771f4fd\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.browser:browser:1.4.0] C:\Users\mawad\.gradle\caches\transforms-3\e6c5931a131f9074365fa6b30384fdd0\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.browser:browser:1.4.0] C:\Users\mawad\.gradle\caches\transforms-3\e6c5931a131f9074365fa6b30384fdd0\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\mawad\.gradle\caches\transforms-3\8477a2108c3535fe41d3abf1edf1d40d\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\mawad\.gradle\caches\transforms-3\8477a2108c3535fe41d3abf1edf1d40d\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\mawad\.gradle\caches\transforms-3\8c56985abe4d66d3aaea3b073c5419b5\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\mawad\.gradle\caches\transforms-3\8c56985abe4d66d3aaea3b073c5419b5\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\mawad\.gradle\caches\transforms-3\81c4b255e6e7701a52bf58831817d911\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\mawad\.gradle\caches\transforms-3\81c4b255e6e7701a52bf58831817d911\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\mawad\.gradle\caches\transforms-3\e5afbd639434ac2f523cedf5395f25d5\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\mawad\.gradle\caches\transforms-3\e5afbd639434ac2f523cedf5395f25d5\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\mawad\.gradle\caches\transforms-3\352700d06157c873f8996cb72dbca503\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\mawad\.gradle\caches\transforms-3\352700d06157c873f8996cb72dbca503\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\mawad\.gradle\caches\transforms-3\a58120dcf597ad916797f12694d48e35\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\mawad\.gradle\caches\transforms-3\a58120dcf597ad916797f12694d48e35\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44
 MERGED from [androidx.core:core-ktx:1.10.1] C:\Users\mawad\.gradle\caches\transforms-3\e1797f9eb9258395f6bb50aba9856ae7\transformed\jetified-core-ktx-1.10.1\AndroidManifest.xml:5:5-44
 MERGED from [androidx.core:core-ktx:1.10.1] C:\Users\mawad\.gradle\caches\transforms-3\e1797f9eb9258395f6bb50aba9856ae7\transformed\jetified-core-ktx-1.10.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\mawad\.gradle\caches\transforms-3\8477a2108c3535fe41d3abf1edf1d40d\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\mawad\.gradle\caches\transforms-3\8477a2108c3535fe41d3abf1edf1d40d\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\mawad\.gradle\caches\transforms-3\8563f770f9e911df150dea0007b340f4\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\mawad\.gradle\caches\transforms-3\8563f770f9e911df150dea0007b340f4\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\mawad\.gradle\caches\transforms-3\79b23288b601c5e916de5dc30fe3922b\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\mawad\.gradle\caches\transforms-3\79b23288b601c5e916de5dc30fe3922b\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\mawad\.gradle\caches\transforms-3\e11432afc863418aa09f52e896d840d7\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\mawad\.gradle\caches\transforms-3\e11432afc863418aa09f52e896d840d7\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.10.1] C:\Users\mawad\.gradle\caches\transforms-3\c082f5d7d44fbd751e596b1d8dfe178c\transformed\core-1.10.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.10.1] C:\Users\mawad\.gradle\caches\transforms-3\c082f5d7d44fbd751e596b1d8dfe178c\transformed\core-1.10.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\mawad\.gradle\caches\transforms-3\baa0cae05e9ae84e9686ffd981614515\transformed\jetified-savedstate-1.2.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\mawad\.gradle\caches\transforms-3\baa0cae05e9ae84e9686ffd981614515\transformed\jetified-savedstate-1.2.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\131ac871e54845a3940f8cc8d928228d\transformed\lifecycle-livedata-2.6.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\131ac871e54845a3940f8cc8d928228d\transformed\lifecycle-livedata-2.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\eee2bb99eb62ffb54c019a4541e0c5d7\transformed\lifecycle-livedata-core-2.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\eee2bb99eb62ffb54c019a4541e0c5d7\transformed\lifecycle-livedata-core-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\2571da7e10380d04f7024861368b0dd6\transformed\jetified-lifecycle-service-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\2571da7e10380d04f7024861368b0dd6\transformed\jetified-lifecycle-service-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-reactivestreams:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\5a4f7fa0ac44231ebf4bbd45ae4bb231\transformed\lifecycle-reactivestreams-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-reactivestreams:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\5a4f7fa0ac44231ebf4bbd45ae4bb231\transformed\lifecycle-reactivestreams-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\05595c3dac6d4a79d6bce46c51913008\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\05595c3dac6d4a79d6bce46c51913008\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\131ac871e54845a3940f8cc8d928228d\transformed\lifecycle-livedata-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\131ac871e54845a3940f8cc8d928228d\transformed\lifecycle-livedata-2.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\4d01f31bae63ab8696dfeba15c982a74\transformed\lifecycle-viewmodel-2.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\4d01f31bae63ab8696dfeba15c982a74\transformed\lifecycle-viewmodel-2.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\5e7d6ec4f4974b79c19e4c32f17fff32\transformed\lifecycle-runtime-2.6.1\AndroidManifest.xml:5:5-44
@@ -339,6 +385,8 @@ MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\mawa
 MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\mawad\.gradle\caches\transforms-3\eaeceeb421be684f6c21d29376ba0a46\transformed\jetified-transport-api-3.0.0\AndroidManifest.xml:18:5-20:41
 MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\mawad\.gradle\caches\transforms-3\d6151f61f9e0f7087252d17120f61133\transformed\jetified-firebase-encoders-json-18.0.0\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\mawad\.gradle\caches\transforms-3\d6151f61f9e0f7087252d17120f61133\transformed\jetified-firebase-encoders-json-18.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\mawad\.gradle\caches\transforms-3\f32fb81aa6dca15bcc28aa05b6d47f6d\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\mawad\.gradle\caches\transforms-3\f32fb81aa6dca15bcc28aa05b6d47f6d\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\mawad\.gradle\caches\transforms-3\f81841bb2d1af5f1467ca679d766605b\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\mawad\.gradle\caches\transforms-3\f81841bb2d1af5f1467ca679d766605b\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\mawad\.gradle\caches\transforms-3\9397610aa89e3112e65e2a65c939279f\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
@@ -349,6 +397,8 @@ MERGED from [io.grpc:grpc-android:1.52.1] C:\Users\mawad\.gradle\caches\transfor
 MERGED from [io.grpc:grpc-android:1.52.1] C:\Users\mawad\.gradle\caches\transforms-3\a6f18d556e9416c267f4f8d50aafdc61\transformed\jetified-grpc-android-1.52.1\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\mawad\.gradle\caches\transforms-3\49af39915099eec44ec1265e5c05b231\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\mawad\.gradle\caches\transforms-3\49af39915099eec44ec1265e5c05b231\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:7:5-9:41
+MERGED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\mawad\.gradle\caches\transforms-3\0bdcc59367316b7f73353b2f9a835c5e\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\mawad\.gradle\caches\transforms-3\0bdcc59367316b7f73353b2f9a835c5e\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
 INJECTED from F:\Order-Food\android\app\src\debug\AndroidManifest.xml
@@ -394,13 +444,13 @@ MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Us
 	android:name
 		ADDED from F:\Order-Food\android\app\src\debug\AndroidManifest.xml:7:22-64
 service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [:firebase_auth] F:\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-MERGED from [:firebase_database] F:\Order-Food\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-MERGED from [:firebase_database] F:\Order-Food\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-MERGED from [:firebase_storage] F:\Order-Food\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-MERGED from [:firebase_storage] F:\Order-Food\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+ADDED from [:firebase_database] F:\Order-Food\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
 MERGED from [:cloud_firestore] F:\Order-Food\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
 MERGED from [:cloud_firestore] F:\Order-Food\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_auth] F:\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_auth] F:\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_storage] F:\Order-Food\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_storage] F:\Order-Food\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
 MERGED from [:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:37:9-41:19
 MERGED from [:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:37:9-41:19
 MERGED from [:firebase_core] F:\Order-Food\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
@@ -432,31 +482,31 @@ MERGED from [com.google.firebase:firebase-common:20.3.3] C:\Users\mawad\.gradle\
 	android:directBootAware
 		ADDED from [com.google.firebase:firebase-common:20.3.3] C:\Users\mawad\.gradle\caches\transforms-3\a7414f859da620dd63f4e151444b9ea4\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:34:13-43
 	android:name
-		ADDED from [:firebase_auth] F:\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:18-89
-meta-data#com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar
-ADDED from [:firebase_auth] F:\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
-	android:value
-		ADDED from [:firebase_auth] F:\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
-	android:name
-		ADDED from [:firebase_auth] F:\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
+		ADDED from [:firebase_database] F:\Order-Food\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:10:18-89
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.database.FlutterFirebaseAppRegistrar
 ADDED from [:firebase_database] F:\Order-Food\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
 	android:value
 		ADDED from [:firebase_database] F:\Order-Food\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 	android:name
 		ADDED from [:firebase_database] F:\Order-Food\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-127
-meta-data#com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar
-ADDED from [:firebase_storage] F:\Order-Food\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
-	android:value
-		ADDED from [:firebase_storage] F:\Order-Food\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
-	android:name
-		ADDED from [:firebase_storage] F:\Order-Food\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-126
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar
 ADDED from [:cloud_firestore] F:\Order-Food\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
 	android:value
 		ADDED from [:cloud_firestore] F:\Order-Food\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 	android:name
 		ADDED from [:cloud_firestore] F:\Order-Food\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-134
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar
+ADDED from [:firebase_auth] F:\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+	android:value
+		ADDED from [:firebase_auth] F:\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+	android:name
+		ADDED from [:firebase_auth] F:\Order-Food\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_storage] F:\Order-Food\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+	android:value
+		ADDED from [:firebase_storage] F:\Order-Food\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+	android:name
+		ADDED from [:firebase_storage] F:\Order-Food\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-126
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-68
 MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\mawad\.gradle\caches\transforms-3\1c71bdaede5fb70624c81058b12292f8\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:24:5-68
@@ -513,6 +563,8 @@ MERGED from [io.grpc:grpc-android:1.52.1] C:\Users\mawad\.gradle\caches\transfor
 		ADDED from [:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-76
 uses-permission#android.permission.POST_NOTIFICATIONS
 ADDED from [:firebase_messaging] F:\Order-Food\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-77
+MERGED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-77
+MERGED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-77
 MERGED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-77
 MERGED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-77
 MERGED from [com.google.firebase:firebase-messaging:23.2.0] C:\Users\mawad\.gradle\caches\transforms-3\d5a8f692488500b5dcc859a2fc2151f1\transformed\jetified-firebase-messaging-23.2.0\AndroidManifest.xml:25:5-77
@@ -591,14 +643,100 @@ ADDED from [:image_picker_android] F:\Order-Food\build\image_picker_android\inte
 		ADDED from [:image_picker_android] F:\Order-Food\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-72
 	android:name
 		ADDED from [:image_picker_android] F:\Order-Food\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
+uses-permission#android.permission.BROADCAST_CLOSE_SYSTEM_DIALOGS
+ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-89
+	android:name
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-86
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-81
+ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-81
+MERGED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-81
+MERGED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-81
 	android:name
-		ADDED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-78
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-78
 uses-permission#android.permission.VIBRATE
-ADDED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-66
+ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-66
+MERGED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-66
+MERGED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-66
 	android:name
-		ADDED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-63
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:12:22-63
+receiver#me.carda.awesome_notifications.DartNotificationActionReceiver
+ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:15:9-17:39
+	android:exported
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-36
+	android:name
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-89
+receiver#me.carda.awesome_notifications.DartDismissedNotificationReceiver
+ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:18:9-20:39
+	android:exported
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-36
+	android:name
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-92
+receiver#me.carda.awesome_notifications.DartScheduledNotificationReceiver
+ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:21:9-23:39
+	android:exported
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-36
+	android:name
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-92
+receiver#me.carda.awesome_notifications.DartRefreshSchedulesReceiver
+ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:24:9-38:20
+	android:enabled
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-35
+	android:exported
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-36
+	android:name
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:25:13-87
+intent-filter#action:name:android.app.action.SCHEDULE_EXACT_ALARM_PERMISSION_STATE_CHANGED+action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.LOCKED_BOOT_COMPLETED+action:name:android.intent.action.MY_PACKAGE_REPLACED+action:name:android.intent.action.QUICKBOOT_POWERON+action:name:com.htc.intent.action.QUICKBOOT_POWERON+category:name:android.intent.category.DEFAULT
+ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:28:13-37:29
+category#android.intent.category.DEFAULT
+ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:29:17-76
+	android:name
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:29:27-73
+action#android.intent.action.BOOT_COMPLETED
+ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:31:17-79
+	android:name
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:31:25-76
+action#android.intent.action.LOCKED_BOOT_COMPLETED
+ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:32:17-86
+	android:name
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:32:25-83
+action#android.intent.action.MY_PACKAGE_REPLACED
+ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:33:17-84
+	android:name
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:33:25-81
+action#android.intent.action.QUICKBOOT_POWERON
+ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:34:25-79
+action#com.htc.intent.action.QUICKBOOT_POWERON
+ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:35:17-82
+	android:name
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:35:25-79
+action#android.app.action.SCHEDULE_EXACT_ALARM_PERMISSION_STATE_CHANGED
+ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:36:17-107
+	android:name
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:36:25-104
+service#me.carda.awesome_notifications.DartBackgroundService
+ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:40:9-43:72
+	android:exported
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:42:13-37
+	android:permission
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:43:13-69
+	android:name
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:41:13-80
+service#me.carda.awesome_notifications.core.services.ForegroundService
+ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:44:9-49:43
+MERGED from [me.carda:androidcore:0.7.7] C:\Users\mawad\.gradle\caches\transforms-3\ae3e77dc7b5d2eeeb40af8bc6ec93977\transformed\jetified-androidcore-0.7.7\AndroidManifest.xml:10:9-15:43
+MERGED from [me.carda:androidcore:0.7.7] C:\Users\mawad\.gradle\caches\transforms-3\ae3e77dc7b5d2eeeb40af8bc6ec93977\transformed\jetified-androidcore-0.7.7\AndroidManifest.xml:10:9-15:43
+	android:enabled
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:46:13-35
+	android:exported
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:47:13-37
+	android:stopWithTask
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:49:13-40
+	android:foregroundServiceType
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:48:13-54
+	android:name
+		ADDED from [:awesome_notifications] F:\Order-Food\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:45:13-90
 uses-permission#android.permission.USE_FULL_SCREEN_INTENT
 ADDED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-81
 	android:name
@@ -627,22 +765,6 @@ ADDED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_noti
 		ADDED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-101
 intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.MY_PACKAGE_REPLACED+action:name:android.intent.action.QUICKBOOT_POWERON+action:name:com.htc.intent.action.QUICKBOOT_POWERON
 ADDED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:25:13-30:29
-action#android.intent.action.BOOT_COMPLETED
-ADDED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:26:17-79
-	android:name
-		ADDED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:26:25-76
-action#android.intent.action.MY_PACKAGE_REPLACED
-ADDED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:27:17-84
-	android:name
-		ADDED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:27:25-81
-action#android.intent.action.QUICKBOOT_POWERON
-ADDED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:28:17-82
-	android:name
-		ADDED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:28:25-79
-action#com.htc.intent.action.QUICKBOOT_POWERON
-ADDED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:29:17-82
-	android:name
-		ADDED from [:flutter_local_notifications] F:\Order-Food\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:29:25-79
 activity#com.google.firebase.auth.internal.GenericIdpActivity
 ADDED from [com.google.firebase:firebase-auth:22.1.0] C:\Users\mawad\.gradle\caches\transforms-3\a5ed2787244d1d029684e4412f2ec19e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:29:9-46:20
 	android:excludeFromRecents
@@ -661,10 +783,6 @@ action#android.intent.action.VIEW
 ADDED from [com.google.firebase:firebase-auth:22.1.0] C:\Users\mawad\.gradle\caches\transforms-3\a5ed2787244d1d029684e4412f2ec19e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:36:17-69
 	android:name
 		ADDED from [com.google.firebase:firebase-auth:22.1.0] C:\Users\mawad\.gradle\caches\transforms-3\a5ed2787244d1d029684e4412f2ec19e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:36:25-66
-category#android.intent.category.DEFAULT
-ADDED from [com.google.firebase:firebase-auth:22.1.0] C:\Users\mawad\.gradle\caches\transforms-3\a5ed2787244d1d029684e4412f2ec19e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:38:17-76
-	android:name
-		ADDED from [com.google.firebase:firebase-auth:22.1.0] C:\Users\mawad\.gradle\caches\transforms-3\a5ed2787244d1d029684e4412f2ec19e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:38:27-73
 category#android.intent.category.BROWSABLE
 ADDED from [com.google.firebase:firebase-auth:22.1.0] C:\Users\mawad\.gradle\caches\transforms-3\a5ed2787244d1d029684e4412f2ec19e\transformed\jetified-firebase-auth-22.1.0\AndroidManifest.xml:39:17-78
 	android:name
@@ -849,6 +967,28 @@ ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\mawad\.gradle\caches\t
 		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\mawad\.gradle\caches\transforms-3\81c4b255e6e7701a52bf58831817d911\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
 	android:name
 		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\mawad\.gradle\caches\transforms-3\81c4b255e6e7701a52bf58831817d911\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\mawad\.gradle\caches\transforms-3\a58120dcf597ad916797f12694d48e35\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\05595c3dac6d4a79d6bce46c51913008\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\05595c3dac6d4a79d6bce46c51913008\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mawad\.gradle\caches\transforms-3\473a5660f2386016976c48eef1ae485b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mawad\.gradle\caches\transforms-3\473a5660f2386016976c48eef1ae485b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\mawad\.gradle\caches\transforms-3\e00611b8cd97177a3a152c43f77407d0\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\mawad\.gradle\caches\transforms-3\e00611b8cd97177a3a152c43f77407d0\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\mawad\.gradle\caches\transforms-3\a58120dcf597ad916797f12694d48e35\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\mawad\.gradle\caches\transforms-3\a58120dcf597ad916797f12694d48e35\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\mawad\.gradle\caches\transforms-3\a58120dcf597ad916797f12694d48e35\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\mawad\.gradle\caches\transforms-3\a58120dcf597ad916797f12694d48e35\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\mawad\.gradle\caches\transforms-3\a58120dcf597ad916797f12694d48e35\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\mawad\.gradle\caches\transforms-3\a58120dcf597ad916797f12694d48e35\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\mawad\.gradle\caches\transforms-3\a58120dcf597ad916797f12694d48e35\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
 permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.10.1] C:\Users\mawad\.gradle\caches\transforms-3\c082f5d7d44fbd751e596b1d8dfe178c\transformed\core-1.10.1\AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
@@ -869,18 +1009,12 @@ uses-permission#com.example.order.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.10.1] C:\Users\mawad\.gradle\caches\transforms-3\c082f5d7d44fbd751e596b1d8dfe178c\transformed\core-1.10.1\AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.10.1] C:\Users\mawad\.gradle\caches\transforms-3\c082f5d7d44fbd751e596b1d8dfe178c\transformed\core-1.10.1\AndroidManifest.xml:26:22-94
-provider#androidx.startup.InitializationProvider
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mawad\.gradle\caches\transforms-3\473a5660f2386016976c48eef1ae485b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\mawad\.gradle\caches\transforms-3\e00611b8cd97177a3a152c43f77407d0\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\mawad\.gradle\caches\transforms-3\e00611b8cd97177a3a152c43f77407d0\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
-	tools:node
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mawad\.gradle\caches\transforms-3\473a5660f2386016976c48eef1ae485b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:28:13-31
-	android:authorities
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mawad\.gradle\caches\transforms-3\473a5660f2386016976c48eef1ae485b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:26:13-68
-	android:exported
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mawad\.gradle\caches\transforms-3\473a5660f2386016976c48eef1ae485b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:27:13-37
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\05595c3dac6d4a79d6bce46c51913008\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\05595c3dac6d4a79d6bce46c51913008\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mawad\.gradle\caches\transforms-3\473a5660f2386016976c48eef1ae485b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:25:13-67
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\mawad\.gradle\caches\transforms-3\05595c3dac6d4a79d6bce46c51913008\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
 meta-data#androidx.profileinstaller.ProfileInstallerInitializer
 ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mawad\.gradle\caches\transforms-3\473a5660f2386016976c48eef1ae485b\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
 	android:value
@@ -951,3 +1085,67 @@ ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\m
 		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\mawad\.gradle\caches\transforms-3\a31d93df4a999dbb94e7d646d3eed65c\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:34:13-37
 	android:name
 		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\mawad\.gradle\caches\transforms-3\a31d93df4a999dbb94e7d646d3eed65c\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:33:13-132
+uses-permission#com.sec.android.provider.badge.permission.READ
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:19:5-86
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:19:22-83
+uses-permission#com.sec.android.provider.badge.permission.WRITE
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:20:5-87
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:20:22-84
+uses-permission#com.htc.launcher.permission.READ_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:23:5-81
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:23:22-78
+uses-permission#com.htc.launcher.permission.UPDATE_SHORTCUT
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:24:5-83
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:24:22-80
+uses-permission#com.sonyericsson.home.permission.BROADCAST_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:27:5-88
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:27:22-85
+uses-permission#com.sonymobile.home.permission.PROVIDER_INSERT_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:28:5-92
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:28:22-89
+uses-permission#com.anddoes.launcher.permission.UPDATE_COUNT
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:31:5-84
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:31:22-81
+uses-permission#com.majeur.launcher.permission.UPDATE_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:34:5-83
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:34:22-80
+uses-permission#com.huawei.android.launcher.permission.CHANGE_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:37:5-91
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:37:22-88
+uses-permission#com.huawei.android.launcher.permission.READ_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:38:5-92
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:38:22-89
+uses-permission#com.huawei.android.launcher.permission.WRITE_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:39:5-93
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:39:22-90
+uses-permission#android.permission.READ_APP_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:42:5-73
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:42:22-70
+uses-permission#com.oppo.launcher.permission.READ_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:45:5-82
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:45:22-79
+uses-permission#com.oppo.launcher.permission.WRITE_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:46:5-83
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:46:22-80
+uses-permission#me.everything.badger.permission.BADGE_COUNT_READ
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:49:5-88
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:49:22-85
+uses-permission#me.everything.badger.permission.BADGE_COUNT_WRITE
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:50:5-89
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\mawad\.gradle\caches\transforms-3\40d4e718cfbc1e04ad66f33b73d35897\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:50:22-86

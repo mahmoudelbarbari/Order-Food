@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:order/core/widgets/app_bar_widget.dart';
 import 'package:order/core/widgets/snackbar_message.dart';
 import 'package:order/features/login/presentation/pages/login_page.dart';
 import 'package:order/features/register/domain/entities/register_entities.dart';
@@ -20,45 +19,37 @@ class _RegisterPageState extends State<RegisterPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const AppBarWidget(
-        pageName: 'Register Page',
+    return SafeArea(
+      child: Scaffold(
+        body: _buildBody(),
       ),
-      body: _buildBody(),
     );
   }
 
   Widget _buildBody() {
     return BlocProvider<RegisterCubit>(
       create: (_) => RegisterCubit(),
-      child: Padding(
-        padding: const EdgeInsets.all(10),
-        child: BlocConsumer<RegisterCubit, RegisterState>(
-          listener: (context, state) {
-            if (state is CreateUserSuccessfully) {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const LoginPage(),
-                  ));
-              registerAccountEntity = state.registerAccountEntity;
-              SnackBarMessage().showSuccessSnackBar(
-                  message: state.registerAccountEntity.message ??
-                      "You created an account successfully",
-                  context: context);
-            } else if (state is RegisterErrorState) {
-              SnackBarMessage().showErrorSnackBar(
-                  message: state.errorMessage, context: context);
-            }
-          },
-          builder: (context, state) {
-            if (state is RegisterErrorState) {
-              SnackBarMessage().showErrorSnackBar(
-                  message: state.errorMessage, context: context);
-            }
-            return RegisterWidget(registerAccountEntity: registerAccountEntity);
-          },
-        ),
+      child: BlocConsumer<RegisterCubit, RegisterState>(
+        listener: (context, state) {
+          if (state is CreateUserSuccessfully) {
+            registerAccountEntity = state.registerAccountEntity;
+            SnackBarMessage().showSuccessSnackBar(
+                message: state.registerAccountEntity.message ??
+                    "You created an account successfully",
+                context: context);
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const LoginPage(),
+                ));
+          } else if (state is RegisterErrorState) {
+            SnackBarMessage().showErrorSnackBar(
+                message: state.errorMessage, context: context);
+          }
+        },
+        builder: (context, state) {
+          return RegisterWidget(registerAccountEntity: registerAccountEntity);
+        },
       ),
     );
   }

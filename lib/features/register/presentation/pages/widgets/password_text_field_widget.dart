@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../core/theme_app.dart';
+
 class PasswordTextFieldWidget extends StatelessWidget {
   const PasswordTextFieldWidget({
     Key? key,
@@ -15,11 +17,41 @@ class PasswordTextFieldWidget extends StatelessWidget {
       keyboardType: TextInputType.multiline,
       controller: controllerPassword,
       style: const TextStyle(fontSize: 20),
-      decoration: const InputDecoration(
-        border: OutlineInputBorder(
+      decoration: InputDecoration(
+        fillColor: authTextFromFieldFillColor.withOpacity(.3),
+        border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(12))),
-        labelText: 'Password',
-        prefixIcon: Icon(Icons.lock),
+        hintText: 'Password',
+        hintStyle: const TextStyle(
+          color: authTextFromFieldHintTextColor,
+          fontSize: 17,
+          fontWeight: FontWeight.w500,
+        ),
+        prefixIcon: const Icon(Icons.lock_outline),
+        suffixIcon: const Text(""),
+        filled: true,
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: authTextFromFieldPorderColor.withOpacity(.5),
+          ),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: authTextFromFieldPorderColor.withOpacity(.5),
+          ),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: authTextFromFieldErrorBorderColor.withOpacity(.5),
+          ),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderSide: const BorderSide(color: Colors.white),
+          borderRadius: BorderRadius.circular(10),
+        ),
       ),
       validator: (value) {
         if (value == null || value.isEmpty) {

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:order/features/login/presentation/pages/login_page.dart';
+import 'package:order/features/login/presentation/pages/widgtes/login_top_image_widget.dart';
 import 'package:order/features/register/domain/entities/register_entities.dart';
 
+import '../../../../../core/theme_app.dart';
 import '../../../../../core/widgets/botton_auth_row_widget.dart';
 import '../../../../../core/widgets/common_elevated_button_widget.dart';
 import '../../cubit/register_cubit.dart';
@@ -10,6 +12,7 @@ import 'email_text_field_widget.dart';
 import 'mobile_text_field_widget.dart';
 import 'password_text_field_widget.dart';
 import 'register_text_field_widget.dart';
+import 'register_top_title_widget.dart';
 
 class RegisterWidget extends StatefulWidget {
   final RegisterAccountEntity registerAccountEntity;
@@ -62,17 +65,22 @@ class _RegisterWidgetState extends State<RegisterWidget> {
     const sizedBox = SizedBox(height: 12);
     return Form(
       key: _keyform,
-      child: ListView(children: [
-        Padding(
+      child: SingleChildScrollView(
+        child: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const TopImage(),
+              const SizedBox(
+                width: double.infinity,
+                height: 20,
+              ),
+              const RegisterTopTitleWidget(),
               RegisterTextFieldWidget(
-                  controller: controllerUsername, labelText: 'Username'),
+                  controller: controllerUsername, hintText: 'Username'),
               sizedBox,
               RegisterTextFieldWidget(
-                  controller: controllerName, labelText: 'Name'),
+                  controller: controllerName, hintText: 'Name'),
               sizedBox,
               EmailTextFieldWidget(controllerEmail: controllerEmail),
               sizedBox,
@@ -80,15 +88,42 @@ class _RegisterWidgetState extends State<RegisterWidget> {
               sizedBox,
               DropdownButtonFormField<String?>(
                 borderRadius: BorderRadius.circular(12),
-                hint: const Text(
-                  'Gender',
-                  style: TextStyle(fontSize: 20),
-                ),
-                decoration: const InputDecoration(
-                  prefixIcon: Icon(Icons.person),
-                  border: OutlineInputBorder(
-                      gapPadding: 12,
-                      borderRadius: BorderRadius.all(Radius.circular(12))),
+                decoration: InputDecoration(
+                  fillColor: authTextFromFieldFillColor.withOpacity(.3),
+                  prefixIcon: const Icon(
+                    Icons.person_outline,
+                    size: 24,
+                    color: authTextFromFieldHintTextColor,
+                  ),
+                  hintText: 'Gender',
+                  hintStyle: const TextStyle(
+                    color: authTextFromFieldHintTextColor,
+                    fontSize: 17,
+                    fontWeight: FontWeight.w500,
+                  ),
+                  filled: true,
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: authTextFromFieldPorderColor.withOpacity(.5),
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: authTextFromFieldPorderColor.withOpacity(.5),
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  errorBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: authTextFromFieldErrorBorderColor.withOpacity(.5),
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  focusedErrorBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                 ),
                 value: selectedValue,
                 icon: const Icon(Icons.keyboard_arrow_down),
@@ -112,25 +147,27 @@ class _RegisterWidgetState extends State<RegisterWidget> {
               sizedBox,
               CommonElevatedButton(
                 text: "Sign up",
-                onTap: () {
+                onTap: () async {
                   setState(() {
                     if (_keyform.currentState!.validate()) {
-                      context.read<RegisterCubit>().registerAccountFromRemote(
-                          registerAccountEntity: RegisterAccountEntity(
-                            gender: controllerGender.text.trim(),
-                            name: controllerName.text,
-                            phoneNumber: controllerPhone.text,
-                            username: controllerUsername.text,
-                          ),
-                          email: controllerEmail.text.trim(),
-                          password: controllerPassword.text);
+                      context
+                          .read<RegisterCubit>()
+                          .registerAccountFromRemote(context,
+                              registerAccountEntity: RegisterAccountEntity(
+                                gender: controllerGender.text.trim(),
+                                name: controllerName.text,
+                                phoneNumber: controllerPhone.text,
+                                username: controllerUsername.text,
+                              ),
+                              email: controllerEmail.text.trim(),
+                              password: controllerPassword.text);
                     }
                   });
                 },
               ),
               BottomAuthRowWidget(
-                text: "Already have an account? ",
-                value: "Login Now",
+                text: "Already have an account?",
+                value: "Login",
                 onTap: () => Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => const LoginPage(),
                 )),
@@ -138,7 +175,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
             ],
           ),
         ),
-      ]),
+      ),
     );
   }
 }

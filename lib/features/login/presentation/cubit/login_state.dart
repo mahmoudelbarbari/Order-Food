@@ -8,6 +8,8 @@ class SuccessLogoutState extends LoginState {
   SuccessLogoutState(logedout);
 }
 
+class LogoutLoadingState extends LoginState {}
+
 class ErrorState extends LoginState {
   String errorMessage;
 

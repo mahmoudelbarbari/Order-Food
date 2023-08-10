@@ -53,7 +53,6 @@ void init() {
   //new DB
   sl.registerLazySingleton(() => FirebaseDatabseProvider());
   //sl.registerLazySingleton(() => DatabaseProvider());
-
   //olddb
   sl.registerLazySingleton<LocalDatabaseDataSource>(
       () => DatabaseDataSourceImpl(sl()));

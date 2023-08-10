@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:order/core/theme_app.dart';
 import 'package:order/features/event/presentation/pages/ticket_page.dart';
 import 'package:order/features/login/presentation/cubit/login_cubit.dart';
 import 'package:order/features/login/presentation/cubit/login_state.dart';
@@ -17,25 +16,10 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        title: const Column(
-          children: [
-            SizedBox(height: 20),
-            Text(
-              'Food',
-              style: TextStyle(
-                color: primaryColor,
-                fontSize: 25,
-                fontStyle: FontStyle.italic,
-              ),
-            ),
-          ],
-        ),
+    return SafeArea(
+      child: Scaffold(
+        body: _buildBody(),
       ),
-      body: _buildBody(),
     );
   }
 

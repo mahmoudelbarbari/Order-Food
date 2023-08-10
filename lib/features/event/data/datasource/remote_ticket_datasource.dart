@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:order/core/services/awesome_notification_service.dart';
 import 'package:order/features/event/data/models/event_model.dart';
 import 'package:order/features/event/data/models/titcket_model.dart';
 import 'package:order/features/event/domain/entities/event_entities.dart';
@@ -41,9 +42,12 @@ class RemoteTicketDatasource extends TicketDatasourceInterface {
         "title": eventModel.title,
         "description": eventModel.description,
       });
+      await AwesomeNotificationService.showNotification(
+          title: eventModel.title ?? '', body: eventModel.description ?? '');
+
       return BaseResponse(status: true, message: "Ticket Added Successfully");
     } catch (e) {
-      return BaseResponse(status: false, message: "Something went wrong");
+      return BaseResponse(status: false, message: e.toString());
     }
   }
 

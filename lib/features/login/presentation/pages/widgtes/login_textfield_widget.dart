@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:order/core/theme_app.dart';
 
 class LoginTextFieldWidget extends StatelessWidget {
   const LoginTextFieldWidget({
     Key? key,
     required this.controllerEmail,
     required this.prefixIcon,
+    this.suffixIcon,
     required this.labelText,
     required this.obscureText,
   }) : super(key: key);
 
   final TextEditingController controllerEmail;
   final Widget prefixIcon;
+  final Widget? suffixIcon;
   final String labelText;
   final bool obscureText;
 
@@ -21,10 +24,35 @@ class LoginTextFieldWidget extends StatelessWidget {
       keyboardType: TextInputType.emailAddress,
       style: const TextStyle(fontSize: 20),
       decoration: InputDecoration(
+        filled: true,
+        fillColor: authTextFromFieldHintTextColor.withOpacity(.3),
         border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(12))),
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: authTextFromFieldPorderColor.withOpacity(.5),
+          ),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: authTextFromFieldPorderColor.withOpacity(.5),
+          ),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: authTextFromFieldErrorBorderColor.withOpacity(.5),
+          ),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderSide: const BorderSide(color: Colors.white),
+          borderRadius: BorderRadius.circular(10),
+        ),
         labelText: labelText,
         prefixIcon: prefixIcon,
+        suffixIcon: suffixIcon,
       ),
       validator: (value) {
         if (value!.isNotEmpty) {

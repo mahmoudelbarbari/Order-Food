@@ -70,7 +70,6 @@ class _FormWidgetState extends State<FormWidget> {
         title: titleController.text,
         description: descriptionController.text,
       );
-      BlocProvider.of<TicketCubit>(context).getAllTickets();
       Navigator.push(
         context,
         MaterialPageRoute(builder: (_) => const TicketPage()),

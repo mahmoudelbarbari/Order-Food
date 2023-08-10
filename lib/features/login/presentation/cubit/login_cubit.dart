@@ -1,5 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:order/core/widgets/handler_request_api.dart';
 import 'package:order/features/login/domain/usecases/login_usecase.dart';
 import 'package:order/features/login/domain/usecases/remote_login_usecase.dart';
 import 'package:order/features/login/domain/usecases/remote_logout_usecase.dart';
@@ -13,19 +15,25 @@ class LoginCubit extends Cubit<LoginState> {
 
   LoginCubit() : super(LoginStateInt());
 
-  Future<void> remoteLogin(String email, String password) async {
+  Future<void> remoteLogin(
+      String email, String password, BuildContext context) async {
     emit(LoginStateLoading());
 
     final remoteLoginUsecase = RemoteLoginUsecase(sl());
 
     try {
-      final loggedin = await remoteLoginUsecase.call(email, password);
-      // return emit(LoginSucessState("Logged in successfully"));
-      if (loggedin.status) {
-        return emit(LoginSucessState("Hello, $email welcome back ;)"));
-      } else {
-        return emit(ErrorState(errorMessage: "Faild to login"));
-      }
+      emit(LoginStateLoading());
+      handlerRequestApi(
+        context: context,
+        body: () async {
+          final loggedin = await remoteLoginUsecase.call(email, password);
+          if (loggedin.status) {
+            return emit(LoginSucessState("Hello, $email welcome back ;)"));
+          } else {
+            return emit(ErrorState(errorMessage: loggedin.message));
+          }
+        },
+      );
     } on FirebaseAuthException catch (e) {
       emit(ErrorState(
         errorMessage: e.message.toString(),
@@ -49,12 +57,13 @@ class LoginCubit extends Cubit<LoginState> {
   }
 
   Future<void> logOut() async {
+    emit(LogoutLoadingState());
     final remoteLogoutUsecase = RemoteLogoutUsecase(sl());
     try {
+      emit(LogoutLoadingState());
       final loggedout = await remoteLogoutUsecase.call();
       if (loggedout.status) {
         emit(SuccessLogoutState(loggedout));
-        emit(SuccessState(loggedout));
       } else {
         emit(ErrorState(errorMessage: loggedout.message));
       }

@@ -6,6 +6,8 @@ import 'package:image_picker/image_picker.dart';
 import 'package:order/features/event/domain/entities/event_entities.dart';
 import 'package:order/features/restaurant/data/model/restaurant_model.dart';
 
+import '../../../../core/services/awesome_notification_service.dart';
+
 class FirebaseDatasourceProvider {
   static final _firebaseDatasourceProvider =
       FirebaseDatasourceProvider._internal();
@@ -44,6 +46,9 @@ class RestaurantDatasourceImpl extends RestaurantDatasourceInterface {
         "restaurantDescription": restaurantModel.restaurantDescription,
         "restaurantHotline": restaurantModel.hotlineNum,
       });
+      await AwesomeNotificationService.showNotification(
+          title: "Restaurant added ${restaurantModel.restaurantName}",
+          body: restaurantModel.restaurantDescription);
       return BaseResponse(status: true, message: 'added Successfully');
     } catch (e) {
       return BaseResponse(status: false, message: e.toString());

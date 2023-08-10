@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:order/core/theme_app.dart';
 
 class BottomAuthRowWidget extends StatelessWidget {
   const BottomAuthRowWidget({
@@ -17,10 +18,16 @@ class BottomAuthRowWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        Text(text),
+        Text(
+          text,
+          style: const TextStyle(color: primaryColor),
+        ),
         TextButton(
           onPressed: onTap,
-          child: Text(value),
+          child: Text(
+            value,
+            style: const TextStyle(color: headline1Color),
+          ),
         )
       ],
     );

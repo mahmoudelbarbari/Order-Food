@@ -15,11 +15,22 @@ class $AssetsImagesGen {
   /// File path: assets/images/empty_list.svg
   String get emptyList => 'assets/images/empty_list.svg';
 
+  /// File path: assets/images/image_icon.svg
+  String get imageIcon => 'assets/images/image_icon.svg';
+
+  /// File path: assets/images/login.png
+  String get login => 'assets/images/login.png';
+
+  /// File path: assets/images/profile.png
+  AssetGenImage get profilePng =>
+      const AssetGenImage('assets/images/profile.png');
+
   /// File path: assets/images/profile.svg
-  String get profile => 'assets/images/profile.svg';
+  String get profileSvg => 'assets/images/profile.svg';
 
   /// List of all assets
-  List<String> get values => [emptyList, profile];
+  List<dynamic> get values =>
+      [emptyList, imageIcon, login, profilePng, profileSvg];
 }
 
 class Assets {

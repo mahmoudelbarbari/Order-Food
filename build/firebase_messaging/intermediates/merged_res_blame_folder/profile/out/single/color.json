@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "F:\\Order-Food\\build\\firebase_messaging\\intermediates\\merged_res\\profile\\color\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\Users\\mawad\\.gradle\\caches\\transforms-3\\92765a38b804eb963c63cd05789eee6f\\transformed\\jetified-play-services-base-18.0.1\\res\\color\\common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "F:\\Order-Food\\build\\firebase_messaging\\intermediates\\merged_res\\profile\\color\\common_google_signin_btn_tint.xml",
+        "source": "C:\\Users\\mawad\\.gradle\\caches\\transforms-3\\92765a38b804eb963c63cd05789eee6f\\transformed\\jetified-play-services-base-18.0.1\\res\\color\\common_google_signin_btn_tint.xml"
+    },
+    {
+        "merged": "F:\\Order-Food\\build\\firebase_messaging\\intermediates\\merged_res\\profile\\color\\common_google_signin_btn_text_dark.xml",
+        "source": "C:\\Users\\mawad\\.gradle\\caches\\transforms-3\\92765a38b804eb963c63cd05789eee6f\\transformed\\jetified-play-services-base-18.0.1\\res\\color\\common_google_signin_btn_text_dark.xml"
+    }
+]

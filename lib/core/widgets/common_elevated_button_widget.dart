@@ -15,11 +15,17 @@ class CommonElevatedButton extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-            minimumSize: const Size(327, 56),
+            side: BorderSide.none,
+            minimumSize: const Size(337, 50),
             shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15))),
+                borderRadius: BorderRadius.circular(12))),
         onPressed: onTap,
-        child: Text(text),
+        child: Text(
+          text,
+          style: const TextStyle(
+            fontSize: 20,
+          ),
+        ),
       ),
     );
   }

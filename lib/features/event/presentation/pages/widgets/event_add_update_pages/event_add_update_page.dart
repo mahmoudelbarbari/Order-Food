@@ -35,6 +35,7 @@ class EventAddUpdatePage extends StatelessWidget {
             if (state is MessageAddDeleteUpdateEventState) {
               SnackBarMessage().showSuccessSnackBar(
                   message: state.message, context: context);
+              context.read<TicketCubit>().getAllTickets();
               Navigator.of(context).pushAndRemoveUntil(
                   MaterialPageRoute(builder: (_) => const TicketPage()),
                   (route) => false);

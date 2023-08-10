@@ -20,6 +20,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "awesome_notifications",
+      "rootUri": "file:///C:/Users/mawad/AppData/Local/Pub/Cache/hosted/pub.dev/awesome_notifications-0.7.4+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "badges",
       "rootUri": "file:///C:/Users/mawad/AppData/Local/Pub/Cache/hosted/pub.dev/badges-3.1.1",
       "packageUri": "lib/",
@@ -291,9 +297,9 @@
     },
     {
       "name": "flutter_svg",
-      "rootUri": "file:///C:/Users/mawad/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_svg-1.1.6",
+      "rootUri": "file:///C:/Users/mawad/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_svg-2.0.7",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "2.19"
     },
     {
       "name": "flutter_test",
@@ -380,6 +386,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "intl",
+      "rootUri": "file:///C:/Users/mawad/AppData/Local/Pub/Cache/hosted/pub.dev/intl-0.17.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "js",
       "rootUri": "file:///C:/Users/mawad/AppData/Local/Pub/Cache/hosted/pub.dev/js-0.6.7",
       "packageUri": "lib/",
@@ -424,12 +436,6 @@
     {
       "name": "path",
       "rootUri": "file:///C:/Users/mawad/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.8.3",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "path_drawing",
-      "rootUri": "file:///C:/Users/mawad/AppData/Local/Pub/Cache/hosted/pub.dev/path_drawing-1.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -572,6 +578,24 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "vector_graphics",
+      "rootUri": "file:///C:/Users/mawad/AppData/Local/Pub/Cache/hosted/pub.dev/vector_graphics-1.1.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "vector_graphics_codec",
+      "rootUri": "file:///C:/Users/mawad/AppData/Local/Pub/Cache/hosted/pub.dev/vector_graphics_codec-1.1.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "vector_graphics_compiler",
+      "rootUri": "file:///C:/Users/mawad/AppData/Local/Pub/Cache/hosted/pub.dev/vector_graphics_compiler-1.1.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "vector_math",
       "rootUri": "file:///C:/Users/mawad/AppData/Local/Pub/Cache/hosted/pub.dev/vector_math-2.1.4",
       "packageUri": "lib/",
@@ -596,7 +620,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-08-08T07:25:42.102865Z",
+  "generated": "2023-08-09T12:51:08.328336Z",
   "generator": "pub",
   "generatorVersion": "3.0.0-339.0.dev"
 }

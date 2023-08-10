@@ -20,6 +20,7 @@ import 'package:order/features/restaurant/presentation/pages/add_restaurant_page
 import 'package:order/features/restaurant/presentation/pages/get_all_restaurants_page/all_restaurants_page.dart';
 import 'package:order/features/restaurant/presentation/pages/menu_page/menu_page.dart';
 
+import 'core/services/awesome_notification_service.dart';
 import 'core/services/push_notification_service.dart';
 import 'features/event/presentation/cubit/ticket_cubit.dart';
 import 'features/login/presentation/pages/login_page.dart';
@@ -34,6 +35,8 @@ void main() async {
     await Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform,
     );
+
+    await AwesomeNotificationService.initializeNotification();
 
     // await di.sl<DatabaseProvider>().initDB(); sqlite DB
 

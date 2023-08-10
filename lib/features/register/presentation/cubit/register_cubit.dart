@@ -1,9 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:order/core/widgets/handler_request_api.dart';
 import 'package:order/features/register/domain/entities/register_entities.dart';
 import 'package:order/features/register/domain/usecase/remote_register_usecase.dart';
 import 'package:order/features/register/presentation/cubit/register_state.dart';
 import 'package:order/injection_container.dart';
+
 import '../../domain/usecase/register_usecase.dart';
 
 class RegisterCubit extends Cubit<RegisterState> {
@@ -11,7 +14,7 @@ class RegisterCubit extends Cubit<RegisterState> {
 
   RegisterCubit() : super(RegisterStateInt());
 
-  Future<void> registerAccountFromRemote(
+  Future<void> registerAccountFromRemote(BuildContext context,
       {required String email,
       required String password,
       required RegisterAccountEntity registerAccountEntity}) async {
@@ -19,10 +22,15 @@ class RegisterCubit extends Cubit<RegisterState> {
     final remoteRegisterUsecase = RemoteRegisterUsecase(sl());
 
     try {
-      await remoteRegisterUsecase(email, password, registerAccountEntity);
-      emit(CreateUserSuccessfully(
-        registerAccountEntity: registerAccountEntity,
-      ));
+      handlerRequestApi(
+        context: context,
+        body: () async {
+          await remoteRegisterUsecase(email, password, registerAccountEntity);
+          emit(CreateUserSuccessfully(
+            registerAccountEntity: registerAccountEntity,
+          ));
+        },
+      );
     } on FirebaseAuthException catch (e) {
       emit(RegisterErrorState(
         errorMessage: e.message.toString(),

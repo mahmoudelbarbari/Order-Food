@@ -20,9 +20,11 @@ class RemoteLoginDatasourceImpl implements RemoteLoginDatasource {
       return LoginBaseResponse(status: true, message: "successfully loggedin");
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
-        return LoginBaseResponse(status: false, message: e.code);
+        return LoginBaseResponse(status: false, message: 'User not found');
       } else if (e.code == 'wrong-password') {
-        return LoginBaseResponse(status: false, message: e.code);
+        return LoginBaseResponse(status: false, message: "Wrong password");
+      } else if (e.code == 'invalid-email') {
+        return LoginBaseResponse(status: false, message: "Invalid email");
       }
     } catch (e) {
       return LoginBaseResponse(status: false, message: e.toString());

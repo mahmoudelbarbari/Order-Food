@@ -27,9 +27,10 @@ class User extends Account {
     };
   }
 
-  factory User.fromMap(Map<String, dynamic> map) {
+  factory User.fromMap(map) {
     return User(
       idUser: map['idUser'],
+      name: map['name'],
       username: map['username'],
       password: map['password'],
     );
