@@ -31,28 +31,6 @@ class RegisterTextFieldWidget extends StatelessWidget {
           fontWeight: FontWeight.w500,
         ),
         filled: true,
-        enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: authTextFromFieldPorderColor.withOpacity(.5),
-          ),
-          borderRadius: BorderRadius.circular(10),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: authTextFromFieldPorderColor.withOpacity(.5),
-          ),
-          borderRadius: BorderRadius.circular(10),
-        ),
-        errorBorder: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: authTextFromFieldErrorBorderColor.withOpacity(.5),
-          ),
-          borderRadius: BorderRadius.circular(10),
-        ),
-        focusedErrorBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: Colors.white),
-          borderRadius: BorderRadius.circular(10),
-        ),
       ),
       validator: (value) {
         if (value!.isNotEmpty) {

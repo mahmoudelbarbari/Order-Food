@@ -28,28 +28,6 @@ class LoginTextFieldWidget extends StatelessWidget {
         fillColor: authTextFromFieldHintTextColor.withOpacity(.3),
         border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(12))),
-        enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: authTextFromFieldPorderColor.withOpacity(.5),
-          ),
-          borderRadius: BorderRadius.circular(10),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: authTextFromFieldPorderColor.withOpacity(.5),
-          ),
-          borderRadius: BorderRadius.circular(10),
-        ),
-        errorBorder: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: authTextFromFieldErrorBorderColor.withOpacity(.5),
-          ),
-          borderRadius: BorderRadius.circular(10),
-        ),
-        focusedErrorBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: Colors.white),
-          borderRadius: BorderRadius.circular(10),
-        ),
         hintText: hintText,
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,

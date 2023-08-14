@@ -33,8 +33,6 @@ class EmailTextFieldWidget extends StatelessWidget {
       style: const TextStyle(fontSize: 20),
       decoration: InputDecoration(
         fillColor: authTextFromFieldFillColor.withOpacity(.3),
-        border: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(12))),
         hintText: 'Example@gmail.com',
         hintStyle: const TextStyle(
           color: authTextFromFieldHintTextColor,
@@ -44,28 +42,6 @@ class EmailTextFieldWidget extends StatelessWidget {
         prefixIcon: const Icon(Icons.email_outlined),
         suffixIcon: const Text(""),
         filled: true,
-        enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: authTextFromFieldPorderColor.withOpacity(.5),
-          ),
-          borderRadius: BorderRadius.circular(10),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: authTextFromFieldPorderColor.withOpacity(.5),
-          ),
-          borderRadius: BorderRadius.circular(10),
-        ),
-        errorBorder: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: authTextFromFieldErrorBorderColor.withOpacity(.5),
-          ),
-          borderRadius: BorderRadius.circular(10),
-        ),
-        focusedErrorBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: Colors.white),
-          borderRadius: BorderRadius.circular(10),
-        ),
       ),
     );
   }
