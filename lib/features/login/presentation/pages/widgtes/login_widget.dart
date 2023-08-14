@@ -51,7 +51,7 @@ class _LoginWidgetState extends State<LoginWidget> {
               const LoginHeaderWidget(),
               const SizedBox(height: 15),
               LoginTextFieldWidget(
-                  labelText: "Email",
+                  hintText: "Email",
                   obscureText: false,
                   prefixIcon: const Icon(Icons.email),
                   controllerEmail: controllerEmail),
@@ -59,7 +59,7 @@ class _LoginWidgetState extends State<LoginWidget> {
               LoginTextFieldWidget(
                 obscureText: passwordVisible,
                 controllerEmail: controllerPassword,
-                labelText: "Password",
+                hintText: "Password",
                 prefixIcon: const Icon(Icons.lock),
                 suffixIcon: IconButton(
                   onPressed: () {

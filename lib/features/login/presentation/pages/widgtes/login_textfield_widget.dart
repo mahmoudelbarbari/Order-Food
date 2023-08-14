@@ -7,14 +7,14 @@ class LoginTextFieldWidget extends StatelessWidget {
     required this.controllerEmail,
     required this.prefixIcon,
     this.suffixIcon,
-    required this.labelText,
+    required this.hintText,
     required this.obscureText,
   }) : super(key: key);
 
   final TextEditingController controllerEmail;
   final Widget prefixIcon;
   final Widget? suffixIcon;
-  final String labelText;
+  final String hintText;
   final bool obscureText;
 
   @override
@@ -50,7 +50,7 @@ class LoginTextFieldWidget extends StatelessWidget {
           borderSide: const BorderSide(color: Colors.white),
           borderRadius: BorderRadius.circular(10),
         ),
-        labelText: labelText,
+        hintText: hintText,
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
       ),

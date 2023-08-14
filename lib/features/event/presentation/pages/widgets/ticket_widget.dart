@@ -4,6 +4,10 @@ import 'package:order/features/event/domain/entities/event_entities.dart';
 import 'package:order/features/event/presentation/cubit/ticket_cubit.dart';
 import 'package:order/features/event/presentation/pages/widgets/tickets_list_title_widget.dart';
 
+import '../../../../restaurant/presentation/pages/get_all_restaurants_page/all_restaurants_page.dart';
+import 'custome_row_home_widget.dart';
+import 'get_restaurant_row_widget.dart';
+
 class TicketWidget extends StatefulWidget {
   final List<EventEntity> eventEntity;
   const TicketWidget({
@@ -37,9 +41,20 @@ class _TicketWidgetState extends State<TicketWidget> {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
+          CustomRowHomePage(
+              firstText: 'Resturant',
+              scoindText: 'SeeMore',
+              press: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const AllRestaurantPage()));
+              }),
+          const SizedBox(height: 16),
+          const GetRestaurantRowWidget(),
           divider,
-          Expanded(
+          Flexible(
+            flex: 4,
             child: ListView.separated(
+                shrinkWrap: true,
                 itemCount: widget.eventEntity.length,
                 itemBuilder: (context, index) {
                   return TicketsListTitleWidget(

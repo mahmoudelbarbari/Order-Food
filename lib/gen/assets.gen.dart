@@ -19,7 +19,19 @@ class $AssetsImagesGen {
   String get imageIcon => 'assets/images/image_icon.svg';
 
   /// File path: assets/images/login.png
-  String get login => 'assets/images/login.png';
+  AssetGenImage get login => const AssetGenImage('assets/images/login.png');
+
+  /// File path: assets/images/onboarding1.png
+  AssetGenImage get onboarding1 =>
+      const AssetGenImage('assets/images/onboarding1.png');
+
+  /// File path: assets/images/onboarding2.png
+  AssetGenImage get onboarding2 =>
+      const AssetGenImage('assets/images/onboarding2.png');
+
+  /// File path: assets/images/onboarding3.png
+  AssetGenImage get onboarding3 =>
+      const AssetGenImage('assets/images/onboarding3.png');
 
   /// File path: assets/images/profile.png
   AssetGenImage get profilePng =>
@@ -28,9 +40,22 @@ class $AssetsImagesGen {
   /// File path: assets/images/profile.svg
   String get profileSvg => 'assets/images/profile.svg';
 
+  /// File path: assets/images/restaurant.jpeg
+  AssetGenImage get restaurant =>
+      const AssetGenImage('assets/images/restaurant.jpeg');
+
   /// List of all assets
-  List<dynamic> get values =>
-      [emptyList, imageIcon, login, profilePng, profileSvg];
+  List<dynamic> get values => [
+        emptyList,
+        imageIcon,
+        login,
+        onboarding1,
+        onboarding2,
+        onboarding3,
+        profilePng,
+        profileSvg,
+        restaurant
+      ];
 }
 
 class Assets {
