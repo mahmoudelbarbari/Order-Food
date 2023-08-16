@@ -52,7 +52,7 @@ class _TicketWidgetState extends State<TicketWidget> {
           const GetRestaurantRowWidget(),
           divider,
           Flexible(
-            flex: 4,
+            flex: 3,
             child: ListView.separated(
                 shrinkWrap: true,
                 itemCount: widget.eventEntity.length,

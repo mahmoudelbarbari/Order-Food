@@ -14,7 +14,6 @@ class RemoteLoginDatasourceImpl implements RemoteLoginDatasource {
   Future<LoginBaseResponse> remoteLoginUser(
       String email, String password) async {
     try {
-      // await firebaseDB.auth.signInAnonymously();
       await firebaseDB.auth
           .signInWithEmailAndPassword(email: email, password: password);
       return LoginBaseResponse(status: true, message: "successfully loggedin");

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:order/features/event/presentation/pages/ticket_page.dart';
 import 'package:order/features/login/presentation/cubit/login_cubit.dart';
 import 'package:order/features/login/presentation/cubit/login_state.dart';
 
+import '../../../../core/bottom_navigation_bar_widget.dart';
 import 'widgtes/login_widget.dart';
 
 class LoginPage extends StatefulWidget {
@@ -34,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const TicketPage(),
+                  builder: (context) => HomePage(),
                 ));
           }
           if (state is ErrorState) {

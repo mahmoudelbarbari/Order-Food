@@ -19,30 +19,25 @@ class $AssetsImagesGen {
   String get imageIcon => 'assets/images/image_icon.svg';
 
   /// File path: assets/images/login.png
-  AssetGenImage get login => const AssetGenImage('assets/images/login.png');
+  String get login => 'assets/images/login.png';
 
   /// File path: assets/images/onboarding1.png
-  AssetGenImage get onboarding1 =>
-      const AssetGenImage('assets/images/onboarding1.png');
+  String get onboarding1 => 'assets/images/onboarding1.png';
 
   /// File path: assets/images/onboarding2.png
-  AssetGenImage get onboarding2 =>
-      const AssetGenImage('assets/images/onboarding2.png');
+  String get onboarding2 => 'assets/images/onboarding2.png';
 
   /// File path: assets/images/onboarding3.png
-  AssetGenImage get onboarding3 =>
-      const AssetGenImage('assets/images/onboarding3.png');
+  String get onboarding3 => 'assets/images/onboarding3.png';
 
   /// File path: assets/images/profile.png
-  AssetGenImage get profilePng =>
-      const AssetGenImage('assets/images/profile.png');
+  String get profilePng => 'assets/images/profile.png';
 
   /// File path: assets/images/profile.svg
   String get profileSvg => 'assets/images/profile.svg';
 
   /// File path: assets/images/restaurant.jpeg
-  AssetGenImage get restaurant =>
-      const AssetGenImage('assets/images/restaurant.jpeg');
+  String get restaurant => 'assets/images/restaurant.jpeg';
 
   /// List of all assets
   List<dynamic> get values => [

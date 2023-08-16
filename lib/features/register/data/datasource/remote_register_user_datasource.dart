@@ -1,4 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:order/core/database/firebase_db.dart';
 import 'package:order/features/register/data/models/register_account_model.dart';
 import 'package:order/features/register/domain/entities/register_entities.dart';
@@ -6,7 +8,7 @@ import 'package:order/features/register/domain/entities/register_entities.dart';
 abstract class RemoteRegisterDatasource {
   Future<RegisterAccountEntity> remoteRegisterUser(String email,
       String password, RegisterAccountEntity registerAccountEntity);
-  Future<List<RegisterAccountEntity>> getUserInfo();
+  Future<RegisterAccountModel> getUserInfo();
 }
 
 class RemoteRegisterDatasourceImlp implements RemoteRegisterDatasource {
@@ -52,6 +54,10 @@ class RemoteRegisterDatasourceImlp implements RemoteRegisterDatasource {
         case "user-not-found":
           RegisterAccountEntity(message: "User with this email doesn't exist.");
           break;
+        case "user-disabled":
+          RegisterAccountEntity(
+              message: "User with this email has been disabled.");
+          break;
         case "too-many-requests":
           RegisterAccountEntity(message: "Too many requests");
           break;
@@ -69,16 +75,48 @@ class RemoteRegisterDatasourceImlp implements RemoteRegisterDatasource {
   }
 
   @override
-  Future<List<RegisterAccountEntity>> getUserInfo() async {
-    User? user = firebaseDB.auth.currentUser;
-    List<RegisterAccountModel> loggedUser = [];
-    await firebaseDB.firebaseFirestore
-        .collection("Users")
-        .doc(user!.uid)
-        .get()
-        .then((value) {
-      loggedUser.add(RegisterAccountModel.fromMap(value.data()));
-    });
-    return loggedUser;
+  Future<RegisterAccountModel> getUserInfo() async {
+    User? getCurrentUser = firebaseDB.auth.currentUser;
+    try {
+      DocumentSnapshot userSnapshot = await firebaseDB.firebaseFirestore
+          .collection("Users")
+          .doc(getCurrentUser!.uid)
+          .get();
+
+      if (userSnapshot.exists) {
+        RegisterAccountModel registerAccountModel =
+            RegisterAccountModel.fromMap(userSnapshot.data());
+        if (kDebugMode) {
+          print("user data ${registerAccountModel.name}");
+        }
+        return registerAccountModel; // Return the retrieved model
+      } else {
+        return RegisterAccountModel(message: 'User not found', replyCode: 404);
+      }
+    } catch (e) {
+      return RegisterAccountModel(message: e.toString(), replyCode: 500);
+    }
   }
+
+  // @override
+  // Future<RegisterAccountModel> getUserInfo() async {
+  //   User? getCurrentUser = firebaseDB.auth.currentUser;
+  //   try {
+  //     RegisterAccountModel registerAccountModel = RegisterAccountModel();
+  //     await firebaseDB.firebaseFirestore
+  //         .collection("Users")
+  //         .doc(getCurrentUser!.uid)
+  //         .get()
+  //         .then((value) {
+  //       registerAccountModel = RegisterAccountModel.fromMap(value.data());
+  //       if (kDebugMode) {
+  //         print("user data ${registerAccountModel.name}");
+  //       }
+  //     });
+  //     return RegisterAccountModel(
+  //         message: 'Profile info retrive success', replyCode: 200);
+  //   } catch (e) {
+  //     return RegisterAccountModel(message: e.toString(), replyCode: 500);
+  //   }
+  // }
 }

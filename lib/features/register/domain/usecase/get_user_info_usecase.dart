@@ -1,11 +1,11 @@
-import '../entities/register_entities.dart';
+import '../../data/models/register_account_model.dart';
 import '../reposisatory/register_reprisatory.dart';
 
 class GetUserInfoUsecase {
   final RegisterAccountRepository _registerAccountRepository;
   GetUserInfoUsecase(this._registerAccountRepository);
 
-  Future<List<RegisterAccountEntity>> call() async {
+  Future<RegisterAccountModel> call() async {
     return await _registerAccountRepository.getUserInfo();
   }
 }

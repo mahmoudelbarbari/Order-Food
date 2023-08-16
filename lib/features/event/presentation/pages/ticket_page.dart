@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:order/core/drawer_menu.dart';
 import 'package:order/core/widgets/loading_widget.dart';
 import 'package:order/features/cart/presentation/cubit/cart_cubit.dart';
 import 'package:order/features/cart/presentation/pages/cart_page.dart';
@@ -27,6 +26,7 @@ class _TicketPageState extends State<TicketPage> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
+        automaticallyImplyLeading: false,
         actions: [
           Badge(
             child: IconButton(
@@ -41,7 +41,6 @@ class _TicketPageState extends State<TicketPage> {
         ],
         title: const TicketPageAppBarTitleWidget(),
       ),
-      drawer: const NavigationDrawerr(),
       body: _buildBody(),
       floatingActionButton: const FloatingButtonHomeWidget(),
     );

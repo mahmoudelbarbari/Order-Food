@@ -10,6 +10,7 @@ import 'package:order/core/theme_app.dart';
 import 'package:order/features/cart/presentation/cubit/cart_cubit.dart';
 import 'package:order/features/cart/presentation/pages/cart_page.dart';
 import 'package:order/features/event/presentation/cubit/cubit_message/chat_cubit.dart';
+import 'package:order/features/event/presentation/pages/settings_page.dart';
 import 'package:order/features/event/presentation/pages/ticket_page.dart';
 import 'package:order/features/login/presentation/cubit/login_cubit.dart';
 import 'package:order/features/register/presentation/cubit/register_cubit.dart';
@@ -79,6 +80,7 @@ class MyApp extends StatelessWidget {
             'menu': (context) => const MenuPage(),
             'allrestaurant': (context) => const AllRestaurantPage(),
             'cart': (context) => const CartPage(),
+            'settings': (context) => const SettingsPage(),
           },
           home: const LoginPage(),
         ));

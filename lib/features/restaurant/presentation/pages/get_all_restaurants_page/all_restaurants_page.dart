@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:order/core/drawer_menu.dart';
 import 'package:order/core/widgets/app_bar_widget.dart';
 import 'package:order/core/widgets/loading_widget.dart';
 import 'package:order/features/restaurant/presentation/cubit/restaurant_cubit.dart';
@@ -23,7 +22,6 @@ class _AllRestaurantPageState extends State<AllRestaurantPage> {
         pageName: "Restaurants",
         centerTitle: false,
       ),
-      endDrawer: const NavigationDrawerr(),
       body: Padding(
         padding: const EdgeInsets.all(10),
         child: BlocConsumer<RestaurantCubit, RestaurantState>(

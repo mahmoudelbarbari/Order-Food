@@ -2,7 +2,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:order/core/widgets/handler_request_api.dart';
+import 'package:order/features/register/data/models/register_account_model.dart';
 import 'package:order/features/register/domain/entities/register_entities.dart';
+import 'package:order/features/register/domain/usecase/get_user_info_usecase.dart';
 import 'package:order/features/register/domain/usecase/remote_register_usecase.dart';
 import 'package:order/features/register/presentation/cubit/register_state.dart';
 import 'package:order/injection_container.dart';
@@ -50,6 +52,21 @@ class RegisterCubit extends Cubit<RegisterState> {
       }
     } catch (e) {
       emit(RegisterErrorState(errorMessage: e.toString()));
+    }
+  }
+
+  Future<void> getUserInfo(RegisterAccountModel registerAccountModel) async {
+    try {
+      emit(ProfileLoadingState());
+      final getUserInfoUsecase = GetUserInfoUsecase(sl());
+      final userInfo = await getUserInfoUsecase.call();
+      if (userInfo.replyCode == 200) {
+        emit(ProfileSuccessState(registerAccountModel: registerAccountModel));
+      } else {
+        emit(ProfileErrorState(errorMessage: userInfo.message ?? ''));
+      }
+    } catch (e) {
+      emit(ProfileErrorState(errorMessage: e.toString()));
     }
   }
 }

@@ -68,8 +68,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                     });
                   },
                   icon: Icon(passwordVisible
-                      ? Icons.visibility
-                      : Icons.visibility_off),
+                      ? Icons.visibility_off
+                      : Icons.visibility),
                 ),
               ),
               const SizedBox(height: 12),

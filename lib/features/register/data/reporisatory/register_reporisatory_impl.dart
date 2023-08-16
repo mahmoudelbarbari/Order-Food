@@ -1,4 +1,5 @@
 import 'package:order/features/register/data/datasource/remote_register_user_datasource.dart';
+import 'package:order/features/register/data/models/register_account_model.dart';
 import 'package:order/features/register/domain/entities/register_entities.dart';
 
 import '../../domain/reposisatory/register_reprisatory.dart';
@@ -23,7 +24,7 @@ class RegisterReporisatoryImpl implements RegisterAccountRepository {
   }
 
   @override
-  Future<List<RegisterAccountEntity>> getUserInfo() async {
+  Future<RegisterAccountModel> getUserInfo() async {
     return await remoteRegisterDatasourceImlp.getUserInfo();
   }
 }

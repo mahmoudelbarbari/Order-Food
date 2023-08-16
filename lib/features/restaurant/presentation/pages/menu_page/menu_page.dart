@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:order/core/drawer_menu.dart';
 import 'package:order/core/widgets/app_bar_widget.dart';
 import 'package:order/features/register/domain/entities/register_entities.dart';
 import 'package:order/features/restaurant/presentation/cubit/restaurant_cubit.dart';
@@ -23,8 +22,8 @@ class _MenuPageState extends State<MenuPage> {
       appBar: const AppBarWidget(
         pageName: 'Add Menu Restaurant',
         centerTitle: false,
+        hideBackButton: true,
       ),
-      drawer: const NavigationDrawerr(),
       body: BlocProvider<RestaurantCubit>(
         create: (context) => RestaurantCubit(),
         child: BlocConsumer<RestaurantCubit, RestaurantState>(
