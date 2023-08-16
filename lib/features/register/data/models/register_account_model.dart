@@ -37,14 +37,6 @@ class RegisterAccountModel extends RegisterAccountEntity {
       // Return a default instance or handle the null case accordingly
       return RegisterAccountModel();
     }
-
-    print('Debugging fromMap:');
-    print('idUser: ${map['idUser']}');
-    print('userName: ${map['userName']}');
-    print('email: ${map['email']}');
-    print('gender: ${map['gender']}');
-    print('name: ${map['name']}');
-    print('phoneNumber: ${map['phoneNumber']}');
     return RegisterAccountModel(
       idUser: map['idUser'] ?? '',
       username: map['userName'] ?? '',
@@ -54,33 +46,4 @@ class RegisterAccountModel extends RegisterAccountEntity {
       phoneNumber: map['phoneNumber'] ?? '',
     );
   }
-
-  // factory RegisterAccountModel.fromMap(map) {
-  //   print('Debugging fromMap:');
-  //   print('idUser: ${map['idUser']}');
-  //   print('userName: ${map['userName']}');
-  //   print('email: ${map['email']}');
-  //   print('gender: ${map['gender']}');
-  //   print('name: ${map['name']}');
-  //   print('phoneNumber: ${map['phoneNumber']}');
-
-  //   return RegisterAccountModel(
-  //     idUser: map['idUser'],
-  //     username: map['userName'],
-  //     email: map['email'],
-  //     gender: map['gender'],
-  //     name: map['name'],
-  //     phoneNumber: map['phoneNumber'],
-  //   );
-  // }
-
-  // factory RegisterAccountModel.fromEntity(RegisterAccountEntity entity) =>
-  //     RegisterAccountModel(
-  //       idUser: entity.idUser,
-  //       username: entity.username,
-  //       name: entity.name,
-  //       email: entity.email,
-  //       gender: entity.gender,
-  //       phoneNumber: entity.phoneNumber,
-  //     );
 }

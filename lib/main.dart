@@ -23,6 +23,7 @@ import 'package:order/features/restaurant/presentation/pages/menu_page/menu_page
 
 import 'core/services/awesome_notification_service.dart';
 import 'core/services/push_notification_service.dart';
+import 'core/widgets/welcome_splash_widget.dart';
 import 'features/event/presentation/cubit/ticket_cubit.dart';
 import 'features/login/presentation/pages/login_page.dart';
 import 'firebase_options.dart';
@@ -47,14 +48,20 @@ void main() async {
   }, (e, s) {});
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
   static final FirebaseMessaging _firebaseMessaging =
       FirebaseMessaging.instance;
 
   @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
   Widget build(BuildContext context) {
-    final pushNotificationService = PushNotificationService(_firebaseMessaging);
+    final pushNotificationService =
+        PushNotificationService(MyApp._firebaseMessaging);
     pushNotificationService.initialise();
 
     return MultiBlocProvider(
@@ -82,7 +89,7 @@ class MyApp extends StatelessWidget {
             'cart': (context) => const CartPage(),
             'settings': (context) => const SettingsPage(),
           },
-          home: const LoginPage(),
+          home: const WelcomeSplashWidget(),
         ));
   }
 }

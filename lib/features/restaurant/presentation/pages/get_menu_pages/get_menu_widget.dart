@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:order/core/widgets/snackbar_message.dart';
 import 'package:order/features/cart/presentation/cubit/cart_cubit.dart';
 import 'package:order/features/restaurant/data/model/restaurant_model.dart';
 import 'package:order/features/restaurant/presentation/cubit/menu_cubit.dart';
@@ -37,10 +38,9 @@ class _AllMenuWidgetState extends State<AllMenuWidget> {
             title: Text(widget.menuModel[index].name),
             subtitle: Text(widget.menuModel[index].price.toString()),
             onTap: () {
-              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  backgroundColor: Colors.green,
-                  content: Text(
-                      "${widget.menuModel[index].name} Added to your cart")));
+              FlutterToastMessageWidget().showSuccessFlutterToast(
+                  message: "${widget.menuModel[index].name} Added to your cart",
+                  context: context);
               context
                   .read<CartCubit>()
                   .addProductToCart(widget.menuModel[index]);

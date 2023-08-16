@@ -39,6 +39,10 @@ class CartDatasourceImpl extends CartDatasourceInterface {
         'name': menuModel.name,
         'price': menuModel.price,
       });
+      await firebaseFirestore.collection('Order saves').doc().set({
+        'name': menuModel.name,
+        'price': menuModel.price,
+      });
       return BaseResponse(
           status: true,
           message: "Item added , ${menuModel.name} was added to your cart");
@@ -65,14 +69,6 @@ class CartDatasourceImpl extends CartDatasourceInterface {
 
   @override
   Future<List<MenuModel>> getAllCartItems() async {
-    // final retrive = firebaseFirestore.collection('Cart');
-    // List<MenuModel> cartItems = [];
-    // retrive.get().then((querySnapshot) {
-    //   for (var doc in querySnapshot.docs) {
-    //     cartItems.add(MenuModel.fromSnapShot(doc));
-    //   }
-    // });
-    // return cartItems;
     final retrive = firebaseFirestore.collection('Cart');
     final querySnapshot = await retrive.get();
     querySnapshot.docs.map((e) => e.data()).toList();

@@ -22,27 +22,30 @@ class _CartPageState extends State<CartPage> {
         pageName: "Cart",
         centerTitle: false,
       ),
-      body: BlocConsumer<CartCubit, CartState>(
-        listener: (context, state) {
-          if (state is CartError) {
-            if (kDebugMode) {
-              print(state.errorMessage);
+      body: BlocProvider(
+        create: (context) => CartCubit()..getAllCartItems(),
+        child: BlocConsumer<CartCubit, CartState>(
+          listener: (context, state) {
+            if (state is CartError) {
+              if (kDebugMode) {
+                print(state.errorMessage);
+              }
             }
-          }
-        },
-        builder: (context, state) {
-          if (state is CartLoading) {
-            return const LoadingWidget();
-          } else if (state is CartItemsLoadded) {
-            return CartWidget(menuModel: state.menuModel);
-          }
-          return const Center(
-            child: Text(
-              'Your cart is empty..!',
-              style: TextStyle(fontSize: 15),
-            ),
-          );
-        },
+          },
+          builder: (context, state) {
+            if (state is CartLoading) {
+              return const LoadingWidget();
+            } else if (state is CartItemsLoadded) {
+              return CartWidget(menuModel: state.menuModel);
+            }
+            return const Center(
+              child: Text(
+                'Your cart is empty..!',
+                style: TextStyle(fontSize: 15),
+              ),
+            );
+          },
+        ),
       ),
     );
   }

@@ -11,11 +11,11 @@ class PersistentBottomBarScaffold extends StatefulWidget {
       : super(key: key);
 
   @override
-  _PersistentBottomBarScaffoldState createState() =>
-      _PersistentBottomBarScaffoldState();
+  PersistentBottomBarScaffoldState createState() =>
+      PersistentBottomBarScaffoldState();
 }
 
-class _PersistentBottomBarScaffoldState
+class PersistentBottomBarScaffoldState
     extends State<PersistentBottomBarScaffold> {
   int _selectedTab = 0;
 
