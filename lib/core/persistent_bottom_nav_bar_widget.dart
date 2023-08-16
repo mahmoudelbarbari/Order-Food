@@ -1,0 +1,101 @@
+import 'package:flutter/material.dart';
+import 'package:order/core/theme_app.dart';
+import 'package:order/features/cart/presentation/pages/cart_page.dart';
+import 'package:order/features/event/presentation/pages/settings_page.dart';
+import 'package:order/features/event/presentation/pages/ticket_page.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
+
+import '../features/event/presentation/pages/widgets/event_add_update_pages/event_add_update_page.dart';
+
+class NavBarWidget extends StatelessWidget {
+  const NavBarWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    PersistentTabController controller;
+
+    controller = PersistentTabController(initialIndex: 0);
+    return PersistentTabView(
+      context,
+      controller: controller,
+      screens: _buildScreens(),
+      items: _navBarsItems(),
+      confineInSafeArea: true,
+      backgroundColor: Colors.white, // Default is Colors.white.
+      handleAndroidBackButtonPress: true, // Default is true.
+      resizeToAvoidBottomInset:
+          true, // This needs to be true if you want to move up the screen when keyboard appears. Default is true.
+      stateManagement: true, // Default is true.
+      hideNavigationBarWhenKeyboardShows:
+          true, // Recommended to set 'resizeToAvoidBottomInset' as true while using this argument. Default is true.
+      decoration: NavBarDecoration(
+        borderRadius: BorderRadius.circular(10.0),
+        colorBehindNavBar: Colors.white,
+      ),
+      popAllScreensOnTapOfSelectedTab: true,
+      popActionScreens: PopActionScreensType.all,
+      itemAnimationProperties: const ItemAnimationProperties(
+        // Navigation Bar's items animation properties.
+        duration: Duration(milliseconds: 200),
+        curve: Curves.ease,
+      ),
+      screenTransitionAnimation: const ScreenTransitionAnimation(
+        // Screen transition animation on change of selected tab.
+        animateTabTransition: true,
+        curve: Curves.ease,
+        duration: Duration(milliseconds: 200),
+      ),
+      navBarStyle:
+          NavBarStyle.style9, // Choose the nav bar style with this property.
+    );
+  }
+
+  List<Widget> _buildScreens() {
+    return [
+      const TicketPage(),
+      const EventAddUpdatePage(isUpdateEvent: false),
+      const CartPage(),
+      const SettingsPage(),
+    ];
+  }
+
+  List<PersistentBottomNavBarItem> _navBarsItems() {
+    final tab1navigatorKey = GlobalKey<NavigatorState>();
+    final tab2navigatorKey = GlobalKey<NavigatorState>();
+    final tab3navigatorKey = GlobalKey<NavigatorState>();
+    final tab4navigatorKey = GlobalKey<NavigatorState>();
+
+    return [
+      PersistentBottomNavBarItem(
+        icon: const Icon(Icons.home),
+        title: ("Home"),
+        activeColorPrimary: primaryColor,
+        inactiveColorPrimary: Colors.black,
+        routeAndNavigatorSettings:
+            RouteAndNavigatorSettings(navigatorKey: tab1navigatorKey),
+      ),
+      PersistentBottomNavBarItem(
+          icon: const Icon(
+            Icons.border_color_rounded,
+          ),
+          activeColorPrimary: primaryColor,
+          title: ("Add"),
+          routeAndNavigatorSettings:
+              RouteAndNavigatorSettings(navigatorKey: tab2navigatorKey)),
+      PersistentBottomNavBarItem(
+          icon: const Icon(Icons.shopping_cart_outlined),
+          title: ("Cart"),
+          activeColorPrimary: primaryColor,
+          inactiveColorPrimary: Colors.black,
+          routeAndNavigatorSettings:
+              RouteAndNavigatorSettings(navigatorKey: tab3navigatorKey)),
+      PersistentBottomNavBarItem(
+          icon: const Icon(Icons.settings),
+          title: ("Settings"),
+          activeColorPrimary: primaryColor,
+          inactiveColorPrimary: Colors.black,
+          routeAndNavigatorSettings:
+              RouteAndNavigatorSettings(navigatorKey: tab4navigatorKey)),
+    ];
+  }
+}

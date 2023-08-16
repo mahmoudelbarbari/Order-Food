@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:order/core/widgets/app_bar_widget.dart';
+import 'package:order/core/widgets/snackbar_message.dart';
 import 'package:order/features/register/domain/entities/register_entities.dart';
 import 'package:order/features/restaurant/presentation/cubit/restaurant_cubit.dart';
 import 'package:order/features/restaurant/presentation/cubit/restaurant_state.dart';
@@ -30,14 +31,14 @@ class _MenuPageState extends State<MenuPage> {
           listener: (context, state) {
             if (state is CreateRestaurantSuccessfully) {
               registerAccountEntity = state.registerAccountEntity;
-              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  backgroundColor: Colors.green,
-                  content: Text(state.registerAccountEntity.message ??
-                      "Added Successfully")));
+              FlutterToastMessageWidget().showSuccessFlutterToast(
+                  message: state.registerAccountEntity.message ??
+                      "Added Successfully",
+                  context: context);
             }
             if (state is RestaurantError) {
-              ScaffoldMessenger.of(context)
-                  .showSnackBar(SnackBar(content: Text(state.errorMessage)));
+              FlutterToastMessageWidget().showErrorFlutterToast(
+                  message: state.errorMessage, context: context);
             }
           },
           builder: (context, state) {

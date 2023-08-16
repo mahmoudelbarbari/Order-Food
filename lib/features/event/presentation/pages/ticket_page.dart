@@ -7,7 +7,6 @@ import 'package:order/features/cart/presentation/pages/cart_page.dart';
 import 'package:order/features/event/presentation/cubit/ticket_cubit.dart';
 import 'package:order/features/event/presentation/cubit/ticket_state.dart';
 import 'package:order/features/event/presentation/pages/widgets/empty_list_widget.dart';
-import 'package:order/features/event/presentation/pages/widgets/floating_button_home_widget.dart';
 import 'package:order/features/event/presentation/pages/widgets/ticket_page_app_bar_title_widget.dart';
 
 import '../pages/widgets/ticket_widget.dart';
@@ -42,7 +41,7 @@ class _TicketPageState extends State<TicketPage> {
         title: const TicketPageAppBarTitleWidget(),
       ),
       body: _buildBody(),
-      floatingActionButton: const FloatingButtonHomeWidget(),
+      // floatingActionButton: const FloatingButtonHomeWidget(),
     );
   }
 

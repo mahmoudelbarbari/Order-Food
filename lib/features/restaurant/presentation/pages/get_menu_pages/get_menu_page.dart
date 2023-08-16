@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:order/core/widgets/app_bar_widget.dart';
 import 'package:order/core/widgets/loading_widget.dart';
+import 'package:order/core/widgets/snackbar_message.dart';
 import 'package:order/features/restaurant/presentation/cubit/menu_cubit.dart';
 import 'package:order/features/restaurant/presentation/cubit/menu_state.dart';
 import 'package:order/features/restaurant/presentation/pages/get_menu_pages/get_menu_widget.dart';
@@ -42,12 +43,8 @@ class _AllMenuPageState extends State<AllMenuPage> {
                 menuModel: state.menuModel,
               );
             } else if (state is MenuError) {
-              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  backgroundColor: Colors.red,
-                  content: Text(state.errorMessage)));
-              if (kDebugMode) {
-                print(state.errorMessage);
-              }
+              FlutterToastMessageWidget().showErrorFlutterToast(
+                  message: state.errorMessage, context: context);
             }
             return const LoadingWidget();
           },

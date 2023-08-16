@@ -19,9 +19,9 @@ class EventAddUpdatePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarWidget(
-          pageName: isUpdateEvent ? "Add Event" : "Edit Event",
-          centerTitle: false),
+      appBar: const AppBarWidget(
+        pageName: "Add Event",
+      ),
       body: _buildBody(),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:order/features/event/domain/entities/event_entities.dart';
 import 'package:order/features/event/presentation/cubit/ticket_cubit.dart';
 import 'package:order/features/event/presentation/pages/ticket_page.dart';
@@ -62,9 +63,9 @@ class _FormWidgetState extends State<FormWidget> {
     final isValid = _formKey.currentState!.validate();
 
     if (isValid) {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-          backgroundColor: Colors.green,
-          content: Text("You created an ticket successfully")));
+      Fluttertoast.showToast(
+          msg: "You created an ticket successfully",
+          backgroundColor: Colors.green);
       final eventEntity = EventEntity(
         id: widget.isUpdateEvent ? widget.eventEntity!.id : null,
         title: titleController.text,

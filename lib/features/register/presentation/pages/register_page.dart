@@ -33,9 +33,8 @@ class _RegisterPageState extends State<RegisterPage> {
         listener: (context, state) {
           if (state is CreateUserSuccessfully) {
             registerAccountEntity = state.registerAccountEntity;
-            SnackBarMessage().showSuccessSnackBar(
-                message: state.registerAccountEntity.message ??
-                    "You created an account successfully",
+            FlutterToastMessageWidget().showSuccessFlutterToast(
+                message: "You created an account successfully",
                 context: context);
             Navigator.push(
                 context,
@@ -43,7 +42,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   builder: (context) => const LoginPage(),
                 ));
           } else if (state is RegisterErrorState) {
-            SnackBarMessage().showErrorSnackBar(
+            FlutterToastMessageWidget().showSuccessFlutterToast(
                 message: state.errorMessage, context: context);
           }
         },

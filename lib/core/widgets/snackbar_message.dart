@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class SnackBarMessage {
   void showSuccessSnackBar(
@@ -25,5 +26,17 @@ class SnackBarMessage {
         backgroundColor: Colors.redAccent,
       ),
     );
+  }
+}
+
+class FlutterToastMessageWidget {
+  void showSuccessFlutterToast(
+      {required String message, required BuildContext context}) {
+    Fluttertoast.showToast(msg: message, backgroundColor: Colors.green);
+  }
+
+  void showErrorFlutterToast(
+      {required String message, required BuildContext context}) {
+    Fluttertoast.showToast(msg: message, backgroundColor: Colors.red);
   }
 }

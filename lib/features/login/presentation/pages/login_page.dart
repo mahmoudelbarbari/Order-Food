@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:order/core/widgets/snackbar_message.dart';
 import 'package:order/features/login/presentation/cubit/login_cubit.dart';
 import 'package:order/features/login/presentation/cubit/login_state.dart';
 
-import '../../../../core/bottom_navigation_bar_widget.dart';
+import '../../../../core/persistent_bottom_nav_bar_widget.dart';
 import 'widgtes/login_widget.dart';
 
 class LoginPage extends StatefulWidget {
@@ -29,18 +30,17 @@ class _LoginPageState extends State<LoginPage> {
       child: BlocConsumer<LoginCubit, LoginState>(
         listener: (context, state) {
           if (state is LoginSucessState) {
-            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                backgroundColor: Colors.green, content: Text(state.message)));
+            FlutterToastMessageWidget().showSuccessFlutterToast(
+                message: state.message, context: context);
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => HomePage(),
+                  builder: (context) => const NavBarWidget(),
                 ));
           }
           if (state is ErrorState) {
-            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                backgroundColor: Colors.red,
-                content: Text(state.errorMessage)));
+            FlutterToastMessageWidget().showErrorFlutterToast(
+                message: state.errorMessage, context: context);
           }
         },
         builder: (context, state) {

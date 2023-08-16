@@ -29,13 +29,13 @@ class _RestaurantPageState extends State<RestaurantPage> {
         child: BlocConsumer<RestaurantCubit, RestaurantState>(
           listener: (context, state) {
             if (state is CreateRestaurantSuccessfully) {
-              SnackBarMessage().showSuccessSnackBar(
+              FlutterToastMessageWidget().showSuccessFlutterToast(
                   message: "Restaurant added seccessfuly :)", context: context);
               registerAccountEntity = state.registerAccountEntity;
             }
 
             if (state is RestaurantError) {
-              SnackBarMessage().showErrorSnackBar(
+              FlutterToastMessageWidget().showErrorFlutterToast(
                   message: "You must choose an image..!", context: context);
             }
           },
