@@ -5,6 +5,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:get/get.dart';
 import 'package:order/core/bloc_observer/bloc_observer.dart';
 import 'package:order/core/theme_app.dart';
 import 'package:order/features/cart/presentation/cubit/cart_cubit.dart';
@@ -75,7 +76,7 @@ class _MyAppState extends State<MyApp> {
           BlocProvider(create: (_) => di.sl<CartCubit>()..getAllCartItems()),
           BlocProvider(create: (_) => di.sl<ChatCubit>()..getChatData()),
         ],
-        child: MaterialApp(
+        child: GetMaterialApp(
           title: 'Food App',
           theme: appTheme,
           debugShowCheckedModeBanner: false,

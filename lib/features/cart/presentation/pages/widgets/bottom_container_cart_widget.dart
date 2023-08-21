@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:order/features/cart/presentation/cubit/cart_cubit.dart';
 
 import '../../../../restaurant/presentation/pages/get_menu_pages/get_menu_page.dart';
+import 'cart_alert_dialog_widget.dart';
 
 class BottomContainerCartWidget extends StatelessWidget {
   const BottomContainerCartWidget({
@@ -46,7 +49,10 @@ class BottomContainerCartWidget extends StatelessWidget {
             height: 40,
             width: 120,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                showAlertDialog(context, isCloseDismissible: true);
+                context.read<CartCubit>().clearCartItems();
+              },
               style: OutlinedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10))),

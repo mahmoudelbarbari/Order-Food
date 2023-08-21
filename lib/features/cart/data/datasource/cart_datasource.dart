@@ -24,6 +24,8 @@ abstract class CartDatasourceInterface extends FirebaseDatasourceProvider {
   Future<BaseResponse> addProductToCart(MenuModel menuModel);
   Future<BaseResponse> addCartData(CartItemModel cartItemModel);
   Future<List<MenuModel>> getAllCartItems();
+  Future<List<MenuModel>> viewwOrder();
+  Future<BaseResponse> clearCartItems();
 }
 
 class CartDatasourceImpl extends CartDatasourceInterface {
@@ -32,14 +34,11 @@ class CartDatasourceImpl extends CartDatasourceInterface {
   @override
   Future<BaseResponse> addProductToCart(MenuModel menuModel) async {
     try {
-      // await firebaseFirestore.collection('Cart').add({
-      //   'cart': FieldValue.arrayUnion([menuModel.toMap()])
-      // });
       await firebaseFirestore.collection('Cart').doc().set({
         'name': menuModel.name,
         'price': menuModel.price,
       });
-      await firebaseFirestore.collection('Order saves').doc().set({
+      await firebaseFirestore.collection('order_save').doc().set({
         'name': menuModel.name,
         'price': menuModel.price,
       });
@@ -54,7 +53,7 @@ class CartDatasourceImpl extends CartDatasourceInterface {
   @override
   Future<BaseResponse> addCartData(CartItemModel cartItemModel) async {
     try {
-      await firebaseFirestore.collection("checkoutList").doc().set({
+      await firebaseFirestore.collection("checkout_list").doc().set({
         'name': cartItemModel.name,
         'price': cartItemModel.price,
         'quantity': cartItemModel.quantity,
@@ -78,5 +77,32 @@ class CartDatasourceImpl extends CartDatasourceInterface {
       cartItems.add(MenuModel.fromSnapShot(doc));
     }
     return cartItems;
+  }
+
+  @override
+  Future<List<MenuModel>> viewwOrder() async {
+    final retrive = firebaseFirestore.collection('order_save');
+    final querySnapshot = await retrive.get();
+    querySnapshot.docs.map((e) => e.data()).toList();
+    List<MenuModel> cartItems = [];
+    for (QueryDocumentSnapshot<Map<String, dynamic>> doc
+        in querySnapshot.docs) {
+      cartItems.add(MenuModel.fromSnapShot(doc));
+    }
+    return cartItems;
+  }
+
+  @override
+  Future<BaseResponse> clearCartItems() async {
+    try {
+      firebaseFirestore.collection('Cart').get().then((snapshot) {
+        for (DocumentSnapshot documents in snapshot.docs) {
+          documents.reference.delete();
+        }
+      });
+      return BaseResponse(status: true, message: "Cart cleared Successfully");
+    } catch (e) {
+      return BaseResponse(status: false, message: e.toString());
+    }
   }
 }

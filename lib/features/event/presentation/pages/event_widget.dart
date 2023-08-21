@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:order/features/event/domain/entities/event_entities.dart';
 import 'package:order/features/event/presentation/pages/widgets/event_details_page/event_detail_page.dart';
 
@@ -26,14 +27,9 @@ class EventWidget extends StatelessWidget {
           ),
           contentPadding: const EdgeInsets.symmetric(horizontal: 10),
           onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (_) => EventDetailsPage(
-                  eventEntity: eventEntity[index],
-                ),
-              ),
-            );
+            Get.to(EventDetailsPage(
+              eventEntity: eventEntity[index],
+            ));
           },
         );
       },

@@ -6,7 +6,7 @@ class CartTitleCardWidget extends StatelessWidget {
     required this.title,
     this.textStyle = const TextStyle(
       color: Colors.blue,
-      fontSize: 20,
+      fontSize: 25,
     ),
   }) : super(key: key);
 

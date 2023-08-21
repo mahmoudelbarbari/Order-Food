@@ -16,4 +16,14 @@ class CartReporisatoryImpl implements CartReporisatoryInterface {
   Future<List<MenuModel>> getAllCartItems() async {
     return await cartDatasourceInterface.getAllCartItems();
   }
+
+  @override
+  Future<List<MenuModel>> viewOrders() async {
+    return await cartDatasourceInterface.viewwOrder();
+  }
+
+  @override
+  Future<BaseResponse> clearCartItems() async {
+    return await cartDatasourceInterface.clearCartItems();
+  }
 }

@@ -33,17 +33,12 @@ class _CartPageState extends State<CartPage> {
             }
           },
           builder: (context, state) {
-            if (state is CartLoading) {
-              return const LoadingWidget();
-            } else if (state is CartItemsLoadded) {
+            if (state is CartItemsLoadded) {
               return CartWidget(menuModel: state.menuModel);
+            } else if (state is EmptyCart) {
+              return const Center(child: Text('Your cart is empty....!'));
             }
-            return const Center(
-              child: Text(
-                'Your cart is empty..!',
-                style: TextStyle(fontSize: 15),
-              ),
-            );
+            return const LoadingWidget();
           },
         ),
       ),

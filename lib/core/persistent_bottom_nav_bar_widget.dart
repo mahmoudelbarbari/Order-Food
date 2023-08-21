@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:order/core/theme_app.dart';
-import 'package:order/features/cart/presentation/pages/cart_page.dart';
 import 'package:order/features/event/presentation/pages/settings_page.dart';
 import 'package:order/features/event/presentation/pages/ticket_page.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
@@ -45,8 +44,8 @@ class NavBarWidget extends StatelessWidget {
         curve: Curves.ease,
         duration: Duration(milliseconds: 200),
       ),
-      navBarStyle:
-          NavBarStyle.style9, // Choose the nav bar style with this property.
+      navBarStyle: NavBarStyle
+          .neumorphic, // Choose the nav bar style with this property.
     );
   }
 
@@ -54,7 +53,7 @@ class NavBarWidget extends StatelessWidget {
     return [
       const TicketPage(),
       const EventAddUpdatePage(isUpdateEvent: false),
-      const CartPage(),
+      // const CartPage(),
       const SettingsPage(),
     ];
   }
@@ -62,12 +61,12 @@ class NavBarWidget extends StatelessWidget {
   List<PersistentBottomNavBarItem> _navBarsItems() {
     final tab1navigatorKey = GlobalKey<NavigatorState>();
     final tab2navigatorKey = GlobalKey<NavigatorState>();
-    final tab3navigatorKey = GlobalKey<NavigatorState>();
+    // final tab3navigatorKey = GlobalKey<NavigatorState>();
     final tab4navigatorKey = GlobalKey<NavigatorState>();
 
     return [
       PersistentBottomNavBarItem(
-        icon: const Icon(Icons.home),
+        icon: const Icon(Icons.home_outlined),
         title: ("Home"),
         activeColorPrimary: primaryColor,
         inactiveColorPrimary: Colors.black,
@@ -76,21 +75,21 @@ class NavBarWidget extends StatelessWidget {
       ),
       PersistentBottomNavBarItem(
           icon: const Icon(
-            Icons.border_color_rounded,
+            Icons.add_box_outlined,
           ),
           activeColorPrimary: primaryColor,
           title: ("Add"),
           routeAndNavigatorSettings:
               RouteAndNavigatorSettings(navigatorKey: tab2navigatorKey)),
+      // PersistentBottomNavBarItem(
+      //     icon: const Icon(Icons.shopping_cart_outlined),
+      //     title: ("Cart"),
+      //     activeColorPrimary: primaryColor,
+      //     inactiveColorPrimary: Colors.black,
+      //     routeAndNavigatorSettings:
+      //         RouteAndNavigatorSettings(navigatorKey: tab3navigatorKey)),
       PersistentBottomNavBarItem(
-          icon: const Icon(Icons.shopping_cart_outlined),
-          title: ("Cart"),
-          activeColorPrimary: primaryColor,
-          inactiveColorPrimary: Colors.black,
-          routeAndNavigatorSettings:
-              RouteAndNavigatorSettings(navigatorKey: tab3navigatorKey)),
-      PersistentBottomNavBarItem(
-          icon: const Icon(Icons.settings),
+          icon: const Icon(Icons.settings_outlined),
           title: ("Settings"),
           activeColorPrimary: primaryColor,
           inactiveColorPrimary: Colors.black,

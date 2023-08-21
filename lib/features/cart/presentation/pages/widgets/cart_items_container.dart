@@ -16,15 +16,16 @@ class CartItemsContainer extends StatefulWidget {
   final Center center;
   final String title;
   final int subTitle;
-
   @override
   State<CartItemsContainer> createState() => _CartItemsContainerState();
 }
 
 class _CartItemsContainerState extends State<CartItemsContainer> {
   int count = 1;
-  final double delivartFee = 25.0;
-  final double serviceFee = 12.0;
+  double delivartFee = 25.0;
+  double serviceFee = 12.0;
+  double totalPrice = 0.0;
+
   @override
   Widget build(BuildContext context) {
     return Container(

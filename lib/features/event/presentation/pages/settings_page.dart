@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:order/core/widgets/app_bar_widget.dart';
 
+import '../../../cart/presentation/pages/view_order_page.dart';
 import '../../../login/presentation/cubit/login_cubit.dart';
 import '../../../login/presentation/pages/login_page.dart';
 import '../../../restaurant/presentation/cubit/restaurant_cubit.dart';
@@ -36,8 +37,18 @@ class _SettingsPageState extends State<SettingsPage> {
           child: Column(children: [
             sizedBox,
             SettingsDetailsRow(
+              text: 'Your Orders',
+              icon: Icons.text_snippet_outlined,
+              onTap: () {
+                context.read<RestaurantCubit>().getAllRestaurants();
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const ViewOrderPage()));
+              },
+            ),
+            sizedBox,
+            SettingsDetailsRow(
               text: 'Restaurants',
-              icon: Icons.restaurant,
+              icon: Icons.table_restaurant_outlined,
               onTap: () {
                 context.read<RestaurantCubit>().getAllRestaurants();
                 Navigator.of(context).push(MaterialPageRoute(
@@ -47,7 +58,7 @@ class _SettingsPageState extends State<SettingsPage> {
             sizedBox,
             SettingsDetailsRow(
               text: 'Add Restaurant',
-              icon: Icons.add_box_rounded,
+              icon: Icons.add_box_outlined,
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => const RestaurantPage()));

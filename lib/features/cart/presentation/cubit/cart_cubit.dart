@@ -1,6 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:order/features/cart/domain/usecase/add_items_to_cart_usecase.dart';
+import 'package:order/features/cart/domain/usecase/clear_cart_items_usecase.dart';
 import 'package:order/features/cart/domain/usecase/get_all_cart_items_usecase.dart';
+import 'package:order/features/cart/domain/usecase/view_orders_usecase.dart';
 import 'package:order/features/cart/presentation/cubit/cart_state.dart';
 import 'package:order/features/restaurant/data/model/restaurant_model.dart';
 import 'package:order/injection_container.dart';
@@ -8,6 +10,8 @@ import 'package:order/injection_container.dart';
 class CartCubit extends Cubit<CartState> {
   late AddProductToCartUsecase addProductToCartUsecase;
   late GetAllCartItemsUsecase getAllCartItemsUsecase;
+  late ViewOrderUsecase viewOrderUsecase;
+  late ClearCartItemsUsecase clearCartItemsUsecase;
 
   CartCubit() : super(CartLoading());
 
@@ -30,7 +34,37 @@ class CartCubit extends Cubit<CartState> {
       emit(CartLoading());
       getAllCartItemsUsecase = sl();
       final allCartItems = await getAllCartItemsUsecase.call();
-      emit(CartItemsLoadded(menuModel: allCartItems));
+      if (allCartItems.isEmpty) {
+        emit(EmptyCart());
+      } else {
+        emit(CartItemsLoadded(menuModel: allCartItems));
+      }
+    } catch (e) {
+      emit(CartError(errorMessage: e.toString()));
+    }
+  }
+
+  Future<void> viewOrder() async {
+    try {
+      emit(CartLoading());
+      viewOrderUsecase = sl();
+      final getAllOrders = await viewOrderUsecase.call();
+      emit(CartItemsLoadded(menuModel: getAllOrders));
+    } catch (e) {
+      emit(CartError(errorMessage: e.toString()));
+    }
+  }
+
+  Future<void> clearCartItems() async {
+    try {
+      emit(CartLoading());
+      clearCartItemsUsecase = sl();
+      final clearedCart = await clearCartItemsUsecase.call();
+      if (clearedCart.status) {
+        emit(CartClearedSuccessfully(clearedCart));
+      } else {
+        emit(CartError(errorMessage: clearedCart.message));
+      }
     } catch (e) {
       emit(CartError(errorMessage: e.toString()));
     }

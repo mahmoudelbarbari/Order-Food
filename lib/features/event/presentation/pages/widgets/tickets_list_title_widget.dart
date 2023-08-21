@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../domain/entities/event_entities.dart';
 import 'event_details_page/event_detail_page.dart';
@@ -29,14 +30,7 @@ class TicketsListTitleWidget extends StatelessWidget {
       ),
       contentPadding: const EdgeInsets.symmetric(horizontal: 10),
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (_) => EventDetailsPage(
-              eventEntity: eventEntity,
-            ),
-          ),
-        );
+        Get.to(() => EventDetailsPage(eventEntity: eventEntity));
       },
     );
   }

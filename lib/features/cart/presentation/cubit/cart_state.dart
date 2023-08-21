@@ -21,3 +21,9 @@ class CartItemsLoadded extends CartState {
     required this.menuModel,
   });
 }
+
+class CartClearedSuccessfully extends CartState {
+  CartClearedSuccessfully(clearedCart);
+}
+
+class EmptyCart extends CartState {}

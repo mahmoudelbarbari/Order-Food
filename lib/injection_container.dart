@@ -4,6 +4,7 @@ import 'package:order/features/cart/data/datasource/cart_datasource.dart';
 import 'package:order/features/cart/data/reporisatory_imlp/cart_reporisatory_impl.dart';
 import 'package:order/features/cart/domain/reporisatory/cart_reporisatory.dart';
 import 'package:order/features/cart/domain/usecase/add_items_to_cart_usecase.dart';
+import 'package:order/features/cart/domain/usecase/clear_cart_items_usecase.dart';
 import 'package:order/features/cart/domain/usecase/get_all_cart_items_usecase.dart';
 import 'package:order/features/cart/presentation/cubit/cart_cubit.dart';
 import 'package:order/features/event/data/datasource/remote_ticket_datasource.dart';
@@ -41,6 +42,7 @@ import 'package:order/features/restaurant/domain/usecase/upload_image_usecase.da
 import 'package:order/features/restaurant/presentation/cubit/menu_cubit.dart';
 import 'package:order/features/restaurant/presentation/cubit/restaurant_cubit.dart';
 
+import 'features/cart/domain/usecase/view_orders_usecase.dart';
 import 'features/login/data/datasources/local_login_user.dart';
 import 'features/login/data/reporisatory/account_reporisatory_impl.dart';
 import 'features/login/domain/repositories/account_repository.dart';
@@ -193,6 +195,12 @@ void init() {
 
   sl.registerLazySingleton<GetAllCartItemsUsecase>(
       () => GetAllCartItemsUsecase(sl<CartReporisatoryInterface>()));
+
+  sl.registerLazySingleton<ViewOrderUsecase>(
+      () => ViewOrderUsecase(sl<CartReporisatoryInterface>()));
+
+  sl.registerLazySingleton<ClearCartItemsUsecase>(
+      () => ClearCartItemsUsecase(sl<CartReporisatoryInterface>()));
 
 //AddCartData
   //Cart Cubit

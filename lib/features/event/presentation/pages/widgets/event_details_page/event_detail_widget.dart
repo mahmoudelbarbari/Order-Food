@@ -28,6 +28,7 @@ class EventDetailWidget extends StatefulWidget {
 
 class _EventDetailWidgetState extends State<EventDetailWidget> {
   late final TextEditingController addCommentcontroller;
+  GlobalKey<FormState> formKey = GlobalKey<FormState>();
   Account account = Account();
 
   Future<void> refresh() async {
@@ -63,12 +64,15 @@ class _EventDetailWidgetState extends State<EventDetailWidget> {
   }
 
   Widget _bodyWidget(ChatLoadedState messages) {
-    return Column(
-      children: [
-        _listEventWidget(),
-        _listMessagesWidget(messages),
-        _sendTextMessageWidget(),
-      ],
+    return Form(
+      key: formKey,
+      child: Column(
+        children: [
+          _listEventWidget(),
+          _listMessagesWidget(messages),
+          _sendTextMessageWidget(),
+        ],
+      ),
     );
   }
 
@@ -179,13 +183,11 @@ class _EventDetailWidgetState extends State<EventDetailWidget> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: TextField(
+        autofocus: true,
+        textInputAction: TextInputAction.done,
         controller: addCommentcontroller,
         decoration: InputDecoration(
           prefixIcon: const Icon(Icons.message),
-          border: OutlineInputBorder(
-              borderSide: const BorderSide(width: 0),
-              gapPadding: 10,
-              borderRadius: BorderRadius.circular(25)),
           labelText: "Write a comment... ",
           suffixIcon: IconButton(
             icon: const Icon(Icons.send),

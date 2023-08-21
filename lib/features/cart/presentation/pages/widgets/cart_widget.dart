@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:order/features/cart/presentation/cubit/cart_cubit.dart';
-import 'package:order/features/restaurant/data/model/restaurant_model.dart';
 
+import '../../../../restaurant/data/model/restaurant_model.dart';
 import 'bottom_container_cart_widget.dart';
 import 'cart_items_container.dart';
 
@@ -18,10 +18,6 @@ class CartWidget extends StatefulWidget {
 }
 
 class _CartWidgetState extends State<CartWidget> {
-  static double delivartFee = 25.00;
-  static double serviceFee = 12.00;
-  double total = delivartFee + serviceFee;
-
   Future<void> _refresh() async {
     setState(() {
       context.read<CartCubit>().getAllCartItems();
@@ -30,6 +26,16 @@ class _CartWidgetState extends State<CartWidget> {
 
   @override
   Widget build(BuildContext context) {
+    // double delivartFee = 25.0;
+    // double serviceFee = 12.0;
+
+    // double totalPrice = 0.0; // Initialize the total price
+
+    // // Calculate the total price by summing up the prices of all menu items
+    // for (var menu in widget.menuModel) {
+    //   totalPrice += menu.price;
+    // }
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[

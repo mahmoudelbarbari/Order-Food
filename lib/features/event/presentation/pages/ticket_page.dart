@@ -41,7 +41,6 @@ class _TicketPageState extends State<TicketPage> {
         title: const TicketPageAppBarTitleWidget(),
       ),
       body: _buildBody(),
-      // floatingActionButton: const FloatingButtonHomeWidget(),
     );
   }
 
@@ -70,7 +69,6 @@ class _TicketPageState extends State<TicketPage> {
               print(state.errorMessage);
             }
           }
-
           return const LoadingWidget();
         },
       ),
