@@ -19,7 +19,6 @@ import 'package:order/features/event/domain/reporisatory/ticket_reporisatory.dar
 import 'package:order/features/event/presentation/cubit/cubit_message/chat_cubit.dart';
 import 'package:order/features/event/presentation/cubit/ticket_cubit.dart';
 import 'package:order/features/login/data/datasources/remote_login_user.dart';
-import 'package:order/features/login/domain/usecases/login_usecase.dart';
 import 'package:order/features/login/domain/usecases/remote_login_usecase.dart';
 import 'package:order/features/login/domain/usecases/remote_logout_usecase.dart';
 import 'package:order/features/login/presentation/cubit/login_cubit.dart';
@@ -27,7 +26,6 @@ import 'package:order/features/register/data/datasource/remote_register_user_dat
 import 'package:order/features/register/data/reporisatory/register_reporisatory_impl.dart';
 import 'package:order/features/register/domain/reposisatory/register_reprisatory.dart';
 import 'package:order/features/register/domain/usecase/get_user_info_usecase.dart';
-import 'package:order/features/register/domain/usecase/register_usecase.dart';
 import 'package:order/features/register/domain/usecase/remote_register_usecase.dart';
 import 'package:order/features/register/presentation/cubit/register_cubit.dart';
 import 'package:order/features/restaurant/data/datasource/restaurant_datasource.dart';
@@ -67,7 +65,7 @@ void init() {
       () => AccountRepositoryImlp(sl()));
 
   //usecases with singelton dessign pattern
-  sl.registerLazySingleton<LoginUsecase>(() => LoginUsecase(sl()));
+  // sl.registerLazySingleton<LoginUsecase>(() => LoginUsecase(sl()));
   sl.registerLazySingleton<RemoteLoginUsecase>(() => RemoteLoginUsecase(sl()));
   sl.registerLazySingleton<RemoteLogoutUsecase>(
       () => RemoteLogoutUsecase(sl()));
@@ -90,8 +88,8 @@ void init() {
       () => RegisterReporisatoryImpl(sl<RemoteRegisterDatasource>()));
 
   //Registerusecase
-  sl.registerLazySingleton<RegisterUsecase>(
-      () => RegisterUsecase(sl<RegisterAccountRepository>()));
+  // sl.registerLazySingleton<RegisterUsecase>(
+  //     () => RegisterUsecase(sl<RegisterAccountRepository>()));
   sl.registerLazySingleton<RemoteRegisterUsecase>(
       () => RemoteRegisterUsecase(sl<RegisterAccountRepository>()));
 
