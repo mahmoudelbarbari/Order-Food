@@ -26,7 +26,13 @@ class _RestaurantWidgetState extends State<RestaurantWidget> {
       TextEditingController();
   final TextEditingController controllerRestaurantHotline =
       TextEditingController();
-  final GlobalKey<FormState> formKey = GlobalKey();
+  late final GlobalKey<FormState> keyForm;
+
+  @override
+  void initState() {
+    keyForm = GlobalKey<FormState>();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +44,7 @@ class _RestaurantWidgetState extends State<RestaurantWidget> {
       color: Colors.amber,
     );
     return Form(
-      key: formKey,
+      key: keyForm,
       child: ListView(children: [
         sizedBox,
         divider,
@@ -78,7 +84,7 @@ class _RestaurantWidgetState extends State<RestaurantWidget> {
                 text: "Add restaurant",
                 onTap: () {
                   setState(() {
-                    if (formKey.currentState!.validate()) {
+                    if (keyForm.currentState!.validate()) {
                       isPressed = true;
                       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                           backgroundColor: Colors.green,

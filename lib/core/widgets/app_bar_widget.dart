@@ -16,7 +16,7 @@ class AppBarWidget extends PreferredSize {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      elevation: 0.0,
+      elevation: 6,
       backgroundColor: Colors.transparent,
       title: Text(
         pageName,

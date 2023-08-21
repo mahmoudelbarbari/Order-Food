@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get/get.dart';
 import 'package:order/core/widgets/app_bar_widget.dart';
 
 import '../../../cart/presentation/pages/view_order_page.dart';
@@ -60,8 +61,7 @@ class _SettingsPageState extends State<SettingsPage> {
               text: 'Add Restaurant',
               icon: Icons.add_box_outlined,
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const RestaurantPage()));
+                Get.to(() => const RestaurantPage());
               },
             ),
             sizedBox,
