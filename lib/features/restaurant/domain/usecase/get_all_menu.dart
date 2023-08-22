@@ -1,5 +1,6 @@
-import 'package:order/features/restaurant/data/model/restaurant_model.dart';
 import 'package:order/features/restaurant/domain/reporisatory/restaurant_reporisatory.dart';
+
+import '../../data/model/menu_model.dart';
 
 class GetAllMenuUsecase {
   final RestaurantReporisatory restaurantReporisatory;

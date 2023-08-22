@@ -3,6 +3,8 @@ import 'package:order/features/restaurant/data/datasource/restaurant_datasource.
 import 'package:order/features/restaurant/data/model/restaurant_model.dart';
 import 'package:order/features/restaurant/domain/reporisatory/restaurant_reporisatory.dart';
 
+import '../model/menu_model.dart';
+
 class RestaurantReporisatoryImpl implements RestaurantReporisatory {
   final RestaurantDatasourceInterface restaurantDatasourceInterface;
   RestaurantReporisatoryImpl(this.restaurantDatasourceInterface);

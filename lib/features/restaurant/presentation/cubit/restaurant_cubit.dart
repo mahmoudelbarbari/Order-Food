@@ -8,6 +8,8 @@ import 'package:order/features/restaurant/domain/usecase/upload_image_usecase.da
 import 'package:order/features/restaurant/presentation/cubit/restaurant_state.dart';
 import 'package:order/injection_container.dart';
 
+import '../../data/model/menu_model.dart';
+
 class RestaurantCubit extends Cubit<RestaurantState> {
   late AddRestaurantUsecase addRestaurantUsecase;
   late UploadImageUsecase uploadImageUsecase;

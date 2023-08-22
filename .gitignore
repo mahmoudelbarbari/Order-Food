@@ -3,3 +3,4 @@ dart_tool
 gradle
 idea
 node_modules
+.fvm/flutter_sdk

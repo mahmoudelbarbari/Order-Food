@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:order/core/widgets/snackbar_message.dart';
 import 'package:order/features/cart/presentation/cubit/cart_cubit.dart';
-import 'package:order/features/restaurant/data/model/restaurant_model.dart';
 import 'package:order/features/restaurant/presentation/cubit/menu_cubit.dart';
+
+import '../../../data/model/menu_model.dart';
 
 class AllMenuWidget extends StatefulWidget {
   final List<MenuModel> menuModel;

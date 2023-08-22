@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:order/features/event/presentation/pages/ticket_page.dart';
-import 'package:order/features/restaurant/data/model/restaurant_model.dart';
 import 'package:order/features/restaurant/presentation/cubit/restaurant_cubit.dart';
+
+import '../../../data/model/menu_model.dart';
 
 class MenuWidget extends StatefulWidget {
   const MenuWidget({super.key});

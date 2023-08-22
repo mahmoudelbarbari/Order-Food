@@ -2,7 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:order/features/cart/data/models/cart_items_model.dart';
 import 'package:order/features/event/domain/entities/event_entities.dart';
-import 'package:order/features/restaurant/data/model/restaurant_model.dart';
+
+import '../../../restaurant/data/model/menu_model.dart';
 
 class FirebaseDatasourceProvider {
   static final _firebaseDatasourceProvider =

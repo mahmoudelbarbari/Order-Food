@@ -4,8 +4,9 @@ import 'package:order/features/cart/domain/usecase/clear_cart_items_usecase.dart
 import 'package:order/features/cart/domain/usecase/get_all_cart_items_usecase.dart';
 import 'package:order/features/cart/domain/usecase/view_orders_usecase.dart';
 import 'package:order/features/cart/presentation/cubit/cart_state.dart';
-import 'package:order/features/restaurant/data/model/restaurant_model.dart';
 import 'package:order/injection_container.dart';
+
+import '../../../restaurant/data/model/menu_model.dart';
 
 class CartCubit extends Cubit<CartState> {
   late AddProductToCartUsecase addProductToCartUsecase;

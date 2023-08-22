@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../restaurant/data/model/restaurant_model.dart';
+import '../../../../restaurant/data/model/menu_model.dart';
 
 class ViewOrderWidget extends StatelessWidget {
   final List<MenuModel> menuModel;

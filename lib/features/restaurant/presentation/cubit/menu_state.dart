@@ -1,4 +1,4 @@
-import 'package:order/features/restaurant/data/model/restaurant_model.dart';
+import '../../data/model/menu_model.dart';
 
 abstract class MenuState {}
 

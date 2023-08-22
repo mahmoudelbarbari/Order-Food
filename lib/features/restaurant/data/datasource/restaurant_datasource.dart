@@ -7,6 +7,7 @@ import 'package:order/features/event/domain/entities/event_entities.dart';
 import 'package:order/features/restaurant/data/model/restaurant_model.dart';
 
 import '../../../../core/services/awesome_notification_service.dart';
+import '../model/menu_model.dart';
 
 class FirebaseDatasourceProvider {
   static final _firebaseDatasourceProvider =

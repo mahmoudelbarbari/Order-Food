@@ -1,5 +1,6 @@
 import 'package:order/features/cart/domain/reporisatory/cart_reporisatory.dart';
-import 'package:order/features/restaurant/data/model/restaurant_model.dart';
+
+import '../../../restaurant/data/model/menu_model.dart';
 
 class ViewOrderUsecase {
   final CartReporisatoryInterface cartReporisatoryInterface;

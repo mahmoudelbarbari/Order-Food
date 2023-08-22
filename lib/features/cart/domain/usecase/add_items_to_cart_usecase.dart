@@ -1,6 +1,7 @@
 import 'package:order/features/cart/domain/reporisatory/cart_reporisatory.dart';
 import 'package:order/features/event/domain/entities/event_entities.dart';
-import 'package:order/features/restaurant/data/model/restaurant_model.dart';
+
+import '../../../restaurant/data/model/menu_model.dart';
 
 class AddProductToCartUsecase {
   final CartReporisatoryInterface cartReporisatoryInterface;

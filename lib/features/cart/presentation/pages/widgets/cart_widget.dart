@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:order/features/cart/presentation/cubit/cart_cubit.dart';
 
-import '../../../../restaurant/data/model/restaurant_model.dart';
+import '../../../../restaurant/data/model/menu_model.dart';
 import 'bottom_container_cart_widget.dart';
 import 'cart_items_container.dart';
 
