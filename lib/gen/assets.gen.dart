@@ -12,35 +12,54 @@ import 'package:flutter/widgets.dart';
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/empty-list.svg
+  String get emptyList => 'assets/images/empty-list.svg';
+
   /// File path: assets/images/empty_list.svg
-  String get emptyList => 'assets/images/empty_list.svg';
+  String get empty => 'assets/images/empty_list.svg';
 
   /// File path: assets/images/image_icon.svg
   String get imageIcon => 'assets/images/image_icon.svg';
 
   /// File path: assets/images/login.png
-  String get login => 'assets/images/login.png';
+  AssetGenImage get login => const AssetGenImage('assets/images/login.png');
 
   /// File path: assets/images/onboarding1.png
-  String get onboarding1 => 'assets/images/onboarding1.png';
+  AssetGenImage get onboarding1 =>
+      const AssetGenImage('assets/images/onboarding1.png');
 
   /// File path: assets/images/onboarding2.png
-  String get onboarding2 => 'assets/images/onboarding2.png';
+  AssetGenImage get onboarding2 =>
+      const AssetGenImage('assets/images/onboarding2.png');
 
   /// File path: assets/images/onboarding3.png
-  String get onboarding3 => 'assets/images/onboarding3.png';
+  AssetGenImage get onboarding3 =>
+      const AssetGenImage('assets/images/onboarding3.png');
 
   /// File path: assets/images/profile.png
-  String get profilePng => 'assets/images/profile.png';
+  AssetGenImage get profilePng =>
+      const AssetGenImage('assets/images/profile.png');
 
   /// File path: assets/images/profile.svg
   String get profileSvg => 'assets/images/profile.svg';
 
-  /// File path: assets/images/restaurant.jpeg
-  String get restaurant => 'assets/images/restaurant.jpeg';
+  /// File path: assets/images/restaurant.png
+  AssetGenImage get restaurant =>
+      const AssetGenImage('assets/images/restaurant.png');
+
+  /// File path: assets/images/splash.gif
+  AssetGenImage get splash => const AssetGenImage('assets/images/splash.gif');
+
+  /// File path: assets/images/star.png
+  AssetGenImage get star => const AssetGenImage('assets/images/star.png');
+
+  /// File path: assets/images/star_filled.png
+  AssetGenImage get starFilled =>
+      const AssetGenImage('assets/images/star_filled.png');
 
   /// List of all assets
   List<dynamic> get values => [
+        emptyList,
         emptyList,
         imageIcon,
         login,
@@ -49,7 +68,10 @@ class $AssetsImagesGen {
         onboarding3,
         profilePng,
         profileSvg,
-        restaurant
+        restaurant,
+        splash,
+        star,
+        starFilled
       ];
 }
 

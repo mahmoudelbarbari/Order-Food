@@ -12,6 +12,7 @@ class NavBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     PersistentTabController controller;
+    // final GlobalKey<FormState> keyform = GlobalKey<FormState>();
 
     controller = PersistentTabController(initialIndex: 0);
     return PersistentTabView(
@@ -59,42 +60,34 @@ class NavBarWidget extends StatelessWidget {
   }
 
   List<PersistentBottomNavBarItem> _navBarsItems() {
-    final tab1navigatorKey = GlobalKey<NavigatorState>();
-    final tab2navigatorKey = GlobalKey<NavigatorState>();
-    // final tab3navigatorKey = GlobalKey<NavigatorState>();
-    final tab4navigatorKey = GlobalKey<NavigatorState>();
-
     return [
       PersistentBottomNavBarItem(
         icon: const Icon(Icons.home_outlined),
         title: ("Home"),
         activeColorPrimary: primaryColor,
         inactiveColorPrimary: Colors.black,
-        routeAndNavigatorSettings:
-            RouteAndNavigatorSettings(navigatorKey: tab1navigatorKey),
+        // routeAndNavigatorSettings:
+        //     RouteAndNavigatorSettings(navigatorKey: tab1navigatorKey),
       ),
       PersistentBottomNavBarItem(
-          icon: const Icon(
-            Icons.add_box_outlined,
-          ),
-          activeColorPrimary: primaryColor,
-          title: ("Add"),
-          routeAndNavigatorSettings:
-              RouteAndNavigatorSettings(navigatorKey: tab2navigatorKey)),
+        icon: const Icon(
+          Icons.add_box_outlined,
+        ),
+        activeColorPrimary: primaryColor,
+        title: ("Add"),
+      ),
       // PersistentBottomNavBarItem(
       //     icon: const Icon(Icons.shopping_cart_outlined),
       //     title: ("Cart"),
       //     activeColorPrimary: primaryColor,
       //     inactiveColorPrimary: Colors.black,
-      //     routeAndNavigatorSettings:
-      //         RouteAndNavigatorSettings(navigatorKey: tab3navigatorKey)),
+
       PersistentBottomNavBarItem(
-          icon: const Icon(Icons.settings_outlined),
-          title: ("Settings"),
-          activeColorPrimary: primaryColor,
-          inactiveColorPrimary: Colors.black,
-          routeAndNavigatorSettings:
-              RouteAndNavigatorSettings(navigatorKey: tab4navigatorKey)),
+        icon: const Icon(Icons.settings_outlined),
+        title: ("Settings"),
+        activeColorPrimary: primaryColor,
+        inactiveColorPrimary: Colors.black,
+      ),
     ];
   }
 }

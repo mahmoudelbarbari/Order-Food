@@ -31,6 +31,7 @@ class _PluginRegistrant {
           '`image_picker_android` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
+        rethrow;
       }
 
       try {
@@ -40,6 +41,7 @@ class _PluginRegistrant {
           '`sqflite` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
+        rethrow;
       }
 
     } else if (Platform.isIOS) {
@@ -50,6 +52,7 @@ class _PluginRegistrant {
           '`image_picker_ios` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
+        rethrow;
       }
 
       try {
@@ -59,6 +62,7 @@ class _PluginRegistrant {
           '`sqflite` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
+        rethrow;
       }
 
     } else if (Platform.isLinux) {
@@ -69,6 +73,7 @@ class _PluginRegistrant {
           '`file_selector_linux` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
+        rethrow;
       }
 
       try {
@@ -78,6 +83,7 @@ class _PluginRegistrant {
           '`image_picker_linux` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
+        rethrow;
       }
 
     } else if (Platform.isMacOS) {
@@ -88,6 +94,7 @@ class _PluginRegistrant {
           '`file_selector_macos` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
+        rethrow;
       }
 
       try {
@@ -97,6 +104,7 @@ class _PluginRegistrant {
           '`image_picker_macos` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
+        rethrow;
       }
 
       try {
@@ -106,6 +114,7 @@ class _PluginRegistrant {
           '`sqflite` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
+        rethrow;
       }
 
     } else if (Platform.isWindows) {
@@ -116,6 +125,7 @@ class _PluginRegistrant {
           '`file_selector_windows` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
+        rethrow;
       }
 
       try {
@@ -125,6 +135,7 @@ class _PluginRegistrant {
           '`image_picker_windows` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
+        rethrow;
       }
 
     }

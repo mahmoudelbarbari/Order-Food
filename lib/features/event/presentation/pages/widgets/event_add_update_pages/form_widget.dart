@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:get/get.dart';
 import 'package:order/features/event/domain/entities/event_entities.dart';
 import 'package:order/features/event/presentation/cubit/ticket_cubit.dart';
-import 'package:order/features/event/presentation/pages/ticket_page.dart';
 import 'package:order/features/event/presentation/pages/widgets/event_add_update_pages/form_submit_btn.dart';
 import 'package:order/features/event/presentation/pages/widgets/event_add_update_pages/text_form_field_widget.dart';
+
+import '../../../../../../core/persistent_bottom_nav_bar_widget.dart';
 
 class FormWidget extends StatefulWidget {
   final EventEntity? eventEntity;
@@ -71,10 +73,8 @@ class _FormWidgetState extends State<FormWidget> {
         title: titleController.text,
         description: descriptionController.text,
       );
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (_) => const TicketPage()),
-      );
+      Get.to(() => const NavBarWidget());
+
       if (widget.isUpdateEvent) {
         BlocProvider.of<TicketCubit>(context).updateTicket(eventEntity);
       } else {

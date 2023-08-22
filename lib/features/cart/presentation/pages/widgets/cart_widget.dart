@@ -35,6 +35,16 @@ class _CartWidgetState extends State<CartWidget> {
     // for (var menu in widget.menuModel) {
     //   totalPrice += menu.price;
     // }
+    double cartTotalPrice() {
+      double total = 0;
+      double delivartFee = 25.0;
+      double serviceFee = 12.0;
+      for (var item in widget.menuModel) {
+        num price = item.price;
+        total += price + delivartFee + serviceFee;
+      }
+      return total;
+    }
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -65,7 +75,7 @@ class _CartWidgetState extends State<CartWidget> {
             ),
           ),
         ),
-        const BottomContainerCartWidget(),
+        BottomContainerCartWidget(total: cartTotalPrice()),
       ],
     );
   }

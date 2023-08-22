@@ -5,6 +5,7 @@ import 'package:order/core/theme_app.dart';
 
 import '../../../../../gen/assets.gen.dart';
 import '../../cubit/ticket_cubit.dart';
+import 'get_restaurant_row_widget.dart';
 
 class TicketEmptyListWidget extends StatefulWidget {
   const TicketEmptyListWidget({super.key});
@@ -27,19 +28,34 @@ class _TicketEmptyListWidgetState extends State<TicketEmptyListWidget> {
   Widget build(BuildContext context) {
     return RefreshIndicator(
       onRefresh: _refresh,
-      child: ListView(children: [
-        Center(
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
-            SvgPicture.asset(Assets.images.emptyList),
-            const SizedBox(height: 12),
-            Text(
-              "There is no open session at the moment..!  :) ",
-              style: TextStyle(color: appTheme.primaryColor),
-            )
-          ]),
-        ),
-      ]),
+      child: Column(
+        children: [
+          const GetRestaurantRowWidget(),
+          Flexible(
+            flex: 2,
+            child: ListView(
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SvgPicture.asset(
+                      Assets.images.emptyList,
+                      width: 221,
+                      height: 182,
+                    ),
+                    const SizedBox(height: 12),
+                    Text(
+                      "There is no open session at the moment..!  :) ",
+                      style: TextStyle(color: appTheme.primaryColor),
+                    )
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
